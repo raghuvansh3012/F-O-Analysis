@@ -1,9 +1,3 @@
-# Ignore downloaded CSV data files
-*.csv
-
-# Ignore generated dashboard
-fno_dashboard.html
-
 # Ignore Python cache
 __pycache__/
 *.pyc

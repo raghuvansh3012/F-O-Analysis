@@ -4,6 +4,7 @@ import pandas as pd
 import os
 import glob
 import datetime
+import json
 import sys
 import subprocess
 import datetime
@@ -151,6 +152,63 @@ def filter_last_n_days(df, n_days, date_col='Date'):
         cutoff_dates = unique_dates[-n_days:]
         return df[df[date_col].isin(cutoff_dates)]
     return df
+
+
+def filter_current_month(df, date_col='Date'):
+    if df is None or df.empty: return df
+    current_month = datetime.date.today().month
+    current_year = datetime.date.today().year
+    return df[(df[date_col].dt.month == current_month) & (df[date_col].dt.year == current_year)]
+
+def group_dates_into_weeks(dates):
+    # Groups dates into weeks. A new week starts on Wednesday.
+    weeks = []
+    current_week = []
+    
+    for d in sorted(dates):
+        # weekday() 0=Mon, 1=Tue, 2=Wed
+        if current_week and d.weekday() == 2:
+            weeks.append(current_week)
+            current_week = []
+        current_week.append(d)
+        
+    if current_week:
+        weeks.append(current_week)
+    return weeks
+
+def export_week_json(df_oi, df_vol, df_mkt, week_dates, week_idx):
+    json_dir = os.path.join(DATA_DIR, "json_data")
+    os.makedirs(json_dir, exist_ok=True)
+    
+    # Filter data for this week
+    if df_oi is not None: w_oi = df_oi[df_oi['Date'].isin(week_dates)]
+    else: w_oi = pd.DataFrame()
+    
+    if df_vol is not None: w_vol = df_vol[df_vol['Date'].isin(week_dates)]
+    else: w_vol = pd.DataFrame()
+    
+    if df_mkt is not None: w_mkt = df_mkt[df_mkt['Date'].isin(week_dates)]
+    else: w_mkt = pd.DataFrame()
+    
+    # Convert dates to string for JSON serialization
+    def serialize_df(df):
+        if df.empty: return []
+        temp = df.copy()
+        temp['Date'] = temp['Date'].dt.strftime('%Y-%m-%d')
+        return temp.to_dict(orient='records')
+        
+    data = {
+        "week_name": f"Week {week_idx + 1}",
+        "dates": [d.strftime('%Y-%m-%d') for d in week_dates],
+        "oi_data": serialize_df(w_oi),
+        "vol_data": serialize_df(w_vol),
+        "market_data": serialize_df(w_mkt)
+    }
+    
+    filepath = os.path.join(json_dir, f"week_{week_idx + 1}.json")
+    with open(filepath, "w") as f:
+        json.dump(data, f, indent=4)
+    return filepath
 
 # --- 2. Charts banane ka function ---
 
@@ -417,17 +475,19 @@ def generate_activity_table(df, is_volume=False):
 # --- 4. Main function jaha sab run hoga ---
 
 def main():
-    # --- user se input lete hain ya args check karte hain ---
     n_days = None
+    auto_mode = False
     if len(sys.argv) > 1:
-        # Called from runner script or command line with args
-        try:
-            n_days = int(sys.argv[1])
-            print(f"Auto-Filtering for last {n_days} days...")
-        except ValueError:
-            pass
+        if sys.argv[1] == '--auto':
+            auto_mode = True
+            print("Auto-Filtering for Current Month...")
+        else:
+            try:
+                n_days = int(sys.argv[1])
+                print(f"Auto-Filtering for last {n_days} days...")
+            except ValueError:
+                pass
     else:
-        # Ran directly - Prompt User
         try:
             print("="*40)
             user_input = input("Enter number of days to analyze (Press Enter for All): ")
@@ -440,15 +500,23 @@ def main():
         except ValueError:
             print("Invalid input, showing all data.")
             
-    if n_days:
+    if n_days and not auto_mode:
         ensure_data_for_days(n_days)
+    elif auto_mode:
+        # In auto mode we want the script to try fetching all missing days of the current month
+        current_date = datetime.date.today()
+        ensure_data_for_days(current_date.day)
 
     print("Loading Data...")
     df_oi, df_vol, df_mkt = load_data()
     
     if df_oi is None: return
 
-    if n_days:
+    if auto_mode:
+        df_oi = filter_current_month(df_oi)
+        df_vol = filter_current_month(df_vol)
+        df_mkt = filter_current_month(df_mkt)
+    elif n_days:
         df_oi = filter_last_n_days(df_oi, n_days)
         df_vol = filter_last_n_days(df_vol, n_days)
         df_mkt = filter_last_n_days(df_mkt, n_days)
@@ -457,7 +525,11 @@ def main():
     # Actually, the summary tables need history too, which might be N days.
     # The chart filtering is good for the summary history too.
     
-    if n_days:
+    if auto_mode:
+        df_oi = filter_current_month(df_oi)
+        df_vol = filter_current_month(df_vol)
+        df_mkt = filter_current_month(df_mkt)
+    elif n_days:
         df_oi = filter_last_n_days(df_oi, n_days)
         df_vol = filter_last_n_days(df_vol, n_days)
         df_mkt = filter_last_n_days(df_mkt, n_days)
@@ -468,6 +540,41 @@ def main():
     css = """
     body { font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background-color: #121418; color: #e0e6ed; margin: 0; padding: 0; }
     
+    
+    /* Sidebar Hamburger Menu */
+    .sidebar {
+        height: 100%; width: 350px; position: fixed; z-index: 2000; top: 0; left: -350px;
+        background-color: #1a1d21; overflow-x: hidden; transition: 0.3s;
+        padding-top: 60px; border-right: 1px solid #2d323b;
+        box-shadow: 2px 0 10px rgba(0,0,0,0.5);
+    }
+    .sidebar a {
+        padding: 10px 15px 10px 30px; text-decoration: none; font-size: 16px;
+        color: #8b949e; display: block; transition: 0.3s; cursor: pointer;
+    }
+    .sidebar a:hover, .sidebar a.active { color: #fff; background-color: #232730; border-left: 4px solid #3b82f6;}
+    
+    .sidebar .closebtn { position: absolute; top: 0; right: 25px; font-size: 36px; margin-left: 50px; }
+    
+    .hamburger-btn {
+        font-size: 20px; cursor: pointer; background-color: transparent; color: white;
+        padding: 10px 15px; border: none; position: fixed; top: 10px; left: 10px; z-index: 1500;
+        border-radius: 8px;
+    }
+    .hamburger-btn:hover { background-color: #232730; }
+    
+    #main-content { transition: margin-left .3s; padding: 0px; }
+    
+    .week-container { display: none; }
+    .week-container.active { display: block; }
+    
+    .download-json-btn {
+        margin: 5px 30px 15px 40px; padding: 6px 12px; background-color: #3b82f6; color: white !important;
+        text-align: left; border-radius: 4px; font-weight: normal; border-left: none !important;
+        font-family: 'Segoe UI', Roboto, sans-serif; font-size: 13px; text-decoration: none;
+    }
+    .download-json-btn:hover { background-color: #2563eb !important; color: white !important; }
+
     /* Navbar Wrapper & Pill */
     .navbar-wrapper {
         position: sticky; top: 0; z-index: 1000;
@@ -560,48 +667,111 @@ def main():
     <html><head><title>F&O Dashboard</title>
     <style>{css}</style>
     <script>
+        function openNav() {{
+            document.getElementById("mySidebar").style.left = "0";
+            document.getElementById("main-content").style.marginLeft = "350px";
+        }}
+        function closeNav() {{
+            document.getElementById("mySidebar").style.left = "-350px";
+            document.getElementById("main-content").style.marginLeft = "0";
+        }}
+    </script>
+    <script>
         function openParticipant(evt, pName) {{
-            var i, tabcontent, tablinks;
-            tabcontent = document.getElementsByClassName("tab-content");
-            for (i = 0; i < tabcontent.length; i++) tabcontent[i].style.display = "none";
-            tablinks = document.getElementsByClassName("tablinks");
-            for (i = 0; i < tablinks.length; i++) {{
-                tablinks[i].classList.remove("active");
-            }}
-            document.getElementById(pName).style.display = "block";
+            var weekContainer = evt.currentTarget.closest('.week-container');
+            var tabcontent = weekContainer.querySelectorAll('.tab-content');
+            for (var i = 0; i < tabcontent.length; i++) tabcontent[i].style.display = "none";
+            var tablinks = weekContainer.querySelectorAll('.tablinks');
+            for (var i = 0; i < tablinks.length; i++) tablinks[i].classList.remove("active");
+            
+            weekContainer.querySelector('#' + pName).style.display = "block";
             evt.currentTarget.classList.add("active");
             
-            var subbtn = document.querySelector('#' + pName + ' .subnav button');
+            var subbtn = weekContainer.querySelector('#' + pName + ' .subnav button');
             if(subbtn) subbtn.click();
-            
-            // Trigger resize for Plotly
             setTimeout(function() {{ window.dispatchEvent(new Event('resize')); }}, 100);
         }}
         function openMetric(evt, mName, pId) {{
-            var i, content, links;
-            var parent = document.getElementById(pId);
-            content = parent.getElementsByClassName("subtab-content");
-            for (i = 0; i < content.length; i++) content[i].style.display = "none";
-            links = parent.querySelectorAll(".subnav button");
-            for (i = 0; i < links.length; i++) links[i].className = links[i].className.replace(" active", "");
+            var parent = evt.currentTarget.closest('#' + pId);
+            var content = parent.getElementsByClassName("subtab-content");
+            for (var i = 0; i < content.length; i++) content[i].style.display = "none";
+            var links = parent.querySelectorAll(".subnav button");
+            for (var i = 0; i < links.length; i++) links[i].className = links[i].className.replace(" active", "");
             parent.querySelector("." + mName).style.display = "block";
             evt.currentTarget.className += " active";
-            
-            // Trigger resize for Plotly
             setTimeout(function() {{ window.dispatchEvent(new Event('resize')); }}, 100);
         }}
-        function toggleSummary(viewName) {{
-            document.querySelectorAll('.result-section').forEach(el => el.classList.remove('active'));
-            document.querySelectorAll('.toggle-btn').forEach(el => el.classList.remove('active'));
-            document.getElementById('view-' + viewName).classList.add('active');
-            document.getElementById('btn-' + viewName).classList.add('active');
+        function toggleSummary(viewName, weekId) {{
+            var wc = document.getElementById('week-container-' + weekId);
+            wc.querySelectorAll('.result-section').forEach(el => el.classList.remove('active'));
+            wc.querySelectorAll('.toggle-btn').forEach(el => el.classList.remove('active'));
+            wc.querySelector('#view-' + viewName).classList.add('active');
+            wc.querySelector('#btn-' + viewName).classList.add('active');
         }}
     </script>
     </head><body>
-    <div class="navbar-wrapper"><div class="navbar">
+    
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     """]
     
-    # --- NAVBAR ---
+    # Group dates into weeks
+    all_dates = sorted(df_oi['Date'].unique()) if df_oi is not None else []
+    weeks = group_dates_into_weeks(all_dates)
+    
+    # Get current month header
+    if all_dates:
+        month_header = all_dates[-1].strftime("%B %Y")
+        html.append(f'<div style="padding: 10px 15px; color: #8892b0; font-size: 14px; text-transform: uppercase; margin-top: 10px; font-family: monospace;">📅 {month_header}</div>')
+
+    # Generate Sidebar Links
+    import urllib.parse
+    for idx, week_dates in enumerate(weeks):
+        active_cls = "active" if idx == len(weeks)-1 else ""
+        num_days = len(week_dates)
+        is_current = " (current)" if idx == len(weeks)-1 else ""
+        trading_days_str = f" ({num_days} trading days)" if not is_current else ""
+        label = f'Week {idx+1} (Expiry: {week_dates[-1].strftime("%b %d")}){trading_days_str}{is_current}'
+        
+        # Wrapping each week block
+        html.append(f'<div class="sidebar-item-wrapper" style="padding-left: 20px;">')
+        prefix = '└─ ' if idx == len(weeks) - 1 else '├─ '
+        
+        # Link part
+        html.append(f'<div style="color: #8892b0; font-family: monospace; display: flex; align-items: flex-start; padding-right: 15px; margin-top: 10px;">')
+        html.append(f'<span style="white-space: pre;">{prefix}</span>')
+        html.append(f'<a id="sidebar-link-{idx}" class="sidebar-week-link {active_cls}" style="font-family: monospace; font-size: 14px; padding: 0; line-height: 1.4; display: inline-block; word-wrap: break-word; white-space: normal;" onclick="switchWeek({idx})">{label}</a>')
+        html.append('</div>')
+        
+        # Export JSON for the week
+        export_week_json(df_oi, df_vol, df_mkt, week_dates, idx)
+        
+        # Encode as Data URI so download works offline locally without fetching
+        try:
+            with open(f"json_data/week_{idx+1}.json", "r", encoding="utf-8") as f:
+                encoded_json = urllib.parse.quote(f.read())
+            data_uri = "data:application/json;charset=utf-8," + encoded_json
+            html.append(f'<a href="{data_uri}" download="week_{idx+1}.json" class="download-json-btn" id="json-link-{idx}" style="{"display:block" if active_cls else "display:none"}">⬇️ Download JSON</a>')
+        except Exception as e:
+            html.append(f'<a href="#" onclick="alert(\'JSON generation failed.\')" class="download-json-btn" id="json-link-{idx}" style="{"display:block" if active_cls else "display:none"}">⬇️ Download JSON</a>')
+            
+        html.append('</div>')
+        
+    html.append('</div>\n<div id="main-content">\n<button class="hamburger-btn" onclick="openNav()">&#9776;</button>')
+    html.append('<script>function switchWeek(weekId) { document.querySelectorAll(".week-container").forEach(el => el.classList.remove("active")); document.querySelectorAll(".sidebar-week-link").forEach(el => el.classList.remove("active")); document.getElementById("week-container-" + weekId).classList.add("active"); document.querySelectorAll(".download-json-btn").forEach(el => el.style.display="none"); document.getElementById("json-link-" + weekId).style.display="block"; closeNav(); var firstTab = document.querySelector("#week-container-" + weekId + " .tablinks"); if(firstTab) firstTab.click(); setTimeout(function() { window.dispatchEvent(new Event("resize")); }, 100); }</script>')
+    
+    # Iterate through each week
+    for idx, week_dates in enumerate(weeks):
+        active_cls = "active" if idx == len(weeks)-1 else ""
+        html.append(f"<div id='week-container-{idx}' class='week-container {active_cls}'>")
+        
+        # --- Filter Data for this week ---
+        w_oi = df_oi[df_oi['Date'].isin(week_dates)] if df_oi is not None else None
+        w_vol = df_vol[df_vol['Date'].isin(week_dates)] if df_vol is not None else None
+        w_mkt = df_mkt[df_mkt['Date'].isin(week_dates)] if df_mkt is not None else None
+
+        html.append('<div class="navbar-wrapper"><div class="navbar">')
+
     # Updated: FII, DII, Pro, Client, Summary
     nav_tabs = ['FII', 'DII', 'Pro', 'Client', 'Summary']
     for p in nav_tabs:
@@ -637,38 +807,38 @@ def main():
         """)
         
         # --- OI View ---
-        p_oi = df_oi[df_oi['Client Type'] == p].copy()
+        p_oi = w_oi[w_oi['Client Type'] == p].copy()
         html.append("<div class='oi-view subtab-content'>")
         
         # Futures
         html.append(f"<h2>{p} Futures OI</h2>")
-        c1 = generate_html_chart(p_oi, df_mkt, f"{p} Future Index OI", "Future Index Long", "#10b981", "Nifty", True, "Future Index Short")
-        c2 = generate_html_chart(p_oi, df_mkt, f"{p} Future Stock OI", "Future Stock Long", "#10b981", "Nifty", True, "Future Stock Short")
+        c1 = generate_html_chart(p_oi, w_mkt, f"{p} Future Index OI", "Future Index Long", "#10b981", "Nifty", True, "Future Index Short")
+        c2 = generate_html_chart(p_oi, w_mkt, f"{p} Future Stock OI", "Future Stock Long", "#10b981", "Nifty", True, "Future Stock Short")
         html.append(f"<div class='card'>{c1}</div><div class='card'>{c2}</div>")
         
         # Options
         html.append(f"<h2>{p} Options OI</h2>")
         for col_full, col_short, color in op_types:
-            c = generate_html_chart(p_oi, df_mkt, f"{p} {col_full} OI", col_full, color, "Nifty")
+            c = generate_html_chart(p_oi, w_mkt, f"{p} {col_full} OI", col_full, color, "Nifty")
             html.append(f"<div class='card'>{c}</div>")
             
         html.append("</div>") 
         
         # --- Volume View ---
-        if df_vol is not None and not df_vol.empty:
-            p_vol = df_vol[df_vol['Client Type'] == p].copy()
+        if w_vol is not None and not w_vol.empty:
+            p_vol = w_vol[w_vol['Client Type'] == p].copy()
             html.append("<div class='vol-view subtab-content'>")
             
             # Futures Vol
             html.append(f"<h2>{p} Futures Volume</h2>")
-            c3 = generate_html_chart(p_vol, df_mkt, f"{p} Future Index Volume", "Future Index Long", "#10b981", "VIX", True, "Future Index Short")
-            c4 = generate_html_chart(p_vol, df_mkt, f"{p} Future Stock Volume", "Future Stock Long", "#10b981", "VIX", True, "Future Stock Short")
+            c3 = generate_html_chart(p_vol, w_mkt, f"{p} Future Index Volume", "Future Index Long", "#10b981", "VIX", True, "Future Index Short")
+            c4 = generate_html_chart(p_vol, w_mkt, f"{p} Future Stock Volume", "Future Stock Long", "#10b981", "VIX", True, "Future Stock Short")
             html.append(f"<div class='card'>{c3}</div><div class='card'>{c4}</div>")
             
             # Options Vol
             html.append(f"<h2>{p} Options Volume</h2>")
             for col_full, col_short, color in op_types:
-                c = generate_html_chart(p_vol, df_mkt, f"{p} {col_full} Volume", col_full, color, "VIX")
+                c = generate_html_chart(p_vol, w_mkt, f"{p} {col_full} Volume", col_full, color, "VIX")
                 html.append(f"<div class='card'>{c}</div>")
             html.append("</div>")
         else:
@@ -683,27 +853,34 @@ def main():
     html.append("""
     <div class="toggle-container">
         <div class="toggle-pill">
-            <button id="btn-oi" class="toggle-btn active" onclick="toggleSummary('oi')">OI Analysis</button>
-            <button id="btn-vol" class="toggle-btn" onclick="toggleSummary('vol')">Volume Analysis</button>
+            <button id="btn-oi" class="toggle-btn active" onclick="toggleSummary('oi', {idx})">OI Analysis</button>
+            <button id="btn-vol" class="toggle-btn" onclick="toggleSummary('vol', {idx})">Volume Analysis</button>
         </div>
     </div>
     """)
     
     # OI View of Summary
     html.append("<div id='view-oi' class='result-section active'>")
-    html.append(generate_summary_table(df_oi, is_volume=False, n_days_history=5))
-    html.append(generate_activity_table(df_oi, is_volume=False))
+    html.append(generate_summary_table(w_oi, is_volume=False, n_days_history=5))
+    html.append(generate_activity_table(w_oi, is_volume=False))
     html.append("</div>")
     
     # Vol View of Summary
     html.append("<div id='view-vol' class='result-section'>")
-    html.append(generate_summary_table(df_vol, is_volume=True, n_days_history=5))
-    html.append(generate_activity_table(df_vol, is_volume=True))
+    html.append(generate_summary_table(w_vol, is_volume=True, n_days_history=5))
+    html.append(generate_activity_table(w_vol, is_volume=True))
     html.append("</div>")
     
     html.append("</div></div>") # End Summary Tab
         
-    html.append("<script>document.getElementsByClassName('tablinks')[0].click();</script></body></html>")
+    
+    html.append("</div>") # End Week Container
+        
+    html.append("</div>") # End Main Content
+    
+    # Auto click the active week's first tab
+    html.append(f"<script>document.querySelector('#week-container-{len(weeks)-1} .tablinks').click();</script></body></html>")
+
     
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
         f.write("".join(html))

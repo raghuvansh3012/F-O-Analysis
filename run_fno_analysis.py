@@ -47,8 +47,15 @@ def main():
     print("="*60)
     
     # 1. User Input le lo
+    auto_mode = False
+    n_days = 5
+    
     if len(sys.argv) > 1:
-        n_days = int(sys.argv[1])
+        if sys.argv[1] == '--auto':
+            auto_mode = True
+            print("Auto Mode: Fetching all data for the current month...")
+        else:
+            n_days = int(sys.argv[1])
     else:
         try:
             n_days = int(input("\nEnter number of trading days to analyze (e.g., 5): "))
@@ -56,6 +63,12 @@ def main():
             print("Invalid input! Please enter a number.")
             return
 
+    # Calculate days if in auto_mode
+    current_date = datetime.date.today()
+    if auto_mode:
+        # We want to fetch everything from the 1st of the month till today
+        n_days = current_date.day
+        
     print(f"\nScanning for last {n_days} valid data points...")
     
     # 2. pichle N valid trading days nikalne ka jugaad
@@ -95,7 +108,14 @@ def main():
         
     # 3. ab dashboard generate karne ka time aa gaya
     print("\n[Running Analysis] Generating Dashboard...")
-    subprocess.run([sys.executable, VIZ_SCRIPT, str(n_days)])
+    
+    viz_args = [sys.executable, VIZ_SCRIPT]
+    if auto_mode:
+        viz_args.append("--auto")
+    else:
+        viz_args.append(str(n_days))
+        
+    subprocess.run(viz_args)
     
     print("\nDone! Dashboard Updated.")
     print(r"Open: e:\daily report\Option_Aanalysis\fno_dashboard.html")

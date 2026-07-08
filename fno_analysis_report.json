@@ -1,0 +1,3708 @@
+{
+  "report_metadata": {
+    "generated_at": "2026-07-08T00:58:52",
+    "data_dates": [
+      "01-07-2026",
+      "02-07-2026",
+      "03-07-2026",
+      "06-07-2026",
+      "07-07-2026"
+    ],
+    "n_days_analyzed": 5,
+    "n_days_requested": 5
+  },
+  "market_data": {
+    "01-07-2026": {
+      "Nifty": 24005.85,
+      "VIX": 13.24,
+      "Bank_Nifty": 58033.05
+    },
+    "02-07-2026": {
+      "Nifty": 24175.7,
+      "VIX": 12.29,
+      "Bank_Nifty": 58031.65
+    },
+    "03-07-2026": {
+      "Nifty": 24270.85,
+      "VIX": 11.8,
+      "Bank_Nifty": 57938.5
+    },
+    "06-07-2026": {
+      "Nifty": 24430.35,
+      "VIX": 11.82,
+      "Bank_Nifty": 58291.5
+    },
+    "07-07-2026": {
+      "Nifty": 24398.7,
+      "VIX": 11.65,
+      "Bank_Nifty": 58200.7
+    }
+  },
+  "participant_oi": {
+    "Client": {
+      "01-07-2026": {
+        "Future_Index_Long": 251066,
+        "Future_Index_Short": 63543,
+        "Future_Stock_Long": 3194768,
+        "Future_Stock_Short": 198901,
+        "Option_Index_Call_Long": 2163161,
+        "Option_Index_Put_Long": 1888743,
+        "Option_Index_Call_Short": 2028147,
+        "Option_Index_Put_Short": 2586510,
+        "Option_Stock_Call_Long": 1345153,
+        "Option_Stock_Put_Long": 502739,
+        "Option_Stock_Call_Short": 783794,
+        "Option_Stock_Put_Short": 753173,
+        "Total_Long_Contracts": 9345630,
+        "Total_Short_Contracts": 6414068
+      },
+      "02-07-2026": {
+        "Future_Index_Long": 243441,
+        "Future_Index_Short": 65455,
+        "Future_Stock_Long": 3188761,
+        "Future_Stock_Short": 209794,
+        "Option_Index_Call_Long": 2268313,
+        "Option_Index_Put_Long": 2447661,
+        "Option_Index_Call_Short": 2209220,
+        "Option_Index_Put_Short": 3024894,
+        "Option_Stock_Call_Long": 1398494,
+        "Option_Stock_Put_Long": 552702,
+        "Option_Stock_Call_Short": 879183,
+        "Option_Stock_Put_Short": 798193,
+        "Total_Long_Contracts": 10099372,
+        "Total_Short_Contracts": 7186739
+      },
+      "03-07-2026": {
+        "Future_Index_Long": 239868,
+        "Future_Index_Short": 67171,
+        "Future_Stock_Long": 3193072,
+        "Future_Stock_Short": 215579,
+        "Option_Index_Call_Long": 3096998,
+        "Option_Index_Put_Long": 2747363,
+        "Option_Index_Call_Short": 3007973,
+        "Option_Index_Put_Short": 3360184,
+        "Option_Stock_Call_Long": 1543742,
+        "Option_Stock_Put_Long": 596642,
+        "Option_Stock_Call_Short": 970696,
+        "Option_Stock_Put_Short": 863839,
+        "Total_Long_Contracts": 11417685,
+        "Total_Short_Contracts": 8485442
+      },
+      "06-07-2026": {
+        "Future_Index_Long": 232341,
+        "Future_Index_Short": 67709,
+        "Future_Stock_Long": 3179272,
+        "Future_Stock_Short": 234871,
+        "Option_Index_Call_Long": 2801650,
+        "Option_Index_Put_Long": 3400685,
+        "Option_Index_Call_Short": 2754218,
+        "Option_Index_Put_Short": 3913827,
+        "Option_Stock_Call_Long": 1634622,
+        "Option_Stock_Put_Long": 648181,
+        "Option_Stock_Call_Short": 1038830,
+        "Option_Stock_Put_Short": 897275,
+        "Total_Long_Contracts": 11896752,
+        "Total_Short_Contracts": 8906730
+      },
+      "07-07-2026": {
+        "Future_Index_Long": 228252,
+        "Future_Index_Short": 64093,
+        "Future_Stock_Long": 3162432,
+        "Future_Stock_Short": 246922,
+        "Option_Index_Call_Long": 1803242,
+        "Option_Index_Put_Long": 1500941,
+        "Option_Index_Call_Short": 1631914,
+        "Option_Index_Put_Short": 2015837,
+        "Option_Stock_Call_Long": 1779543,
+        "Option_Stock_Put_Long": 675542,
+        "Option_Stock_Call_Short": 1083796,
+        "Option_Stock_Put_Short": 940303,
+        "Total_Long_Contracts": 9149952,
+        "Total_Short_Contracts": 5982864
+      }
+    },
+    "DII": {
+      "01-07-2026": {
+        "Future_Index_Long": 72675,
+        "Future_Index_Short": 11786,
+        "Future_Stock_Long": 253022,
+        "Future_Stock_Short": 4287615,
+        "Option_Index_Call_Long": 3485,
+        "Option_Index_Put_Long": 25675,
+        "Option_Index_Call_Short": 0,
+        "Option_Index_Put_Short": 179,
+        "Option_Stock_Call_Long": 125,
+        "Option_Stock_Put_Long": 33238,
+        "Option_Stock_Call_Short": 134092,
+        "Option_Stock_Put_Short": 2939,
+        "Total_Long_Contracts": 388220,
+        "Total_Short_Contracts": 4436611
+      },
+      "02-07-2026": {
+        "Future_Index_Long": 76185,
+        "Future_Index_Short": 11589,
+        "Future_Stock_Long": 260380,
+        "Future_Stock_Short": 4299854,
+        "Option_Index_Call_Long": 3460,
+        "Option_Index_Put_Long": 25675,
+        "Option_Index_Call_Short": 40,
+        "Option_Index_Put_Short": 1019,
+        "Option_Stock_Call_Long": 91,
+        "Option_Stock_Put_Long": 34259,
+        "Option_Stock_Call_Short": 160828,
+        "Option_Stock_Put_Short": 4275,
+        "Total_Long_Contracts": 400050,
+        "Total_Short_Contracts": 4477605
+      },
+      "03-07-2026": {
+        "Future_Index_Long": 76163,
+        "Future_Index_Short": 11589,
+        "Future_Stock_Long": 273405,
+        "Future_Stock_Short": 4308220,
+        "Option_Index_Call_Long": 4090,
+        "Option_Index_Put_Long": 26055,
+        "Option_Index_Call_Short": 835,
+        "Option_Index_Put_Short": 1014,
+        "Option_Stock_Call_Long": 329,
+        "Option_Stock_Put_Long": 34684,
+        "Option_Stock_Call_Short": 201545,
+        "Option_Stock_Put_Short": 6163,
+        "Total_Long_Contracts": 414726,
+        "Total_Short_Contracts": 4529366
+      },
+      "06-07-2026": {
+        "Future_Index_Long": 77668,
+        "Future_Index_Short": 11572,
+        "Future_Stock_Long": 287044,
+        "Future_Stock_Short": 4297008,
+        "Option_Index_Call_Long": 4195,
+        "Option_Index_Put_Long": 26015,
+        "Option_Index_Call_Short": 800,
+        "Option_Index_Put_Short": 1779,
+        "Option_Stock_Call_Long": 359,
+        "Option_Stock_Put_Long": 35410,
+        "Option_Stock_Call_Short": 238644,
+        "Option_Stock_Put_Short": 6859,
+        "Total_Long_Contracts": 430691,
+        "Total_Short_Contracts": 4556662
+      },
+      "07-07-2026": {
+        "Future_Index_Long": 80816,
+        "Future_Index_Short": 11572,
+        "Future_Stock_Long": 287662,
+        "Future_Stock_Short": 4279786,
+        "Option_Index_Call_Long": 5290,
+        "Option_Index_Put_Long": 26027,
+        "Option_Index_Call_Short": 90,
+        "Option_Index_Put_Short": 229,
+        "Option_Stock_Call_Long": 434,
+        "Option_Stock_Put_Long": 35491,
+        "Option_Stock_Call_Short": 283816,
+        "Option_Stock_Put_Short": 8721,
+        "Total_Long_Contracts": 435720,
+        "Total_Short_Contracts": 4584214
+      }
+    },
+    "FII": {
+      "01-07-2026": {
+        "Future_Index_Long": 32476,
+        "Future_Index_Short": 292535,
+        "Future_Stock_Long": 3771958,
+        "Future_Stock_Short": 3275109,
+        "Option_Index_Call_Long": 424988,
+        "Option_Index_Put_Long": 881237,
+        "Option_Index_Call_Short": 674108,
+        "Option_Index_Put_Short": 375453,
+        "Option_Stock_Call_Long": 89291,
+        "Option_Stock_Put_Long": 142092,
+        "Option_Stock_Call_Short": 154834,
+        "Option_Stock_Put_Short": 98102,
+        "Total_Long_Contracts": 5342042,
+        "Total_Short_Contracts": 4870141
+      },
+      "02-07-2026": {
+        "Future_Index_Long": 29443,
+        "Future_Index_Short": 286343,
+        "Future_Stock_Long": 3804985,
+        "Future_Stock_Short": 3270416,
+        "Option_Index_Call_Long": 439185,
+        "Option_Index_Put_Long": 859057,
+        "Option_Index_Call_Short": 664085,
+        "Option_Index_Put_Short": 417015,
+        "Option_Stock_Call_Long": 120063,
+        "Option_Stock_Put_Long": 171871,
+        "Option_Stock_Call_Short": 184025,
+        "Option_Stock_Put_Short": 118217,
+        "Total_Long_Contracts": 5424604,
+        "Total_Short_Contracts": 4940101
+      },
+      "03-07-2026": {
+        "Future_Index_Long": 29772,
+        "Future_Index_Short": 280539,
+        "Future_Stock_Long": 3835098,
+        "Future_Stock_Short": 3287749,
+        "Option_Index_Call_Long": 479396,
+        "Option_Index_Put_Long": 921556,
+        "Option_Index_Call_Short": 712869,
+        "Option_Index_Put_Short": 444381,
+        "Option_Stock_Call_Long": 138001,
+        "Option_Stock_Put_Long": 199213,
+        "Option_Stock_Call_Short": 218447,
+        "Option_Stock_Put_Short": 134068,
+        "Total_Long_Contracts": 5603036,
+        "Total_Short_Contracts": 5078053
+      },
+      "06-07-2026": {
+        "Future_Index_Long": 32686,
+        "Future_Index_Short": 273965,
+        "Future_Stock_Long": 3856372,
+        "Future_Stock_Short": 3284328,
+        "Option_Index_Call_Long": 481814,
+        "Option_Index_Put_Long": 973972,
+        "Option_Index_Call_Short": 670467,
+        "Option_Index_Put_Short": 516945,
+        "Option_Stock_Call_Long": 151938,
+        "Option_Stock_Put_Long": 214429,
+        "Option_Stock_Call_Short": 239161,
+        "Option_Stock_Put_Short": 151451,
+        "Total_Long_Contracts": 5711211,
+        "Total_Short_Contracts": 5136316
+      },
+      "07-07-2026": {
+        "Future_Index_Long": 32710,
+        "Future_Index_Short": 271548,
+        "Future_Stock_Long": 3845780,
+        "Future_Stock_Short": 3242088,
+        "Option_Index_Call_Long": 355937,
+        "Option_Index_Put_Long": 718833,
+        "Option_Index_Call_Short": 544458,
+        "Option_Index_Put_Short": 275050,
+        "Option_Stock_Call_Long": 164789,
+        "Option_Stock_Put_Long": 235205,
+        "Option_Stock_Call_Short": 259677,
+        "Option_Stock_Put_Short": 162062,
+        "Total_Long_Contracts": 5353254,
+        "Total_Short_Contracts": 4754883
+      }
+    },
+    "Pro": {
+      "01-07-2026": {
+        "Future_Index_Long": 40082,
+        "Future_Index_Short": 28435,
+        "Future_Stock_Long": 869585,
+        "Future_Stock_Short": 327708,
+        "Option_Index_Call_Long": 736795,
+        "Option_Index_Put_Long": 907476,
+        "Option_Index_Call_Short": 626175,
+        "Option_Index_Put_Short": 740987,
+        "Option_Stock_Call_Long": 595463,
+        "Option_Stock_Put_Long": 727741,
+        "Option_Stock_Call_Short": 957312,
+        "Option_Stock_Put_Short": 551596,
+        "Total_Long_Contracts": 3877142,
+        "Total_Short_Contracts": 3232213
+      },
+      "02-07-2026": {
+        "Future_Index_Long": 40808,
+        "Future_Index_Short": 26490,
+        "Future_Stock_Long": 865927,
+        "Future_Stock_Short": 339989,
+        "Option_Index_Call_Long": 772614,
+        "Option_Index_Put_Long": 974285,
+        "Option_Index_Call_Short": 610227,
+        "Option_Index_Put_Short": 863750,
+        "Option_Stock_Call_Long": 703710,
+        "Option_Stock_Put_Long": 771167,
+        "Option_Stock_Call_Short": 998322,
+        "Option_Stock_Put_Short": 609314,
+        "Total_Long_Contracts": 4128511,
+        "Total_Short_Contracts": 3448093
+      },
+      "03-07-2026": {
+        "Future_Index_Long": 44875,
+        "Future_Index_Short": 31379,
+        "Future_Stock_Long": 866163,
+        "Future_Stock_Short": 356190,
+        "Option_Index_Call_Long": 929076,
+        "Option_Index_Put_Long": 1027040,
+        "Option_Index_Call_Short": 787884,
+        "Option_Index_Put_Short": 916435,
+        "Option_Stock_Call_Long": 801053,
+        "Option_Stock_Put_Long": 838873,
+        "Option_Stock_Call_Short": 1092437,
+        "Option_Stock_Put_Short": 665342,
+        "Total_Long_Contracts": 4507080,
+        "Total_Short_Contracts": 3849667
+      },
+      "06-07-2026": {
+        "Future_Index_Long": 42645,
+        "Future_Index_Short": 32094,
+        "Future_Stock_Long": 864025,
+        "Future_Stock_Short": 370506,
+        "Option_Index_Call_Long": 962571,
+        "Option_Index_Put_Long": 1246877,
+        "Option_Index_Call_Short": 824746,
+        "Option_Index_Put_Short": 1214999,
+        "Option_Stock_Call_Long": 869717,
+        "Option_Stock_Put_Long": 869926,
+        "Option_Stock_Call_Short": 1140001,
+        "Option_Stock_Put_Short": 712361,
+        "Total_Long_Contracts": 4855761,
+        "Total_Short_Contracts": 4294706
+      },
+      "07-07-2026": {
+        "Future_Index_Long": 38805,
+        "Future_Index_Short": 33370,
+        "Future_Stock_Long": 867367,
+        "Future_Stock_Short": 394445,
+        "Option_Index_Call_Long": 583538,
+        "Option_Index_Put_Long": 632342,
+        "Option_Index_Call_Short": 571546,
+        "Option_Index_Put_Short": 587027,
+        "Option_Stock_Call_Long": 909534,
+        "Option_Stock_Put_Long": 922116,
+        "Option_Stock_Call_Short": 1227011,
+        "Option_Stock_Put_Short": 757268,
+        "Total_Long_Contracts": 3953702,
+        "Total_Short_Contracts": 3570667
+      }
+    }
+  },
+  "participant_volume": {
+    "Client": {
+      "01-07-2026": {
+        "Future_Index_Long": 38315,
+        "Future_Index_Short": 36899,
+        "Future_Stock_Long": 318985,
+        "Future_Stock_Short": 297223,
+        "Option_Index_Call_Long": 11055090,
+        "Option_Index_Put_Long": 9548800,
+        "Option_Index_Call_Short": 11112376,
+        "Option_Index_Put_Short": 9529699,
+        "Option_Stock_Call_Long": 1185213,
+        "Option_Stock_Put_Long": 424204,
+        "Option_Stock_Call_Short": 1086786,
+        "Option_Stock_Put_Short": 434418,
+        "Total_Long_Contracts": 22570607,
+        "Total_Short_Contracts": 22497401
+      },
+      "02-07-2026": {
+        "Future_Index_Long": 36217,
+        "Future_Index_Short": 45754,
+        "Future_Stock_Long": 307640,
+        "Future_Stock_Short": 324540,
+        "Option_Index_Call_Long": 10421970,
+        "Option_Index_Put_Long": 9420694,
+        "Option_Index_Call_Short": 10497891,
+        "Option_Index_Put_Short": 9300159,
+        "Option_Stock_Call_Long": 1075111,
+        "Option_Stock_Put_Long": 405185,
+        "Option_Stock_Call_Short": 1117159,
+        "Option_Stock_Put_Short": 400242,
+        "Total_Long_Contracts": 21666817,
+        "Total_Short_Contracts": 21685745
+      },
+      "03-07-2026": {
+        "Future_Index_Long": 40468,
+        "Future_Index_Short": 45757,
+        "Future_Stock_Long": 339271,
+        "Future_Stock_Short": 340745,
+        "Option_Index_Call_Long": 19331141,
+        "Option_Index_Put_Long": 19707743,
+        "Option_Index_Call_Short": 19301209,
+        "Option_Index_Put_Short": 19743331,
+        "Option_Stock_Call_Long": 1302701,
+        "Option_Stock_Put_Long": 460934,
+        "Option_Stock_Call_Short": 1248966,
+        "Option_Stock_Put_Short": 482640,
+        "Total_Long_Contracts": 41182258,
+        "Total_Short_Contracts": 41162648
+      },
+      "06-07-2026": {
+        "Future_Index_Long": 35762,
+        "Future_Index_Short": 43827,
+        "Future_Stock_Long": 275406,
+        "Future_Stock_Short": 308498,
+        "Option_Index_Call_Long": 26676122,
+        "Option_Index_Put_Long": 23340629,
+        "Option_Index_Call_Short": 26717715,
+        "Option_Index_Put_Short": 23240950,
+        "Option_Stock_Call_Long": 1161255,
+        "Option_Stock_Put_Long": 417475,
+        "Option_Stock_Call_Short": 1138509,
+        "Option_Stock_Put_Short": 399372,
+        "Total_Long_Contracts": 51906649,
+        "Total_Short_Contracts": 51848871
+      },
+      "07-07-2026": {
+        "Future_Index_Long": 44003,
+        "Future_Index_Short": 44476,
+        "Future_Stock_Long": 300539,
+        "Future_Stock_Short": 329430,
+        "Option_Index_Call_Long": 67402038,
+        "Option_Index_Put_Long": 70517568,
+        "Option_Index_Call_Short": 67225117,
+        "Option_Index_Put_Short": 71052698,
+        "Option_Stock_Call_Long": 1267969,
+        "Option_Stock_Put_Long": 473259,
+        "Option_Stock_Call_Short": 1168014,
+        "Option_Stock_Put_Short": 488926,
+        "Total_Long_Contracts": 140005376,
+        "Total_Short_Contracts": 140308661
+      }
+    },
+    "DII": {
+      "01-07-2026": {
+        "Future_Index_Long": 38,
+        "Future_Index_Short": 30,
+        "Future_Stock_Long": 62007,
+        "Future_Stock_Short": 64119,
+        "Option_Index_Call_Long": 160,
+        "Option_Index_Put_Long": 2470,
+        "Option_Index_Call_Short": 25,
+        "Option_Index_Put_Short": 0,
+        "Option_Stock_Call_Long": 187,
+        "Option_Stock_Put_Long": 965,
+        "Option_Stock_Call_Short": 63805,
+        "Option_Stock_Put_Short": 554,
+        "Total_Long_Contracts": 65827,
+        "Total_Short_Contracts": 128533
+      },
+      "02-07-2026": {
+        "Future_Index_Long": 3707,
+        "Future_Index_Short": 0,
+        "Future_Stock_Long": 64787,
+        "Future_Stock_Short": 69668,
+        "Option_Index_Call_Long": 75,
+        "Option_Index_Put_Long": 0,
+        "Option_Index_Call_Short": 140,
+        "Option_Index_Put_Short": 840,
+        "Option_Stock_Call_Long": 158,
+        "Option_Stock_Put_Long": 1217,
+        "Option_Stock_Call_Short": 26928,
+        "Option_Stock_Put_Short": 1532,
+        "Total_Long_Contracts": 69944,
+        "Total_Short_Contracts": 99108
+      },
+      "03-07-2026": {
+        "Future_Index_Long": 112,
+        "Future_Index_Short": 134,
+        "Future_Stock_Long": 73703,
+        "Future_Stock_Short": 69044,
+        "Option_Index_Call_Long": 670,
+        "Option_Index_Put_Long": 465,
+        "Option_Index_Call_Short": 835,
+        "Option_Index_Put_Short": 80,
+        "Option_Stock_Call_Long": 706,
+        "Option_Stock_Put_Long": 799,
+        "Option_Stock_Call_Short": 41185,
+        "Option_Stock_Put_Short": 2262,
+        "Total_Long_Contracts": 76455,
+        "Total_Short_Contracts": 113540
+      },
+      "06-07-2026": {
+        "Future_Index_Long": 1760,
+        "Future_Index_Short": 238,
+        "Future_Stock_Long": 83827,
+        "Future_Stock_Short": 58976,
+        "Option_Index_Call_Long": 195,
+        "Option_Index_Put_Long": 1074,
+        "Option_Index_Call_Short": 55,
+        "Option_Index_Put_Short": 1879,
+        "Option_Stock_Call_Long": 262,
+        "Option_Stock_Put_Long": 921,
+        "Option_Stock_Call_Short": 37331,
+        "Option_Stock_Put_Short": 891,
+        "Total_Long_Contracts": 88039,
+        "Total_Short_Contracts": 99370
+      },
+      "07-07-2026": {
+        "Future_Index_Long": 3193,
+        "Future_Index_Short": 45,
+        "Future_Stock_Long": 105193,
+        "Future_Stock_Short": 87353,
+        "Option_Index_Call_Long": 1170,
+        "Option_Index_Put_Long": 2483,
+        "Option_Index_Call_Short": 165,
+        "Option_Index_Put_Short": 1721,
+        "Option_Stock_Call_Long": 484,
+        "Option_Stock_Put_Long": 424,
+        "Option_Stock_Call_Short": 45581,
+        "Option_Stock_Put_Short": 2205,
+        "Total_Long_Contracts": 112947,
+        "Total_Short_Contracts": 137070
+      }
+    },
+    "FII": {
+      "01-07-2026": {
+        "Future_Index_Long": 8329,
+        "Future_Index_Short": 11978,
+        "Future_Stock_Long": 254926,
+        "Future_Stock_Short": 268171,
+        "Option_Index_Call_Long": 1602749,
+        "Option_Index_Put_Long": 1679752,
+        "Option_Index_Call_Short": 1618771,
+        "Option_Index_Put_Short": 1706504,
+        "Option_Stock_Call_Long": 112829,
+        "Option_Stock_Put_Long": 89589,
+        "Option_Stock_Call_Short": 129047,
+        "Option_Stock_Put_Short": 85296,
+        "Total_Long_Contracts": 3748174,
+        "Total_Short_Contracts": 3819767
+      },
+      "02-07-2026": {
+        "Future_Index_Long": 14087,
+        "Future_Index_Short": 10928,
+        "Future_Stock_Long": 311107,
+        "Future_Stock_Short": 273387,
+        "Option_Index_Call_Long": 1973383,
+        "Option_Index_Put_Long": 1963695,
+        "Option_Index_Call_Short": 1949163,
+        "Option_Index_Put_Short": 2027436,
+        "Option_Stock_Call_Long": 127427,
+        "Option_Stock_Put_Long": 92937,
+        "Option_Stock_Call_Short": 125846,
+        "Option_Stock_Put_Short": 83273,
+        "Total_Long_Contracts": 4482636,
+        "Total_Short_Contracts": 4470033
+      },
+      "03-07-2026": {
+        "Future_Index_Long": 13475,
+        "Future_Index_Short": 7342,
+        "Future_Stock_Long": 301682,
+        "Future_Stock_Short": 288902,
+        "Option_Index_Call_Long": 2314134,
+        "Option_Index_Put_Long": 2633504,
+        "Option_Index_Call_Short": 2322707,
+        "Option_Index_Put_Short": 2598371,
+        "Option_Stock_Call_Long": 179265,
+        "Option_Stock_Put_Long": 120553,
+        "Option_Stock_Call_Short": 195749,
+        "Option_Stock_Put_Short": 109062,
+        "Total_Long_Contracts": 5562613,
+        "Total_Short_Contracts": 5522133
+      },
+      "06-07-2026": {
+        "Future_Index_Long": 17088,
+        "Future_Index_Short": 7600,
+        "Future_Stock_Long": 249999,
+        "Future_Stock_Short": 225304,
+        "Option_Index_Call_Long": 3473359,
+        "Option_Index_Put_Long": 3702980,
+        "Option_Index_Call_Short": 3428539,
+        "Option_Index_Put_Short": 3723128,
+        "Option_Stock_Call_Long": 186781,
+        "Option_Stock_Put_Long": 110242,
+        "Option_Stock_Call_Short": 193558,
+        "Option_Stock_Put_Short": 112409,
+        "Total_Long_Contracts": 7740449,
+        "Total_Short_Contracts": 7690538
+      },
+      "07-07-2026": {
+        "Future_Index_Long": 10046,
+        "Future_Index_Short": 7605,
+        "Future_Stock_Long": 328521,
+        "Future_Stock_Short": 296873,
+        "Option_Index_Call_Long": 8184095,
+        "Option_Index_Put_Long": 9730830,
+        "Option_Index_Call_Short": 8561132,
+        "Option_Index_Put_Short": 9608221,
+        "Option_Stock_Call_Long": 226994,
+        "Option_Stock_Put_Long": 137836,
+        "Option_Stock_Call_Short": 234659,
+        "Option_Stock_Put_Short": 127671,
+        "Total_Long_Contracts": 18618322,
+        "Total_Short_Contracts": 18836161
+      }
+    },
+    "Pro": {
+      "01-07-2026": {
+        "Future_Index_Long": 17737,
+        "Future_Index_Short": 15512,
+        "Future_Stock_Long": 368951,
+        "Future_Stock_Short": 375356,
+        "Option_Index_Call_Long": 11982776,
+        "Option_Index_Put_Long": 10654692,
+        "Option_Index_Call_Short": 11909603,
+        "Option_Index_Put_Short": 10649511,
+        "Option_Stock_Call_Long": 2074601,
+        "Option_Stock_Put_Long": 1181581,
+        "Option_Stock_Call_Short": 2093192,
+        "Option_Stock_Put_Short": 1176071,
+        "Total_Long_Contracts": 26280338,
+        "Total_Short_Contracts": 26219245
+      },
+      "02-07-2026": {
+        "Future_Index_Long": 18164,
+        "Future_Index_Short": 15493,
+        "Future_Stock_Long": 355346,
+        "Future_Stock_Short": 371285,
+        "Option_Index_Call_Long": 13663059,
+        "Option_Index_Put_Long": 12583231,
+        "Option_Index_Call_Short": 13611293,
+        "Option_Index_Put_Short": 12639185,
+        "Option_Stock_Call_Long": 2016344,
+        "Option_Stock_Put_Long": 1098776,
+        "Option_Stock_Call_Short": 1949107,
+        "Option_Stock_Put_Short": 1113068,
+        "Total_Long_Contracts": 29734920,
+        "Total_Short_Contracts": 29699431
+      },
+      "03-07-2026": {
+        "Future_Index_Long": 20756,
+        "Future_Index_Short": 21578,
+        "Future_Stock_Long": 396766,
+        "Future_Stock_Short": 412731,
+        "Option_Index_Call_Long": 22384789,
+        "Option_Index_Put_Long": 23909727,
+        "Option_Index_Call_Short": 22405983,
+        "Option_Index_Put_Short": 23909657,
+        "Option_Stock_Call_Long": 2320937,
+        "Option_Stock_Put_Long": 1273133,
+        "Option_Stock_Call_Short": 2317709,
+        "Option_Stock_Put_Short": 1261455,
+        "Total_Long_Contracts": 50306108,
+        "Total_Short_Contracts": 50329113
+      },
+      "06-07-2026": {
+        "Future_Index_Long": 13446,
+        "Future_Index_Short": 16391,
+        "Future_Stock_Long": 325838,
+        "Future_Stock_Short": 342292,
+        "Option_Index_Call_Long": 35248941,
+        "Option_Index_Put_Long": 34721560,
+        "Option_Index_Call_Short": 35252308,
+        "Option_Index_Put_Short": 34800286,
+        "Option_Stock_Call_Long": 1982791,
+        "Option_Stock_Put_Long": 1039069,
+        "Option_Stock_Call_Short": 1961691,
+        "Option_Stock_Put_Short": 1055035,
+        "Total_Long_Contracts": 73331645,
+        "Total_Short_Contracts": 73428003
+      },
+      "07-07-2026": {
+        "Future_Index_Long": 15625,
+        "Future_Index_Short": 20741,
+        "Future_Stock_Long": 370719,
+        "Future_Stock_Short": 391316,
+        "Option_Index_Call_Long": 107696779,
+        "Option_Index_Put_Long": 125162220,
+        "Option_Index_Call_Short": 107497668,
+        "Option_Index_Put_Short": 124750461,
+        "Option_Stock_Call_Long": 2218474,
+        "Option_Stock_Put_Long": 1300942,
+        "Option_Stock_Call_Short": 2265667,
+        "Option_Stock_Put_Short": 1293659,
+        "Total_Long_Contracts": 236764759,
+        "Total_Short_Contracts": 236219512
+      }
+    }
+  },
+  "analysis": {
+    "oi_changes": {
+      "Client": {
+        "latest_date": "07-07-2026",
+        "vs_previous_date": "06-07-2026",
+        "Future_Index_Long_Current": 228252,
+        "Future_Index_Long_Previous": 232341,
+        "Future_Index_Long_Change": -4089,
+        "Future_Index_Short_Current": 64093,
+        "Future_Index_Short_Previous": 67709,
+        "Future_Index_Short_Change": -3616,
+        "Future_Stock_Long_Current": 3162432,
+        "Future_Stock_Long_Previous": 3179272,
+        "Future_Stock_Long_Change": -16840,
+        "Future_Stock_Short_Current": 246922,
+        "Future_Stock_Short_Previous": 234871,
+        "Future_Stock_Short_Change": 12051,
+        "Option_Index_Call_Long_Current": 1803242,
+        "Option_Index_Call_Long_Previous": 2801650,
+        "Option_Index_Call_Long_Change": -998408,
+        "Option_Index_Put_Long_Current": 1500941,
+        "Option_Index_Put_Long_Previous": 3400685,
+        "Option_Index_Put_Long_Change": -1899744,
+        "Option_Index_Call_Short_Current": 1631914,
+        "Option_Index_Call_Short_Previous": 2754218,
+        "Option_Index_Call_Short_Change": -1122304,
+        "Option_Index_Put_Short_Current": 2015837,
+        "Option_Index_Put_Short_Previous": 3913827,
+        "Option_Index_Put_Short_Change": -1897990,
+        "Option_Stock_Call_Long_Current": 1779543,
+        "Option_Stock_Call_Long_Previous": 1634622,
+        "Option_Stock_Call_Long_Change": 144921,
+        "Option_Stock_Put_Long_Current": 675542,
+        "Option_Stock_Put_Long_Previous": 648181,
+        "Option_Stock_Put_Long_Change": 27361,
+        "Option_Stock_Call_Short_Current": 1083796,
+        "Option_Stock_Call_Short_Previous": 1038830,
+        "Option_Stock_Call_Short_Change": 44966,
+        "Option_Stock_Put_Short_Current": 940303,
+        "Option_Stock_Put_Short_Previous": 897275,
+        "Option_Stock_Put_Short_Change": 43028,
+        "Total_Long_Contracts_Current": 9149952,
+        "Total_Long_Contracts_Previous": 11896752,
+        "Total_Long_Contracts_Change": -2746800,
+        "Total_Short_Contracts_Current": 5982864,
+        "Total_Short_Contracts_Previous": 8906730,
+        "Total_Short_Contracts_Change": -2923866,
+        "Net_Index_Futures_Change": -473,
+        "Net_Index_Call_Change": 123896,
+        "Net_Index_Put_Change": -1754,
+        "Net_Stock_Futures_Change": -28891,
+        "Net_Stock_Calls_Change": 99955,
+        "Net_Stock_Puts_Change": -15667
+      },
+      "DII": {
+        "latest_date": "07-07-2026",
+        "vs_previous_date": "06-07-2026",
+        "Future_Index_Long_Current": 80816,
+        "Future_Index_Long_Previous": 77668,
+        "Future_Index_Long_Change": 3148,
+        "Future_Index_Short_Current": 11572,
+        "Future_Index_Short_Previous": 11572,
+        "Future_Index_Short_Change": 0,
+        "Future_Stock_Long_Current": 287662,
+        "Future_Stock_Long_Previous": 287044,
+        "Future_Stock_Long_Change": 618,
+        "Future_Stock_Short_Current": 4279786,
+        "Future_Stock_Short_Previous": 4297008,
+        "Future_Stock_Short_Change": -17222,
+        "Option_Index_Call_Long_Current": 5290,
+        "Option_Index_Call_Long_Previous": 4195,
+        "Option_Index_Call_Long_Change": 1095,
+        "Option_Index_Put_Long_Current": 26027,
+        "Option_Index_Put_Long_Previous": 26015,
+        "Option_Index_Put_Long_Change": 12,
+        "Option_Index_Call_Short_Current": 90,
+        "Option_Index_Call_Short_Previous": 800,
+        "Option_Index_Call_Short_Change": -710,
+        "Option_Index_Put_Short_Current": 229,
+        "Option_Index_Put_Short_Previous": 1779,
+        "Option_Index_Put_Short_Change": -1550,
+        "Option_Stock_Call_Long_Current": 434,
+        "Option_Stock_Call_Long_Previous": 359,
+        "Option_Stock_Call_Long_Change": 75,
+        "Option_Stock_Put_Long_Current": 35491,
+        "Option_Stock_Put_Long_Previous": 35410,
+        "Option_Stock_Put_Long_Change": 81,
+        "Option_Stock_Call_Short_Current": 283816,
+        "Option_Stock_Call_Short_Previous": 238644,
+        "Option_Stock_Call_Short_Change": 45172,
+        "Option_Stock_Put_Short_Current": 8721,
+        "Option_Stock_Put_Short_Previous": 6859,
+        "Option_Stock_Put_Short_Change": 1862,
+        "Total_Long_Contracts_Current": 435720,
+        "Total_Long_Contracts_Previous": 430691,
+        "Total_Long_Contracts_Change": 5029,
+        "Total_Short_Contracts_Current": 4584214,
+        "Total_Short_Contracts_Previous": 4556662,
+        "Total_Short_Contracts_Change": 27552,
+        "Net_Index_Futures_Change": 3148,
+        "Net_Index_Call_Change": 1805,
+        "Net_Index_Put_Change": 1562,
+        "Net_Stock_Futures_Change": 17840,
+        "Net_Stock_Calls_Change": -45097,
+        "Net_Stock_Puts_Change": -1781
+      },
+      "FII": {
+        "latest_date": "07-07-2026",
+        "vs_previous_date": "06-07-2026",
+        "Future_Index_Long_Current": 32710,
+        "Future_Index_Long_Previous": 32686,
+        "Future_Index_Long_Change": 24,
+        "Future_Index_Short_Current": 271548,
+        "Future_Index_Short_Previous": 273965,
+        "Future_Index_Short_Change": -2417,
+        "Future_Stock_Long_Current": 3845780,
+        "Future_Stock_Long_Previous": 3856372,
+        "Future_Stock_Long_Change": -10592,
+        "Future_Stock_Short_Current": 3242088,
+        "Future_Stock_Short_Previous": 3284328,
+        "Future_Stock_Short_Change": -42240,
+        "Option_Index_Call_Long_Current": 355937,
+        "Option_Index_Call_Long_Previous": 481814,
+        "Option_Index_Call_Long_Change": -125877,
+        "Option_Index_Put_Long_Current": 718833,
+        "Option_Index_Put_Long_Previous": 973972,
+        "Option_Index_Put_Long_Change": -255139,
+        "Option_Index_Call_Short_Current": 544458,
+        "Option_Index_Call_Short_Previous": 670467,
+        "Option_Index_Call_Short_Change": -126009,
+        "Option_Index_Put_Short_Current": 275050,
+        "Option_Index_Put_Short_Previous": 516945,
+        "Option_Index_Put_Short_Change": -241895,
+        "Option_Stock_Call_Long_Current": 164789,
+        "Option_Stock_Call_Long_Previous": 151938,
+        "Option_Stock_Call_Long_Change": 12851,
+        "Option_Stock_Put_Long_Current": 235205,
+        "Option_Stock_Put_Long_Previous": 214429,
+        "Option_Stock_Put_Long_Change": 20776,
+        "Option_Stock_Call_Short_Current": 259677,
+        "Option_Stock_Call_Short_Previous": 239161,
+        "Option_Stock_Call_Short_Change": 20516,
+        "Option_Stock_Put_Short_Current": 162062,
+        "Option_Stock_Put_Short_Previous": 151451,
+        "Option_Stock_Put_Short_Change": 10611,
+        "Total_Long_Contracts_Current": 5353254,
+        "Total_Long_Contracts_Previous": 5711211,
+        "Total_Long_Contracts_Change": -357957,
+        "Total_Short_Contracts_Current": 4754883,
+        "Total_Short_Contracts_Previous": 5136316,
+        "Total_Short_Contracts_Change": -381433,
+        "Net_Index_Futures_Change": 2441,
+        "Net_Index_Call_Change": 132,
+        "Net_Index_Put_Change": -13244,
+        "Net_Stock_Futures_Change": 31648,
+        "Net_Stock_Calls_Change": -7665,
+        "Net_Stock_Puts_Change": 10165
+      },
+      "Pro": {
+        "latest_date": "07-07-2026",
+        "vs_previous_date": "06-07-2026",
+        "Future_Index_Long_Current": 38805,
+        "Future_Index_Long_Previous": 42645,
+        "Future_Index_Long_Change": -3840,
+        "Future_Index_Short_Current": 33370,
+        "Future_Index_Short_Previous": 32094,
+        "Future_Index_Short_Change": 1276,
+        "Future_Stock_Long_Current": 867367,
+        "Future_Stock_Long_Previous": 864025,
+        "Future_Stock_Long_Change": 3342,
+        "Future_Stock_Short_Current": 394445,
+        "Future_Stock_Short_Previous": 370506,
+        "Future_Stock_Short_Change": 23939,
+        "Option_Index_Call_Long_Current": 583538,
+        "Option_Index_Call_Long_Previous": 962571,
+        "Option_Index_Call_Long_Change": -379033,
+        "Option_Index_Put_Long_Current": 632342,
+        "Option_Index_Put_Long_Previous": 1246877,
+        "Option_Index_Put_Long_Change": -614535,
+        "Option_Index_Call_Short_Current": 571546,
+        "Option_Index_Call_Short_Previous": 824746,
+        "Option_Index_Call_Short_Change": -253200,
+        "Option_Index_Put_Short_Current": 587027,
+        "Option_Index_Put_Short_Previous": 1214999,
+        "Option_Index_Put_Short_Change": -627972,
+        "Option_Stock_Call_Long_Current": 909534,
+        "Option_Stock_Call_Long_Previous": 869717,
+        "Option_Stock_Call_Long_Change": 39817,
+        "Option_Stock_Put_Long_Current": 922116,
+        "Option_Stock_Put_Long_Previous": 869926,
+        "Option_Stock_Put_Long_Change": 52190,
+        "Option_Stock_Call_Short_Current": 1227011,
+        "Option_Stock_Call_Short_Previous": 1140001,
+        "Option_Stock_Call_Short_Change": 87010,
+        "Option_Stock_Put_Short_Current": 757268,
+        "Option_Stock_Put_Short_Previous": 712361,
+        "Option_Stock_Put_Short_Change": 44907,
+        "Total_Long_Contracts_Current": 3953702,
+        "Total_Long_Contracts_Previous": 4855761,
+        "Total_Long_Contracts_Change": -902059,
+        "Total_Short_Contracts_Current": 3570667,
+        "Total_Short_Contracts_Previous": 4294706,
+        "Total_Short_Contracts_Change": -724039,
+        "Net_Index_Futures_Change": -5116,
+        "Net_Index_Call_Change": -125833,
+        "Net_Index_Put_Change": 13437,
+        "Net_Stock_Futures_Change": -20597,
+        "Net_Stock_Calls_Change": -47193,
+        "Net_Stock_Puts_Change": 7283
+      }
+    },
+    "net_oi_positions": {
+      "Client": {
+        "01-07-2026": {
+          "Index_Futures_Net": 187523,
+          "Index_Futures_Long": 251066,
+          "Index_Futures_Short": 63543,
+          "Index_Call_Net": 135014,
+          "Index_Call_Long": 2163161,
+          "Index_Call_Short": 2028147,
+          "Index_Put_Net": -697767,
+          "Index_Put_Long": 1888743,
+          "Index_Put_Short": 2586510,
+          "Stock_Futures_Net": 2995867,
+          "Stock_Futures_Long": 3194768,
+          "Stock_Futures_Short": 198901,
+          "Stock_Calls_Net": 561359,
+          "Stock_Calls_Long": 1345153,
+          "Stock_Calls_Short": 783794,
+          "Stock_Puts_Net": -250434,
+          "Stock_Puts_Long": 502739,
+          "Stock_Puts_Short": 753173
+        },
+        "02-07-2026": {
+          "Index_Futures_Net": 177986,
+          "Index_Futures_Long": 243441,
+          "Index_Futures_Short": 65455,
+          "Index_Call_Net": 59093,
+          "Index_Call_Long": 2268313,
+          "Index_Call_Short": 2209220,
+          "Index_Put_Net": -577233,
+          "Index_Put_Long": 2447661,
+          "Index_Put_Short": 3024894,
+          "Stock_Futures_Net": 2978967,
+          "Stock_Futures_Long": 3188761,
+          "Stock_Futures_Short": 209794,
+          "Stock_Calls_Net": 519311,
+          "Stock_Calls_Long": 1398494,
+          "Stock_Calls_Short": 879183,
+          "Stock_Puts_Net": -245491,
+          "Stock_Puts_Long": 552702,
+          "Stock_Puts_Short": 798193
+        },
+        "03-07-2026": {
+          "Index_Futures_Net": 172697,
+          "Index_Futures_Long": 239868,
+          "Index_Futures_Short": 67171,
+          "Index_Call_Net": 89025,
+          "Index_Call_Long": 3096998,
+          "Index_Call_Short": 3007973,
+          "Index_Put_Net": -612821,
+          "Index_Put_Long": 2747363,
+          "Index_Put_Short": 3360184,
+          "Stock_Futures_Net": 2977493,
+          "Stock_Futures_Long": 3193072,
+          "Stock_Futures_Short": 215579,
+          "Stock_Calls_Net": 573046,
+          "Stock_Calls_Long": 1543742,
+          "Stock_Calls_Short": 970696,
+          "Stock_Puts_Net": -267197,
+          "Stock_Puts_Long": 596642,
+          "Stock_Puts_Short": 863839
+        },
+        "06-07-2026": {
+          "Index_Futures_Net": 164632,
+          "Index_Futures_Long": 232341,
+          "Index_Futures_Short": 67709,
+          "Index_Call_Net": 47432,
+          "Index_Call_Long": 2801650,
+          "Index_Call_Short": 2754218,
+          "Index_Put_Net": -513142,
+          "Index_Put_Long": 3400685,
+          "Index_Put_Short": 3913827,
+          "Stock_Futures_Net": 2944401,
+          "Stock_Futures_Long": 3179272,
+          "Stock_Futures_Short": 234871,
+          "Stock_Calls_Net": 595792,
+          "Stock_Calls_Long": 1634622,
+          "Stock_Calls_Short": 1038830,
+          "Stock_Puts_Net": -249094,
+          "Stock_Puts_Long": 648181,
+          "Stock_Puts_Short": 897275
+        },
+        "07-07-2026": {
+          "Index_Futures_Net": 164159,
+          "Index_Futures_Long": 228252,
+          "Index_Futures_Short": 64093,
+          "Index_Call_Net": 171328,
+          "Index_Call_Long": 1803242,
+          "Index_Call_Short": 1631914,
+          "Index_Put_Net": -514896,
+          "Index_Put_Long": 1500941,
+          "Index_Put_Short": 2015837,
+          "Stock_Futures_Net": 2915510,
+          "Stock_Futures_Long": 3162432,
+          "Stock_Futures_Short": 246922,
+          "Stock_Calls_Net": 695747,
+          "Stock_Calls_Long": 1779543,
+          "Stock_Calls_Short": 1083796,
+          "Stock_Puts_Net": -264761,
+          "Stock_Puts_Long": 675542,
+          "Stock_Puts_Short": 940303
+        }
+      },
+      "DII": {
+        "01-07-2026": {
+          "Index_Futures_Net": 60889,
+          "Index_Futures_Long": 72675,
+          "Index_Futures_Short": 11786,
+          "Index_Call_Net": 3485,
+          "Index_Call_Long": 3485,
+          "Index_Call_Short": 0,
+          "Index_Put_Net": 25496,
+          "Index_Put_Long": 25675,
+          "Index_Put_Short": 179,
+          "Stock_Futures_Net": -4034593,
+          "Stock_Futures_Long": 253022,
+          "Stock_Futures_Short": 4287615,
+          "Stock_Calls_Net": -133967,
+          "Stock_Calls_Long": 125,
+          "Stock_Calls_Short": 134092,
+          "Stock_Puts_Net": 30299,
+          "Stock_Puts_Long": 33238,
+          "Stock_Puts_Short": 2939
+        },
+        "02-07-2026": {
+          "Index_Futures_Net": 64596,
+          "Index_Futures_Long": 76185,
+          "Index_Futures_Short": 11589,
+          "Index_Call_Net": 3420,
+          "Index_Call_Long": 3460,
+          "Index_Call_Short": 40,
+          "Index_Put_Net": 24656,
+          "Index_Put_Long": 25675,
+          "Index_Put_Short": 1019,
+          "Stock_Futures_Net": -4039474,
+          "Stock_Futures_Long": 260380,
+          "Stock_Futures_Short": 4299854,
+          "Stock_Calls_Net": -160737,
+          "Stock_Calls_Long": 91,
+          "Stock_Calls_Short": 160828,
+          "Stock_Puts_Net": 29984,
+          "Stock_Puts_Long": 34259,
+          "Stock_Puts_Short": 4275
+        },
+        "03-07-2026": {
+          "Index_Futures_Net": 64574,
+          "Index_Futures_Long": 76163,
+          "Index_Futures_Short": 11589,
+          "Index_Call_Net": 3255,
+          "Index_Call_Long": 4090,
+          "Index_Call_Short": 835,
+          "Index_Put_Net": 25041,
+          "Index_Put_Long": 26055,
+          "Index_Put_Short": 1014,
+          "Stock_Futures_Net": -4034815,
+          "Stock_Futures_Long": 273405,
+          "Stock_Futures_Short": 4308220,
+          "Stock_Calls_Net": -201216,
+          "Stock_Calls_Long": 329,
+          "Stock_Calls_Short": 201545,
+          "Stock_Puts_Net": 28521,
+          "Stock_Puts_Long": 34684,
+          "Stock_Puts_Short": 6163
+        },
+        "06-07-2026": {
+          "Index_Futures_Net": 66096,
+          "Index_Futures_Long": 77668,
+          "Index_Futures_Short": 11572,
+          "Index_Call_Net": 3395,
+          "Index_Call_Long": 4195,
+          "Index_Call_Short": 800,
+          "Index_Put_Net": 24236,
+          "Index_Put_Long": 26015,
+          "Index_Put_Short": 1779,
+          "Stock_Futures_Net": -4009964,
+          "Stock_Futures_Long": 287044,
+          "Stock_Futures_Short": 4297008,
+          "Stock_Calls_Net": -238285,
+          "Stock_Calls_Long": 359,
+          "Stock_Calls_Short": 238644,
+          "Stock_Puts_Net": 28551,
+          "Stock_Puts_Long": 35410,
+          "Stock_Puts_Short": 6859
+        },
+        "07-07-2026": {
+          "Index_Futures_Net": 69244,
+          "Index_Futures_Long": 80816,
+          "Index_Futures_Short": 11572,
+          "Index_Call_Net": 5200,
+          "Index_Call_Long": 5290,
+          "Index_Call_Short": 90,
+          "Index_Put_Net": 25798,
+          "Index_Put_Long": 26027,
+          "Index_Put_Short": 229,
+          "Stock_Futures_Net": -3992124,
+          "Stock_Futures_Long": 287662,
+          "Stock_Futures_Short": 4279786,
+          "Stock_Calls_Net": -283382,
+          "Stock_Calls_Long": 434,
+          "Stock_Calls_Short": 283816,
+          "Stock_Puts_Net": 26770,
+          "Stock_Puts_Long": 35491,
+          "Stock_Puts_Short": 8721
+        }
+      },
+      "FII": {
+        "01-07-2026": {
+          "Index_Futures_Net": -260059,
+          "Index_Futures_Long": 32476,
+          "Index_Futures_Short": 292535,
+          "Index_Call_Net": -249120,
+          "Index_Call_Long": 424988,
+          "Index_Call_Short": 674108,
+          "Index_Put_Net": 505784,
+          "Index_Put_Long": 881237,
+          "Index_Put_Short": 375453,
+          "Stock_Futures_Net": 496849,
+          "Stock_Futures_Long": 3771958,
+          "Stock_Futures_Short": 3275109,
+          "Stock_Calls_Net": -65543,
+          "Stock_Calls_Long": 89291,
+          "Stock_Calls_Short": 154834,
+          "Stock_Puts_Net": 43990,
+          "Stock_Puts_Long": 142092,
+          "Stock_Puts_Short": 98102
+        },
+        "02-07-2026": {
+          "Index_Futures_Net": -256900,
+          "Index_Futures_Long": 29443,
+          "Index_Futures_Short": 286343,
+          "Index_Call_Net": -224900,
+          "Index_Call_Long": 439185,
+          "Index_Call_Short": 664085,
+          "Index_Put_Net": 442042,
+          "Index_Put_Long": 859057,
+          "Index_Put_Short": 417015,
+          "Stock_Futures_Net": 534569,
+          "Stock_Futures_Long": 3804985,
+          "Stock_Futures_Short": 3270416,
+          "Stock_Calls_Net": -63962,
+          "Stock_Calls_Long": 120063,
+          "Stock_Calls_Short": 184025,
+          "Stock_Puts_Net": 53654,
+          "Stock_Puts_Long": 171871,
+          "Stock_Puts_Short": 118217
+        },
+        "03-07-2026": {
+          "Index_Futures_Net": -250767,
+          "Index_Futures_Long": 29772,
+          "Index_Futures_Short": 280539,
+          "Index_Call_Net": -233473,
+          "Index_Call_Long": 479396,
+          "Index_Call_Short": 712869,
+          "Index_Put_Net": 477175,
+          "Index_Put_Long": 921556,
+          "Index_Put_Short": 444381,
+          "Stock_Futures_Net": 547349,
+          "Stock_Futures_Long": 3835098,
+          "Stock_Futures_Short": 3287749,
+          "Stock_Calls_Net": -80446,
+          "Stock_Calls_Long": 138001,
+          "Stock_Calls_Short": 218447,
+          "Stock_Puts_Net": 65145,
+          "Stock_Puts_Long": 199213,
+          "Stock_Puts_Short": 134068
+        },
+        "06-07-2026": {
+          "Index_Futures_Net": -241279,
+          "Index_Futures_Long": 32686,
+          "Index_Futures_Short": 273965,
+          "Index_Call_Net": -188653,
+          "Index_Call_Long": 481814,
+          "Index_Call_Short": 670467,
+          "Index_Put_Net": 457027,
+          "Index_Put_Long": 973972,
+          "Index_Put_Short": 516945,
+          "Stock_Futures_Net": 572044,
+          "Stock_Futures_Long": 3856372,
+          "Stock_Futures_Short": 3284328,
+          "Stock_Calls_Net": -87223,
+          "Stock_Calls_Long": 151938,
+          "Stock_Calls_Short": 239161,
+          "Stock_Puts_Net": 62978,
+          "Stock_Puts_Long": 214429,
+          "Stock_Puts_Short": 151451
+        },
+        "07-07-2026": {
+          "Index_Futures_Net": -238838,
+          "Index_Futures_Long": 32710,
+          "Index_Futures_Short": 271548,
+          "Index_Call_Net": -188521,
+          "Index_Call_Long": 355937,
+          "Index_Call_Short": 544458,
+          "Index_Put_Net": 443783,
+          "Index_Put_Long": 718833,
+          "Index_Put_Short": 275050,
+          "Stock_Futures_Net": 603692,
+          "Stock_Futures_Long": 3845780,
+          "Stock_Futures_Short": 3242088,
+          "Stock_Calls_Net": -94888,
+          "Stock_Calls_Long": 164789,
+          "Stock_Calls_Short": 259677,
+          "Stock_Puts_Net": 73143,
+          "Stock_Puts_Long": 235205,
+          "Stock_Puts_Short": 162062
+        }
+      },
+      "Pro": {
+        "01-07-2026": {
+          "Index_Futures_Net": 11647,
+          "Index_Futures_Long": 40082,
+          "Index_Futures_Short": 28435,
+          "Index_Call_Net": 110620,
+          "Index_Call_Long": 736795,
+          "Index_Call_Short": 626175,
+          "Index_Put_Net": 166489,
+          "Index_Put_Long": 907476,
+          "Index_Put_Short": 740987,
+          "Stock_Futures_Net": 541877,
+          "Stock_Futures_Long": 869585,
+          "Stock_Futures_Short": 327708,
+          "Stock_Calls_Net": -361849,
+          "Stock_Calls_Long": 595463,
+          "Stock_Calls_Short": 957312,
+          "Stock_Puts_Net": 176145,
+          "Stock_Puts_Long": 727741,
+          "Stock_Puts_Short": 551596
+        },
+        "02-07-2026": {
+          "Index_Futures_Net": 14318,
+          "Index_Futures_Long": 40808,
+          "Index_Futures_Short": 26490,
+          "Index_Call_Net": 162387,
+          "Index_Call_Long": 772614,
+          "Index_Call_Short": 610227,
+          "Index_Put_Net": 110535,
+          "Index_Put_Long": 974285,
+          "Index_Put_Short": 863750,
+          "Stock_Futures_Net": 525938,
+          "Stock_Futures_Long": 865927,
+          "Stock_Futures_Short": 339989,
+          "Stock_Calls_Net": -294612,
+          "Stock_Calls_Long": 703710,
+          "Stock_Calls_Short": 998322,
+          "Stock_Puts_Net": 161853,
+          "Stock_Puts_Long": 771167,
+          "Stock_Puts_Short": 609314
+        },
+        "03-07-2026": {
+          "Index_Futures_Net": 13496,
+          "Index_Futures_Long": 44875,
+          "Index_Futures_Short": 31379,
+          "Index_Call_Net": 141192,
+          "Index_Call_Long": 929076,
+          "Index_Call_Short": 787884,
+          "Index_Put_Net": 110605,
+          "Index_Put_Long": 1027040,
+          "Index_Put_Short": 916435,
+          "Stock_Futures_Net": 509973,
+          "Stock_Futures_Long": 866163,
+          "Stock_Futures_Short": 356190,
+          "Stock_Calls_Net": -291384,
+          "Stock_Calls_Long": 801053,
+          "Stock_Calls_Short": 1092437,
+          "Stock_Puts_Net": 173531,
+          "Stock_Puts_Long": 838873,
+          "Stock_Puts_Short": 665342
+        },
+        "06-07-2026": {
+          "Index_Futures_Net": 10551,
+          "Index_Futures_Long": 42645,
+          "Index_Futures_Short": 32094,
+          "Index_Call_Net": 137825,
+          "Index_Call_Long": 962571,
+          "Index_Call_Short": 824746,
+          "Index_Put_Net": 31878,
+          "Index_Put_Long": 1246877,
+          "Index_Put_Short": 1214999,
+          "Stock_Futures_Net": 493519,
+          "Stock_Futures_Long": 864025,
+          "Stock_Futures_Short": 370506,
+          "Stock_Calls_Net": -270284,
+          "Stock_Calls_Long": 869717,
+          "Stock_Calls_Short": 1140001,
+          "Stock_Puts_Net": 157565,
+          "Stock_Puts_Long": 869926,
+          "Stock_Puts_Short": 712361
+        },
+        "07-07-2026": {
+          "Index_Futures_Net": 5435,
+          "Index_Futures_Long": 38805,
+          "Index_Futures_Short": 33370,
+          "Index_Call_Net": 11992,
+          "Index_Call_Long": 583538,
+          "Index_Call_Short": 571546,
+          "Index_Put_Net": 45315,
+          "Index_Put_Long": 632342,
+          "Index_Put_Short": 587027,
+          "Stock_Futures_Net": 472922,
+          "Stock_Futures_Long": 867367,
+          "Stock_Futures_Short": 394445,
+          "Stock_Calls_Net": -317477,
+          "Stock_Calls_Long": 909534,
+          "Stock_Calls_Short": 1227011,
+          "Stock_Puts_Net": 164848,
+          "Stock_Puts_Long": 922116,
+          "Stock_Puts_Short": 757268
+        }
+      }
+    },
+    "net_volume_positions": {
+      "Client": {
+        "01-07-2026": {
+          "Index_Futures_Net": 1416,
+          "Index_Futures_Long": 38315,
+          "Index_Futures_Short": 36899,
+          "Index_Call_Net": -57286,
+          "Index_Call_Long": 11055090,
+          "Index_Call_Short": 11112376,
+          "Index_Put_Net": 19101,
+          "Index_Put_Long": 9548800,
+          "Index_Put_Short": 9529699,
+          "Stock_Futures_Net": 21762,
+          "Stock_Futures_Long": 318985,
+          "Stock_Futures_Short": 297223,
+          "Stock_Calls_Net": 98427,
+          "Stock_Calls_Long": 1185213,
+          "Stock_Calls_Short": 1086786,
+          "Stock_Puts_Net": -10214,
+          "Stock_Puts_Long": 424204,
+          "Stock_Puts_Short": 434418
+        },
+        "02-07-2026": {
+          "Index_Futures_Net": -9537,
+          "Index_Futures_Long": 36217,
+          "Index_Futures_Short": 45754,
+          "Index_Call_Net": -75921,
+          "Index_Call_Long": 10421970,
+          "Index_Call_Short": 10497891,
+          "Index_Put_Net": 120535,
+          "Index_Put_Long": 9420694,
+          "Index_Put_Short": 9300159,
+          "Stock_Futures_Net": -16900,
+          "Stock_Futures_Long": 307640,
+          "Stock_Futures_Short": 324540,
+          "Stock_Calls_Net": -42048,
+          "Stock_Calls_Long": 1075111,
+          "Stock_Calls_Short": 1117159,
+          "Stock_Puts_Net": 4943,
+          "Stock_Puts_Long": 405185,
+          "Stock_Puts_Short": 400242
+        },
+        "03-07-2026": {
+          "Index_Futures_Net": -5289,
+          "Index_Futures_Long": 40468,
+          "Index_Futures_Short": 45757,
+          "Index_Call_Net": 29932,
+          "Index_Call_Long": 19331141,
+          "Index_Call_Short": 19301209,
+          "Index_Put_Net": -35588,
+          "Index_Put_Long": 19707743,
+          "Index_Put_Short": 19743331,
+          "Stock_Futures_Net": -1474,
+          "Stock_Futures_Long": 339271,
+          "Stock_Futures_Short": 340745,
+          "Stock_Calls_Net": 53735,
+          "Stock_Calls_Long": 1302701,
+          "Stock_Calls_Short": 1248966,
+          "Stock_Puts_Net": -21706,
+          "Stock_Puts_Long": 460934,
+          "Stock_Puts_Short": 482640
+        },
+        "06-07-2026": {
+          "Index_Futures_Net": -8065,
+          "Index_Futures_Long": 35762,
+          "Index_Futures_Short": 43827,
+          "Index_Call_Net": -41593,
+          "Index_Call_Long": 26676122,
+          "Index_Call_Short": 26717715,
+          "Index_Put_Net": 99679,
+          "Index_Put_Long": 23340629,
+          "Index_Put_Short": 23240950,
+          "Stock_Futures_Net": -33092,
+          "Stock_Futures_Long": 275406,
+          "Stock_Futures_Short": 308498,
+          "Stock_Calls_Net": 22746,
+          "Stock_Calls_Long": 1161255,
+          "Stock_Calls_Short": 1138509,
+          "Stock_Puts_Net": 18103,
+          "Stock_Puts_Long": 417475,
+          "Stock_Puts_Short": 399372
+        },
+        "07-07-2026": {
+          "Index_Futures_Net": -473,
+          "Index_Futures_Long": 44003,
+          "Index_Futures_Short": 44476,
+          "Index_Call_Net": 176921,
+          "Index_Call_Long": 67402038,
+          "Index_Call_Short": 67225117,
+          "Index_Put_Net": -535130,
+          "Index_Put_Long": 70517568,
+          "Index_Put_Short": 71052698,
+          "Stock_Futures_Net": -28891,
+          "Stock_Futures_Long": 300539,
+          "Stock_Futures_Short": 329430,
+          "Stock_Calls_Net": 99955,
+          "Stock_Calls_Long": 1267969,
+          "Stock_Calls_Short": 1168014,
+          "Stock_Puts_Net": -15667,
+          "Stock_Puts_Long": 473259,
+          "Stock_Puts_Short": 488926
+        }
+      },
+      "DII": {
+        "01-07-2026": {
+          "Index_Futures_Net": 8,
+          "Index_Futures_Long": 38,
+          "Index_Futures_Short": 30,
+          "Index_Call_Net": 135,
+          "Index_Call_Long": 160,
+          "Index_Call_Short": 25,
+          "Index_Put_Net": 2470,
+          "Index_Put_Long": 2470,
+          "Index_Put_Short": 0,
+          "Stock_Futures_Net": -2112,
+          "Stock_Futures_Long": 62007,
+          "Stock_Futures_Short": 64119,
+          "Stock_Calls_Net": -63618,
+          "Stock_Calls_Long": 187,
+          "Stock_Calls_Short": 63805,
+          "Stock_Puts_Net": 411,
+          "Stock_Puts_Long": 965,
+          "Stock_Puts_Short": 554
+        },
+        "02-07-2026": {
+          "Index_Futures_Net": 3707,
+          "Index_Futures_Long": 3707,
+          "Index_Futures_Short": 0,
+          "Index_Call_Net": -65,
+          "Index_Call_Long": 75,
+          "Index_Call_Short": 140,
+          "Index_Put_Net": -840,
+          "Index_Put_Long": 0,
+          "Index_Put_Short": 840,
+          "Stock_Futures_Net": -4881,
+          "Stock_Futures_Long": 64787,
+          "Stock_Futures_Short": 69668,
+          "Stock_Calls_Net": -26770,
+          "Stock_Calls_Long": 158,
+          "Stock_Calls_Short": 26928,
+          "Stock_Puts_Net": -315,
+          "Stock_Puts_Long": 1217,
+          "Stock_Puts_Short": 1532
+        },
+        "03-07-2026": {
+          "Index_Futures_Net": -22,
+          "Index_Futures_Long": 112,
+          "Index_Futures_Short": 134,
+          "Index_Call_Net": -165,
+          "Index_Call_Long": 670,
+          "Index_Call_Short": 835,
+          "Index_Put_Net": 385,
+          "Index_Put_Long": 465,
+          "Index_Put_Short": 80,
+          "Stock_Futures_Net": 4659,
+          "Stock_Futures_Long": 73703,
+          "Stock_Futures_Short": 69044,
+          "Stock_Calls_Net": -40479,
+          "Stock_Calls_Long": 706,
+          "Stock_Calls_Short": 41185,
+          "Stock_Puts_Net": -1463,
+          "Stock_Puts_Long": 799,
+          "Stock_Puts_Short": 2262
+        },
+        "06-07-2026": {
+          "Index_Futures_Net": 1522,
+          "Index_Futures_Long": 1760,
+          "Index_Futures_Short": 238,
+          "Index_Call_Net": 140,
+          "Index_Call_Long": 195,
+          "Index_Call_Short": 55,
+          "Index_Put_Net": -805,
+          "Index_Put_Long": 1074,
+          "Index_Put_Short": 1879,
+          "Stock_Futures_Net": 24851,
+          "Stock_Futures_Long": 83827,
+          "Stock_Futures_Short": 58976,
+          "Stock_Calls_Net": -37069,
+          "Stock_Calls_Long": 262,
+          "Stock_Calls_Short": 37331,
+          "Stock_Puts_Net": 30,
+          "Stock_Puts_Long": 921,
+          "Stock_Puts_Short": 891
+        },
+        "07-07-2026": {
+          "Index_Futures_Net": 3148,
+          "Index_Futures_Long": 3193,
+          "Index_Futures_Short": 45,
+          "Index_Call_Net": 1005,
+          "Index_Call_Long": 1170,
+          "Index_Call_Short": 165,
+          "Index_Put_Net": 762,
+          "Index_Put_Long": 2483,
+          "Index_Put_Short": 1721,
+          "Stock_Futures_Net": 17840,
+          "Stock_Futures_Long": 105193,
+          "Stock_Futures_Short": 87353,
+          "Stock_Calls_Net": -45097,
+          "Stock_Calls_Long": 484,
+          "Stock_Calls_Short": 45581,
+          "Stock_Puts_Net": -1781,
+          "Stock_Puts_Long": 424,
+          "Stock_Puts_Short": 2205
+        }
+      },
+      "FII": {
+        "01-07-2026": {
+          "Index_Futures_Net": -3649,
+          "Index_Futures_Long": 8329,
+          "Index_Futures_Short": 11978,
+          "Index_Call_Net": -16022,
+          "Index_Call_Long": 1602749,
+          "Index_Call_Short": 1618771,
+          "Index_Put_Net": -26752,
+          "Index_Put_Long": 1679752,
+          "Index_Put_Short": 1706504,
+          "Stock_Futures_Net": -13245,
+          "Stock_Futures_Long": 254926,
+          "Stock_Futures_Short": 268171,
+          "Stock_Calls_Net": -16218,
+          "Stock_Calls_Long": 112829,
+          "Stock_Calls_Short": 129047,
+          "Stock_Puts_Net": 4293,
+          "Stock_Puts_Long": 89589,
+          "Stock_Puts_Short": 85296
+        },
+        "02-07-2026": {
+          "Index_Futures_Net": 3159,
+          "Index_Futures_Long": 14087,
+          "Index_Futures_Short": 10928,
+          "Index_Call_Net": 24220,
+          "Index_Call_Long": 1973383,
+          "Index_Call_Short": 1949163,
+          "Index_Put_Net": -63741,
+          "Index_Put_Long": 1963695,
+          "Index_Put_Short": 2027436,
+          "Stock_Futures_Net": 37720,
+          "Stock_Futures_Long": 311107,
+          "Stock_Futures_Short": 273387,
+          "Stock_Calls_Net": 1581,
+          "Stock_Calls_Long": 127427,
+          "Stock_Calls_Short": 125846,
+          "Stock_Puts_Net": 9664,
+          "Stock_Puts_Long": 92937,
+          "Stock_Puts_Short": 83273
+        },
+        "03-07-2026": {
+          "Index_Futures_Net": 6133,
+          "Index_Futures_Long": 13475,
+          "Index_Futures_Short": 7342,
+          "Index_Call_Net": -8573,
+          "Index_Call_Long": 2314134,
+          "Index_Call_Short": 2322707,
+          "Index_Put_Net": 35133,
+          "Index_Put_Long": 2633504,
+          "Index_Put_Short": 2598371,
+          "Stock_Futures_Net": 12780,
+          "Stock_Futures_Long": 301682,
+          "Stock_Futures_Short": 288902,
+          "Stock_Calls_Net": -16484,
+          "Stock_Calls_Long": 179265,
+          "Stock_Calls_Short": 195749,
+          "Stock_Puts_Net": 11491,
+          "Stock_Puts_Long": 120553,
+          "Stock_Puts_Short": 109062
+        },
+        "06-07-2026": {
+          "Index_Futures_Net": 9488,
+          "Index_Futures_Long": 17088,
+          "Index_Futures_Short": 7600,
+          "Index_Call_Net": 44820,
+          "Index_Call_Long": 3473359,
+          "Index_Call_Short": 3428539,
+          "Index_Put_Net": -20148,
+          "Index_Put_Long": 3702980,
+          "Index_Put_Short": 3723128,
+          "Stock_Futures_Net": 24695,
+          "Stock_Futures_Long": 249999,
+          "Stock_Futures_Short": 225304,
+          "Stock_Calls_Net": -6777,
+          "Stock_Calls_Long": 186781,
+          "Stock_Calls_Short": 193558,
+          "Stock_Puts_Net": -2167,
+          "Stock_Puts_Long": 110242,
+          "Stock_Puts_Short": 112409
+        },
+        "07-07-2026": {
+          "Index_Futures_Net": 2441,
+          "Index_Futures_Long": 10046,
+          "Index_Futures_Short": 7605,
+          "Index_Call_Net": -377037,
+          "Index_Call_Long": 8184095,
+          "Index_Call_Short": 8561132,
+          "Index_Put_Net": 122609,
+          "Index_Put_Long": 9730830,
+          "Index_Put_Short": 9608221,
+          "Stock_Futures_Net": 31648,
+          "Stock_Futures_Long": 328521,
+          "Stock_Futures_Short": 296873,
+          "Stock_Calls_Net": -7665,
+          "Stock_Calls_Long": 226994,
+          "Stock_Calls_Short": 234659,
+          "Stock_Puts_Net": 10165,
+          "Stock_Puts_Long": 137836,
+          "Stock_Puts_Short": 127671
+        }
+      },
+      "Pro": {
+        "01-07-2026": {
+          "Index_Futures_Net": 2225,
+          "Index_Futures_Long": 17737,
+          "Index_Futures_Short": 15512,
+          "Index_Call_Net": 73173,
+          "Index_Call_Long": 11982776,
+          "Index_Call_Short": 11909603,
+          "Index_Put_Net": 5181,
+          "Index_Put_Long": 10654692,
+          "Index_Put_Short": 10649511,
+          "Stock_Futures_Net": -6405,
+          "Stock_Futures_Long": 368951,
+          "Stock_Futures_Short": 375356,
+          "Stock_Calls_Net": -18591,
+          "Stock_Calls_Long": 2074601,
+          "Stock_Calls_Short": 2093192,
+          "Stock_Puts_Net": 5510,
+          "Stock_Puts_Long": 1181581,
+          "Stock_Puts_Short": 1176071
+        },
+        "02-07-2026": {
+          "Index_Futures_Net": 2671,
+          "Index_Futures_Long": 18164,
+          "Index_Futures_Short": 15493,
+          "Index_Call_Net": 51766,
+          "Index_Call_Long": 13663059,
+          "Index_Call_Short": 13611293,
+          "Index_Put_Net": -55954,
+          "Index_Put_Long": 12583231,
+          "Index_Put_Short": 12639185,
+          "Stock_Futures_Net": -15939,
+          "Stock_Futures_Long": 355346,
+          "Stock_Futures_Short": 371285,
+          "Stock_Calls_Net": 67237,
+          "Stock_Calls_Long": 2016344,
+          "Stock_Calls_Short": 1949107,
+          "Stock_Puts_Net": -14292,
+          "Stock_Puts_Long": 1098776,
+          "Stock_Puts_Short": 1113068
+        },
+        "03-07-2026": {
+          "Index_Futures_Net": -822,
+          "Index_Futures_Long": 20756,
+          "Index_Futures_Short": 21578,
+          "Index_Call_Net": -21194,
+          "Index_Call_Long": 22384789,
+          "Index_Call_Short": 22405983,
+          "Index_Put_Net": 70,
+          "Index_Put_Long": 23909727,
+          "Index_Put_Short": 23909657,
+          "Stock_Futures_Net": -15965,
+          "Stock_Futures_Long": 396766,
+          "Stock_Futures_Short": 412731,
+          "Stock_Calls_Net": 3228,
+          "Stock_Calls_Long": 2320937,
+          "Stock_Calls_Short": 2317709,
+          "Stock_Puts_Net": 11678,
+          "Stock_Puts_Long": 1273133,
+          "Stock_Puts_Short": 1261455
+        },
+        "06-07-2026": {
+          "Index_Futures_Net": -2945,
+          "Index_Futures_Long": 13446,
+          "Index_Futures_Short": 16391,
+          "Index_Call_Net": -3367,
+          "Index_Call_Long": 35248941,
+          "Index_Call_Short": 35252308,
+          "Index_Put_Net": -78726,
+          "Index_Put_Long": 34721560,
+          "Index_Put_Short": 34800286,
+          "Stock_Futures_Net": -16454,
+          "Stock_Futures_Long": 325838,
+          "Stock_Futures_Short": 342292,
+          "Stock_Calls_Net": 21100,
+          "Stock_Calls_Long": 1982791,
+          "Stock_Calls_Short": 1961691,
+          "Stock_Puts_Net": -15966,
+          "Stock_Puts_Long": 1039069,
+          "Stock_Puts_Short": 1055035
+        },
+        "07-07-2026": {
+          "Index_Futures_Net": -5116,
+          "Index_Futures_Long": 15625,
+          "Index_Futures_Short": 20741,
+          "Index_Call_Net": 199111,
+          "Index_Call_Long": 107696779,
+          "Index_Call_Short": 107497668,
+          "Index_Put_Net": 411759,
+          "Index_Put_Long": 125162220,
+          "Index_Put_Short": 124750461,
+          "Stock_Futures_Net": -20597,
+          "Stock_Futures_Long": 370719,
+          "Stock_Futures_Short": 391316,
+          "Stock_Calls_Net": -47193,
+          "Stock_Calls_Long": 2218474,
+          "Stock_Calls_Short": 2265667,
+          "Stock_Puts_Net": 7283,
+          "Stock_Puts_Long": 1300942,
+          "Stock_Puts_Short": 1293659
+        }
+      }
+    },
+    "summary_table": {
+      "oi": {
+        "Index Futures": {
+          "Client": {
+            "long_change": -4089,
+            "short_change": -3616,
+            "net_action": -473,
+            "sentiment": "Bearish",
+            "net_by_date": {
+              "07-07-2026": 164159,
+              "06-07-2026": 164632,
+              "03-07-2026": 172697,
+              "02-07-2026": 177986,
+              "01-07-2026": 187523
+            }
+          },
+          "DII": {
+            "long_change": 3148,
+            "short_change": 0,
+            "net_action": 3148,
+            "sentiment": "Bullish",
+            "net_by_date": {
+              "07-07-2026": 69244,
+              "06-07-2026": 66096,
+              "03-07-2026": 64574,
+              "02-07-2026": 64596,
+              "01-07-2026": 60889
+            }
+          },
+          "FII": {
+            "long_change": 24,
+            "short_change": -2417,
+            "net_action": 2441,
+            "sentiment": "Bullish",
+            "net_by_date": {
+              "07-07-2026": -238838,
+              "06-07-2026": -241279,
+              "03-07-2026": -250767,
+              "02-07-2026": -256900,
+              "01-07-2026": -260059
+            }
+          },
+          "Pro": {
+            "long_change": -3840,
+            "short_change": 1276,
+            "net_action": -5116,
+            "sentiment": "Bearish",
+            "net_by_date": {
+              "07-07-2026": 5435,
+              "06-07-2026": 10551,
+              "03-07-2026": 13496,
+              "02-07-2026": 14318,
+              "01-07-2026": 11647
+            }
+          },
+          "TOTAL": {
+            "long_change": -4757,
+            "short_change": -4757,
+            "net_action": 0,
+            "sentiment": "Neutral",
+            "net_by_date": {
+              "07-07-2026": 0,
+              "06-07-2026": 0,
+              "03-07-2026": 0,
+              "02-07-2026": 0,
+              "01-07-2026": 0
+            }
+          }
+        },
+        "Index Call": {
+          "Client": {
+            "long_change": -998408,
+            "short_change": -1122304,
+            "net_action": 123896,
+            "sentiment": "Bullish",
+            "net_by_date": {
+              "07-07-2026": 171328,
+              "06-07-2026": 47432,
+              "03-07-2026": 89025,
+              "02-07-2026": 59093,
+              "01-07-2026": 135014
+            }
+          },
+          "DII": {
+            "long_change": 1095,
+            "short_change": -710,
+            "net_action": 1805,
+            "sentiment": "Bullish",
+            "net_by_date": {
+              "07-07-2026": 5200,
+              "06-07-2026": 3395,
+              "03-07-2026": 3255,
+              "02-07-2026": 3420,
+              "01-07-2026": 3485
+            }
+          },
+          "FII": {
+            "long_change": -125877,
+            "short_change": -126009,
+            "net_action": 132,
+            "sentiment": "Bullish",
+            "net_by_date": {
+              "07-07-2026": -188521,
+              "06-07-2026": -188653,
+              "03-07-2026": -233473,
+              "02-07-2026": -224900,
+              "01-07-2026": -249120
+            }
+          },
+          "Pro": {
+            "long_change": -379033,
+            "short_change": -253200,
+            "net_action": -125833,
+            "sentiment": "Bearish",
+            "net_by_date": {
+              "07-07-2026": 11992,
+              "06-07-2026": 137825,
+              "03-07-2026": 141192,
+              "02-07-2026": 162387,
+              "01-07-2026": 110620
+            }
+          },
+          "TOTAL": {
+            "long_change": -1502223,
+            "short_change": -1502223,
+            "net_action": 0,
+            "sentiment": "Neutral",
+            "net_by_date": {
+              "07-07-2026": -1,
+              "06-07-2026": -1,
+              "03-07-2026": -1,
+              "02-07-2026": 0,
+              "01-07-2026": -1
+            }
+          }
+        },
+        "Index Put": {
+          "Client": {
+            "long_change": -1899744,
+            "short_change": -1897990,
+            "net_action": -1754,
+            "sentiment": "Bullish",
+            "net_by_date": {
+              "07-07-2026": -514896,
+              "06-07-2026": -513142,
+              "03-07-2026": -612821,
+              "02-07-2026": -577233,
+              "01-07-2026": -697767
+            }
+          },
+          "DII": {
+            "long_change": 12,
+            "short_change": -1550,
+            "net_action": 1562,
+            "sentiment": "Bearish",
+            "net_by_date": {
+              "07-07-2026": 25798,
+              "06-07-2026": 24236,
+              "03-07-2026": 25041,
+              "02-07-2026": 24656,
+              "01-07-2026": 25496
+            }
+          },
+          "FII": {
+            "long_change": -255139,
+            "short_change": -241895,
+            "net_action": -13244,
+            "sentiment": "Bullish",
+            "net_by_date": {
+              "07-07-2026": 443783,
+              "06-07-2026": 457027,
+              "03-07-2026": 477175,
+              "02-07-2026": 442042,
+              "01-07-2026": 505784
+            }
+          },
+          "Pro": {
+            "long_change": -614535,
+            "short_change": -627972,
+            "net_action": 13437,
+            "sentiment": "Bearish",
+            "net_by_date": {
+              "07-07-2026": 45315,
+              "06-07-2026": 31878,
+              "03-07-2026": 110605,
+              "02-07-2026": 110535,
+              "01-07-2026": 166489
+            }
+          },
+          "TOTAL": {
+            "long_change": -2769406,
+            "short_change": -2769407,
+            "net_action": 1,
+            "sentiment": "Bearish",
+            "net_by_date": {
+              "07-07-2026": 0,
+              "06-07-2026": -1,
+              "03-07-2026": 0,
+              "02-07-2026": 0,
+              "01-07-2026": 2
+            }
+          }
+        },
+        "Stock Futures": {
+          "Client": {
+            "long_change": -16840,
+            "short_change": 12051,
+            "net_action": -28891,
+            "sentiment": "Bearish",
+            "net_by_date": {
+              "07-07-2026": 2915510,
+              "06-07-2026": 2944401,
+              "03-07-2026": 2977493,
+              "02-07-2026": 2978967,
+              "01-07-2026": 2995867
+            }
+          },
+          "DII": {
+            "long_change": 618,
+            "short_change": -17222,
+            "net_action": 17840,
+            "sentiment": "Bullish",
+            "net_by_date": {
+              "07-07-2026": -3992124,
+              "06-07-2026": -4009964,
+              "03-07-2026": -4034815,
+              "02-07-2026": -4039474,
+              "01-07-2026": -4034593
+            }
+          },
+          "FII": {
+            "long_change": -10592,
+            "short_change": -42240,
+            "net_action": 31648,
+            "sentiment": "Bullish",
+            "net_by_date": {
+              "07-07-2026": 603692,
+              "06-07-2026": 572044,
+              "03-07-2026": 547349,
+              "02-07-2026": 534569,
+              "01-07-2026": 496849
+            }
+          },
+          "Pro": {
+            "long_change": 3342,
+            "short_change": 23939,
+            "net_action": -20597,
+            "sentiment": "Bearish",
+            "net_by_date": {
+              "07-07-2026": 472922,
+              "06-07-2026": 493519,
+              "03-07-2026": 509973,
+              "02-07-2026": 525938,
+              "01-07-2026": 541877
+            }
+          },
+          "TOTAL": {
+            "long_change": -23472,
+            "short_change": -23472,
+            "net_action": 0,
+            "sentiment": "Neutral",
+            "net_by_date": {
+              "07-07-2026": 0,
+              "06-07-2026": 0,
+              "03-07-2026": 0,
+              "02-07-2026": 0,
+              "01-07-2026": 0
+            }
+          }
+        },
+        "Stock Calls": {
+          "Client": {
+            "long_change": 144921,
+            "short_change": 44966,
+            "net_action": 99955,
+            "sentiment": "Bullish",
+            "net_by_date": {
+              "07-07-2026": 695747,
+              "06-07-2026": 595792,
+              "03-07-2026": 573046,
+              "02-07-2026": 519311,
+              "01-07-2026": 561359
+            }
+          },
+          "DII": {
+            "long_change": 75,
+            "short_change": 45172,
+            "net_action": -45097,
+            "sentiment": "Bearish",
+            "net_by_date": {
+              "07-07-2026": -283382,
+              "06-07-2026": -238285,
+              "03-07-2026": -201216,
+              "02-07-2026": -160737,
+              "01-07-2026": -133967
+            }
+          },
+          "FII": {
+            "long_change": 12851,
+            "short_change": 20516,
+            "net_action": -7665,
+            "sentiment": "Bearish",
+            "net_by_date": {
+              "07-07-2026": -94888,
+              "06-07-2026": -87223,
+              "03-07-2026": -80446,
+              "02-07-2026": -63962,
+              "01-07-2026": -65543
+            }
+          },
+          "Pro": {
+            "long_change": 39817,
+            "short_change": 87010,
+            "net_action": -47193,
+            "sentiment": "Bearish",
+            "net_by_date": {
+              "07-07-2026": -317477,
+              "06-07-2026": -270284,
+              "03-07-2026": -291384,
+              "02-07-2026": -294612,
+              "01-07-2026": -361849
+            }
+          },
+          "TOTAL": {
+            "long_change": 197664,
+            "short_change": 197664,
+            "net_action": 0,
+            "sentiment": "Neutral",
+            "net_by_date": {
+              "07-07-2026": 0,
+              "06-07-2026": 0,
+              "03-07-2026": 0,
+              "02-07-2026": 0,
+              "01-07-2026": 0
+            }
+          }
+        },
+        "Stock Puts": {
+          "Client": {
+            "long_change": 27361,
+            "short_change": 43028,
+            "net_action": -15667,
+            "sentiment": "Bullish",
+            "net_by_date": {
+              "07-07-2026": -264761,
+              "06-07-2026": -249094,
+              "03-07-2026": -267197,
+              "02-07-2026": -245491,
+              "01-07-2026": -250434
+            }
+          },
+          "DII": {
+            "long_change": 81,
+            "short_change": 1862,
+            "net_action": -1781,
+            "sentiment": "Bullish",
+            "net_by_date": {
+              "07-07-2026": 26770,
+              "06-07-2026": 28551,
+              "03-07-2026": 28521,
+              "02-07-2026": 29984,
+              "01-07-2026": 30299
+            }
+          },
+          "FII": {
+            "long_change": 20776,
+            "short_change": 10611,
+            "net_action": 10165,
+            "sentiment": "Bearish",
+            "net_by_date": {
+              "07-07-2026": 73143,
+              "06-07-2026": 62978,
+              "03-07-2026": 65145,
+              "02-07-2026": 53654,
+              "01-07-2026": 43990
+            }
+          },
+          "Pro": {
+            "long_change": 52190,
+            "short_change": 44907,
+            "net_action": 7283,
+            "sentiment": "Bearish",
+            "net_by_date": {
+              "07-07-2026": 164848,
+              "06-07-2026": 157565,
+              "03-07-2026": 173531,
+              "02-07-2026": 161853,
+              "01-07-2026": 176145
+            }
+          },
+          "TOTAL": {
+            "long_change": 100408,
+            "short_change": 100408,
+            "net_action": 0,
+            "sentiment": "Neutral",
+            "net_by_date": {
+              "07-07-2026": 0,
+              "06-07-2026": 0,
+              "03-07-2026": 0,
+              "02-07-2026": 0,
+              "01-07-2026": 0
+            }
+          }
+        }
+      },
+      "volume": {
+        "Index Futures": {
+          "Client": {
+            "long_value": 44003,
+            "short_value": 44476,
+            "net_action": -473,
+            "sentiment": "Bearish",
+            "net_by_date": {
+              "07-07-2026": -473,
+              "06-07-2026": -8065,
+              "03-07-2026": -5289,
+              "02-07-2026": -9537,
+              "01-07-2026": 1416
+            }
+          },
+          "DII": {
+            "long_value": 3193,
+            "short_value": 45,
+            "net_action": 3148,
+            "sentiment": "Bullish",
+            "net_by_date": {
+              "07-07-2026": 3148,
+              "06-07-2026": 1522,
+              "03-07-2026": -22,
+              "02-07-2026": 3707,
+              "01-07-2026": 8
+            }
+          },
+          "FII": {
+            "long_value": 10046,
+            "short_value": 7605,
+            "net_action": 2441,
+            "sentiment": "Bullish",
+            "net_by_date": {
+              "07-07-2026": 2441,
+              "06-07-2026": 9488,
+              "03-07-2026": 6133,
+              "02-07-2026": 3159,
+              "01-07-2026": -3649
+            }
+          },
+          "Pro": {
+            "long_value": 15625,
+            "short_value": 20741,
+            "net_action": -5116,
+            "sentiment": "Bearish",
+            "net_by_date": {
+              "07-07-2026": -5116,
+              "06-07-2026": -2945,
+              "03-07-2026": -822,
+              "02-07-2026": 2671,
+              "01-07-2026": 2225
+            }
+          },
+          "TOTAL": {
+            "long_value": 72867,
+            "short_value": 72867,
+            "net_action": 0,
+            "sentiment": "Neutral",
+            "net_by_date": {
+              "07-07-2026": 0,
+              "06-07-2026": 0,
+              "03-07-2026": 0,
+              "02-07-2026": 0,
+              "01-07-2026": 0
+            }
+          }
+        },
+        "Index Call": {
+          "Client": {
+            "long_value": 67402038,
+            "short_value": 67225117,
+            "net_action": 176921,
+            "sentiment": "Bullish",
+            "net_by_date": {
+              "07-07-2026": 176921,
+              "06-07-2026": -41593,
+              "03-07-2026": 29932,
+              "02-07-2026": -75921,
+              "01-07-2026": -57286
+            }
+          },
+          "DII": {
+            "long_value": 1170,
+            "short_value": 165,
+            "net_action": 1005,
+            "sentiment": "Bullish",
+            "net_by_date": {
+              "07-07-2026": 1005,
+              "06-07-2026": 140,
+              "03-07-2026": -165,
+              "02-07-2026": -65,
+              "01-07-2026": 135
+            }
+          },
+          "FII": {
+            "long_value": 8184095,
+            "short_value": 8561132,
+            "net_action": -377037,
+            "sentiment": "Bearish",
+            "net_by_date": {
+              "07-07-2026": -377037,
+              "06-07-2026": 44820,
+              "03-07-2026": -8573,
+              "02-07-2026": 24220,
+              "01-07-2026": -16022
+            }
+          },
+          "Pro": {
+            "long_value": 107696779,
+            "short_value": 107497668,
+            "net_action": 199111,
+            "sentiment": "Bullish",
+            "net_by_date": {
+              "07-07-2026": 199111,
+              "06-07-2026": -3367,
+              "03-07-2026": -21194,
+              "02-07-2026": 51766,
+              "01-07-2026": 73173
+            }
+          },
+          "TOTAL": {
+            "long_value": 183284082,
+            "short_value": 183284082,
+            "net_action": 0,
+            "sentiment": "Neutral",
+            "net_by_date": {
+              "07-07-2026": 0,
+              "06-07-2026": 0,
+              "03-07-2026": 0,
+              "02-07-2026": 0,
+              "01-07-2026": 0
+            }
+          }
+        },
+        "Index Put": {
+          "Client": {
+            "long_value": 70517568,
+            "short_value": 71052698,
+            "net_action": -535130,
+            "sentiment": "Bullish",
+            "net_by_date": {
+              "07-07-2026": -535130,
+              "06-07-2026": 99679,
+              "03-07-2026": -35588,
+              "02-07-2026": 120535,
+              "01-07-2026": 19101
+            }
+          },
+          "DII": {
+            "long_value": 2483,
+            "short_value": 1721,
+            "net_action": 762,
+            "sentiment": "Bearish",
+            "net_by_date": {
+              "07-07-2026": 762,
+              "06-07-2026": -805,
+              "03-07-2026": 385,
+              "02-07-2026": -840,
+              "01-07-2026": 2470
+            }
+          },
+          "FII": {
+            "long_value": 9730830,
+            "short_value": 9608221,
+            "net_action": 122609,
+            "sentiment": "Bearish",
+            "net_by_date": {
+              "07-07-2026": 122609,
+              "06-07-2026": -20148,
+              "03-07-2026": 35133,
+              "02-07-2026": -63741,
+              "01-07-2026": -26752
+            }
+          },
+          "Pro": {
+            "long_value": 125162220,
+            "short_value": 124750461,
+            "net_action": 411759,
+            "sentiment": "Bearish",
+            "net_by_date": {
+              "07-07-2026": 411759,
+              "06-07-2026": -78726,
+              "03-07-2026": 70,
+              "02-07-2026": -55954,
+              "01-07-2026": 5181
+            }
+          },
+          "TOTAL": {
+            "long_value": 205413101,
+            "short_value": 205413101,
+            "net_action": 0,
+            "sentiment": "Neutral",
+            "net_by_date": {
+              "07-07-2026": 0,
+              "06-07-2026": 0,
+              "03-07-2026": 0,
+              "02-07-2026": 0,
+              "01-07-2026": 0
+            }
+          }
+        },
+        "Stock Futures": {
+          "Client": {
+            "long_value": 300539,
+            "short_value": 329430,
+            "net_action": -28891,
+            "sentiment": "Bearish",
+            "net_by_date": {
+              "07-07-2026": -28891,
+              "06-07-2026": -33092,
+              "03-07-2026": -1474,
+              "02-07-2026": -16900,
+              "01-07-2026": 21762
+            }
+          },
+          "DII": {
+            "long_value": 105193,
+            "short_value": 87353,
+            "net_action": 17840,
+            "sentiment": "Bullish",
+            "net_by_date": {
+              "07-07-2026": 17840,
+              "06-07-2026": 24851,
+              "03-07-2026": 4659,
+              "02-07-2026": -4881,
+              "01-07-2026": -2112
+            }
+          },
+          "FII": {
+            "long_value": 328521,
+            "short_value": 296873,
+            "net_action": 31648,
+            "sentiment": "Bullish",
+            "net_by_date": {
+              "07-07-2026": 31648,
+              "06-07-2026": 24695,
+              "03-07-2026": 12780,
+              "02-07-2026": 37720,
+              "01-07-2026": -13245
+            }
+          },
+          "Pro": {
+            "long_value": 370719,
+            "short_value": 391316,
+            "net_action": -20597,
+            "sentiment": "Bearish",
+            "net_by_date": {
+              "07-07-2026": -20597,
+              "06-07-2026": -16454,
+              "03-07-2026": -15965,
+              "02-07-2026": -15939,
+              "01-07-2026": -6405
+            }
+          },
+          "TOTAL": {
+            "long_value": 1104972,
+            "short_value": 1104972,
+            "net_action": 0,
+            "sentiment": "Neutral",
+            "net_by_date": {
+              "07-07-2026": 0,
+              "06-07-2026": 0,
+              "03-07-2026": 0,
+              "02-07-2026": 0,
+              "01-07-2026": 0
+            }
+          }
+        },
+        "Stock Calls": {
+          "Client": {
+            "long_value": 1267969,
+            "short_value": 1168014,
+            "net_action": 99955,
+            "sentiment": "Bullish",
+            "net_by_date": {
+              "07-07-2026": 99955,
+              "06-07-2026": 22746,
+              "03-07-2026": 53735,
+              "02-07-2026": -42048,
+              "01-07-2026": 98427
+            }
+          },
+          "DII": {
+            "long_value": 484,
+            "short_value": 45581,
+            "net_action": -45097,
+            "sentiment": "Bearish",
+            "net_by_date": {
+              "07-07-2026": -45097,
+              "06-07-2026": -37069,
+              "03-07-2026": -40479,
+              "02-07-2026": -26770,
+              "01-07-2026": -63618
+            }
+          },
+          "FII": {
+            "long_value": 226994,
+            "short_value": 234659,
+            "net_action": -7665,
+            "sentiment": "Bearish",
+            "net_by_date": {
+              "07-07-2026": -7665,
+              "06-07-2026": -6777,
+              "03-07-2026": -16484,
+              "02-07-2026": 1581,
+              "01-07-2026": -16218
+            }
+          },
+          "Pro": {
+            "long_value": 2218474,
+            "short_value": 2265667,
+            "net_action": -47193,
+            "sentiment": "Bearish",
+            "net_by_date": {
+              "07-07-2026": -47193,
+              "06-07-2026": 21100,
+              "03-07-2026": 3228,
+              "02-07-2026": 67237,
+              "01-07-2026": -18591
+            }
+          },
+          "TOTAL": {
+            "long_value": 3713921,
+            "short_value": 3713921,
+            "net_action": 0,
+            "sentiment": "Neutral",
+            "net_by_date": {
+              "07-07-2026": 0,
+              "06-07-2026": 0,
+              "03-07-2026": 0,
+              "02-07-2026": 0,
+              "01-07-2026": 0
+            }
+          }
+        },
+        "Stock Puts": {
+          "Client": {
+            "long_value": 473259,
+            "short_value": 488926,
+            "net_action": -15667,
+            "sentiment": "Bullish",
+            "net_by_date": {
+              "07-07-2026": -15667,
+              "06-07-2026": 18103,
+              "03-07-2026": -21706,
+              "02-07-2026": 4943,
+              "01-07-2026": -10214
+            }
+          },
+          "DII": {
+            "long_value": 424,
+            "short_value": 2205,
+            "net_action": -1781,
+            "sentiment": "Bullish",
+            "net_by_date": {
+              "07-07-2026": -1781,
+              "06-07-2026": 30,
+              "03-07-2026": -1463,
+              "02-07-2026": -315,
+              "01-07-2026": 411
+            }
+          },
+          "FII": {
+            "long_value": 137836,
+            "short_value": 127671,
+            "net_action": 10165,
+            "sentiment": "Bearish",
+            "net_by_date": {
+              "07-07-2026": 10165,
+              "06-07-2026": -2167,
+              "03-07-2026": 11491,
+              "02-07-2026": 9664,
+              "01-07-2026": 4293
+            }
+          },
+          "Pro": {
+            "long_value": 1300942,
+            "short_value": 1293659,
+            "net_action": 7283,
+            "sentiment": "Bearish",
+            "net_by_date": {
+              "07-07-2026": 7283,
+              "06-07-2026": -15966,
+              "03-07-2026": 11678,
+              "02-07-2026": -14292,
+              "01-07-2026": 5510
+            }
+          },
+          "TOTAL": {
+            "long_value": 1912461,
+            "short_value": 1912461,
+            "net_action": 0,
+            "sentiment": "Neutral",
+            "net_by_date": {
+              "07-07-2026": 0,
+              "06-07-2026": 0,
+              "03-07-2026": 0,
+              "02-07-2026": 0,
+              "01-07-2026": 0
+            }
+          }
+        }
+      }
+    },
+    "activity_table": {
+      "oi": {
+        "Client": {
+          "Index Futures": {
+            "action": "Sold Net",
+            "net_qty": -473,
+            "sentiment": "Bearish"
+          },
+          "Index Call": {
+            "action": "Bought Net",
+            "net_qty": 123896,
+            "sentiment": "Bullish"
+          },
+          "Index Put": {
+            "action": "Sold Net",
+            "net_qty": -1754,
+            "sentiment": "Bullish"
+          },
+          "Stock Futures": {
+            "action": "Sold Net",
+            "net_qty": -28891,
+            "sentiment": "Bearish"
+          },
+          "Stock Calls": {
+            "action": "Bought Net",
+            "net_qty": 99955,
+            "sentiment": "Bullish"
+          },
+          "Stock Puts": {
+            "action": "Sold Net",
+            "net_qty": -15667,
+            "sentiment": "Bullish"
+          }
+        },
+        "DII": {
+          "Index Futures": {
+            "action": "Bought Net",
+            "net_qty": 3148,
+            "sentiment": "Bullish"
+          },
+          "Index Call": {
+            "action": "Bought Net",
+            "net_qty": 1805,
+            "sentiment": "Bullish"
+          },
+          "Index Put": {
+            "action": "Bought Net",
+            "net_qty": 1562,
+            "sentiment": "Bearish"
+          },
+          "Stock Futures": {
+            "action": "Bought Net",
+            "net_qty": 17840,
+            "sentiment": "Bullish"
+          },
+          "Stock Calls": {
+            "action": "Sold Net",
+            "net_qty": -45097,
+            "sentiment": "Bearish"
+          },
+          "Stock Puts": {
+            "action": "Sold Net",
+            "net_qty": -1781,
+            "sentiment": "Bullish"
+          }
+        },
+        "FII": {
+          "Index Futures": {
+            "action": "Bought Net",
+            "net_qty": 2441,
+            "sentiment": "Bullish"
+          },
+          "Index Call": {
+            "action": "Bought Net",
+            "net_qty": 132,
+            "sentiment": "Bullish"
+          },
+          "Index Put": {
+            "action": "Sold Net",
+            "net_qty": -13244,
+            "sentiment": "Bullish"
+          },
+          "Stock Futures": {
+            "action": "Bought Net",
+            "net_qty": 31648,
+            "sentiment": "Bullish"
+          },
+          "Stock Calls": {
+            "action": "Sold Net",
+            "net_qty": -7665,
+            "sentiment": "Bearish"
+          },
+          "Stock Puts": {
+            "action": "Bought Net",
+            "net_qty": 10165,
+            "sentiment": "Bearish"
+          }
+        },
+        "Pro": {
+          "Index Futures": {
+            "action": "Sold Net",
+            "net_qty": -5116,
+            "sentiment": "Bearish"
+          },
+          "Index Call": {
+            "action": "Sold Net",
+            "net_qty": -125833,
+            "sentiment": "Bearish"
+          },
+          "Index Put": {
+            "action": "Bought Net",
+            "net_qty": 13437,
+            "sentiment": "Bearish"
+          },
+          "Stock Futures": {
+            "action": "Sold Net",
+            "net_qty": -20597,
+            "sentiment": "Bearish"
+          },
+          "Stock Calls": {
+            "action": "Sold Net",
+            "net_qty": -47193,
+            "sentiment": "Bearish"
+          },
+          "Stock Puts": {
+            "action": "Bought Net",
+            "net_qty": 7283,
+            "sentiment": "Bearish"
+          }
+        }
+      },
+      "volume": {
+        "Client": {
+          "Index Futures": {
+            "action": "Sold Net",
+            "net_qty": -473,
+            "sentiment": "Bearish"
+          },
+          "Index Call": {
+            "action": "Bought Net",
+            "net_qty": 176921,
+            "sentiment": "Bullish"
+          },
+          "Index Put": {
+            "action": "Sold Net",
+            "net_qty": -535130,
+            "sentiment": "Bullish"
+          },
+          "Stock Futures": {
+            "action": "Sold Net",
+            "net_qty": -28891,
+            "sentiment": "Bearish"
+          },
+          "Stock Calls": {
+            "action": "Bought Net",
+            "net_qty": 99955,
+            "sentiment": "Bullish"
+          },
+          "Stock Puts": {
+            "action": "Sold Net",
+            "net_qty": -15667,
+            "sentiment": "Bullish"
+          }
+        },
+        "DII": {
+          "Index Futures": {
+            "action": "Bought Net",
+            "net_qty": 3148,
+            "sentiment": "Bullish"
+          },
+          "Index Call": {
+            "action": "Bought Net",
+            "net_qty": 1005,
+            "sentiment": "Bullish"
+          },
+          "Index Put": {
+            "action": "Bought Net",
+            "net_qty": 762,
+            "sentiment": "Bearish"
+          },
+          "Stock Futures": {
+            "action": "Bought Net",
+            "net_qty": 17840,
+            "sentiment": "Bullish"
+          },
+          "Stock Calls": {
+            "action": "Sold Net",
+            "net_qty": -45097,
+            "sentiment": "Bearish"
+          },
+          "Stock Puts": {
+            "action": "Sold Net",
+            "net_qty": -1781,
+            "sentiment": "Bullish"
+          }
+        },
+        "FII": {
+          "Index Futures": {
+            "action": "Bought Net",
+            "net_qty": 2441,
+            "sentiment": "Bullish"
+          },
+          "Index Call": {
+            "action": "Sold Net",
+            "net_qty": -377037,
+            "sentiment": "Bearish"
+          },
+          "Index Put": {
+            "action": "Bought Net",
+            "net_qty": 122609,
+            "sentiment": "Bearish"
+          },
+          "Stock Futures": {
+            "action": "Bought Net",
+            "net_qty": 31648,
+            "sentiment": "Bullish"
+          },
+          "Stock Calls": {
+            "action": "Sold Net",
+            "net_qty": -7665,
+            "sentiment": "Bearish"
+          },
+          "Stock Puts": {
+            "action": "Bought Net",
+            "net_qty": 10165,
+            "sentiment": "Bearish"
+          }
+        },
+        "Pro": {
+          "Index Futures": {
+            "action": "Sold Net",
+            "net_qty": -5116,
+            "sentiment": "Bearish"
+          },
+          "Index Call": {
+            "action": "Bought Net",
+            "net_qty": 199111,
+            "sentiment": "Bullish"
+          },
+          "Index Put": {
+            "action": "Bought Net",
+            "net_qty": 411759,
+            "sentiment": "Bearish"
+          },
+          "Stock Futures": {
+            "action": "Sold Net",
+            "net_qty": -20597,
+            "sentiment": "Bearish"
+          },
+          "Stock Calls": {
+            "action": "Sold Net",
+            "net_qty": -47193,
+            "sentiment": "Bearish"
+          },
+          "Stock Puts": {
+            "action": "Bought Net",
+            "net_qty": 7283,
+            "sentiment": "Bearish"
+          }
+        }
+      }
+    }
+  },
+  "raw_csv_data": {
+    "oi_files": {
+      "01-07-2026": [
+        {
+          "Client_Type": "Client",
+          "Future_Index_Long": 251066,
+          "Future_Index_Short": 63543,
+          "Future_Stock_Long": 3194768,
+          "Future_Stock_Short": 198901,
+          "Option_Index_Call_Long": 2163161,
+          "Option_Index_Put_Long": 1888743,
+          "Option_Index_Call_Short": 2028147,
+          "Option_Index_Put_Short": 2586510,
+          "Option_Stock_Call_Long": 1345153,
+          "Option_Stock_Put_Long": 502739,
+          "Option_Stock_Call_Short": 783794,
+          "Option_Stock_Put_Short": 753173,
+          "Total_Long_Contracts": 9345630,
+          "Total_Short_Contracts": 6414068
+        },
+        {
+          "Client_Type": "DII",
+          "Future_Index_Long": 72675,
+          "Future_Index_Short": 11786,
+          "Future_Stock_Long": 253022,
+          "Future_Stock_Short": 4287615,
+          "Option_Index_Call_Long": 3485,
+          "Option_Index_Put_Long": 25675,
+          "Option_Index_Call_Short": 0,
+          "Option_Index_Put_Short": 179,
+          "Option_Stock_Call_Long": 125,
+          "Option_Stock_Put_Long": 33238,
+          "Option_Stock_Call_Short": 134092,
+          "Option_Stock_Put_Short": 2939,
+          "Total_Long_Contracts": 388220,
+          "Total_Short_Contracts": 4436611
+        },
+        {
+          "Client_Type": "FII",
+          "Future_Index_Long": 32476,
+          "Future_Index_Short": 292535,
+          "Future_Stock_Long": 3771958,
+          "Future_Stock_Short": 3275109,
+          "Option_Index_Call_Long": 424988,
+          "Option_Index_Put_Long": 881237,
+          "Option_Index_Call_Short": 674108,
+          "Option_Index_Put_Short": 375453,
+          "Option_Stock_Call_Long": 89291,
+          "Option_Stock_Put_Long": 142092,
+          "Option_Stock_Call_Short": 154834,
+          "Option_Stock_Put_Short": 98102,
+          "Total_Long_Contracts": 5342042,
+          "Total_Short_Contracts": 4870141
+        },
+        {
+          "Client_Type": "Pro",
+          "Future_Index_Long": 40082,
+          "Future_Index_Short": 28435,
+          "Future_Stock_Long": 869585,
+          "Future_Stock_Short": 327708,
+          "Option_Index_Call_Long": 736795,
+          "Option_Index_Put_Long": 907476,
+          "Option_Index_Call_Short": 626175,
+          "Option_Index_Put_Short": 740987,
+          "Option_Stock_Call_Long": 595463,
+          "Option_Stock_Put_Long": 727741,
+          "Option_Stock_Call_Short": 957312,
+          "Option_Stock_Put_Short": 551596,
+          "Total_Long_Contracts": 3877142,
+          "Total_Short_Contracts": 3232213
+        },
+        {
+          "Client_Type": "TOTAL",
+          "Future_Index_Long": 396299,
+          "Future_Index_Short": 396299,
+          "Future_Stock_Long": 8089333,
+          "Future_Stock_Short": 8089333,
+          "Option_Index_Call_Long": 3328429,
+          "Option_Index_Put_Long": 3703130,
+          "Option_Index_Call_Short": 3328429,
+          "Option_Index_Put_Short": 3703130,
+          "Option_Stock_Call_Long": 2030032,
+          "Option_Stock_Put_Long": 1405810,
+          "Option_Stock_Call_Short": 2030032,
+          "Option_Stock_Put_Short": 1405810,
+          "Total_Long_Contracts": 18953033,
+          "Total_Short_Contracts": 18953033
+        }
+      ],
+      "02-07-2026": [
+        {
+          "Client_Type": "Client",
+          "Future_Index_Long": 243441,
+          "Future_Index_Short": 65455,
+          "Future_Stock_Long": 3188761,
+          "Future_Stock_Short": 209794,
+          "Option_Index_Call_Long": 2268313,
+          "Option_Index_Put_Long": 2447661,
+          "Option_Index_Call_Short": 2209220,
+          "Option_Index_Put_Short": 3024894,
+          "Option_Stock_Call_Long": 1398494,
+          "Option_Stock_Put_Long": 552702,
+          "Option_Stock_Call_Short": 879183,
+          "Option_Stock_Put_Short": 798193,
+          "Total_Long_Contracts": 10099372,
+          "Total_Short_Contracts": 7186739
+        },
+        {
+          "Client_Type": "DII",
+          "Future_Index_Long": 76185,
+          "Future_Index_Short": 11589,
+          "Future_Stock_Long": 260380,
+          "Future_Stock_Short": 4299854,
+          "Option_Index_Call_Long": 3460,
+          "Option_Index_Put_Long": 25675,
+          "Option_Index_Call_Short": 40,
+          "Option_Index_Put_Short": 1019,
+          "Option_Stock_Call_Long": 91,
+          "Option_Stock_Put_Long": 34259,
+          "Option_Stock_Call_Short": 160828,
+          "Option_Stock_Put_Short": 4275,
+          "Total_Long_Contracts": 400050,
+          "Total_Short_Contracts": 4477605
+        },
+        {
+          "Client_Type": "FII",
+          "Future_Index_Long": 29443,
+          "Future_Index_Short": 286343,
+          "Future_Stock_Long": 3804985,
+          "Future_Stock_Short": 3270416,
+          "Option_Index_Call_Long": 439185,
+          "Option_Index_Put_Long": 859057,
+          "Option_Index_Call_Short": 664085,
+          "Option_Index_Put_Short": 417015,
+          "Option_Stock_Call_Long": 120063,
+          "Option_Stock_Put_Long": 171871,
+          "Option_Stock_Call_Short": 184025,
+          "Option_Stock_Put_Short": 118217,
+          "Total_Long_Contracts": 5424604,
+          "Total_Short_Contracts": 4940101
+        },
+        {
+          "Client_Type": "Pro",
+          "Future_Index_Long": 40808,
+          "Future_Index_Short": 26490,
+          "Future_Stock_Long": 865927,
+          "Future_Stock_Short": 339989,
+          "Option_Index_Call_Long": 772614,
+          "Option_Index_Put_Long": 974285,
+          "Option_Index_Call_Short": 610227,
+          "Option_Index_Put_Short": 863750,
+          "Option_Stock_Call_Long": 703710,
+          "Option_Stock_Put_Long": 771167,
+          "Option_Stock_Call_Short": 998322,
+          "Option_Stock_Put_Short": 609314,
+          "Total_Long_Contracts": 4128511,
+          "Total_Short_Contracts": 3448093
+        },
+        {
+          "Client_Type": "TOTAL",
+          "Future_Index_Long": 389877,
+          "Future_Index_Short": 389877,
+          "Future_Stock_Long": 8120053,
+          "Future_Stock_Short": 8120053,
+          "Option_Index_Call_Long": 3483572,
+          "Option_Index_Put_Long": 4306678,
+          "Option_Index_Call_Short": 3483572,
+          "Option_Index_Put_Short": 4306678,
+          "Option_Stock_Call_Long": 2222358,
+          "Option_Stock_Put_Long": 1529999,
+          "Option_Stock_Call_Short": 2222358,
+          "Option_Stock_Put_Short": 1529999,
+          "Total_Long_Contracts": 20052537,
+          "Total_Short_Contracts": 20052537
+        }
+      ],
+      "03-07-2026": [
+        {
+          "Client_Type": "TOTAL",
+          "Future_Index_Long": 390678,
+          "Future_Index_Short": 390678,
+          "Future_Stock_Long": 8167738,
+          "Future_Stock_Short": 8167738,
+          "Option_Index_Call_Long": 4509560,
+          "Option_Index_Put_Long": 4722015,
+          "Option_Index_Call_Short": 4509560,
+          "Option_Index_Put_Short": 4722015,
+          "Option_Stock_Call_Long": 2483125,
+          "Option_Stock_Put_Long": 1669412,
+          "Option_Stock_Call_Short": 2483125,
+          "Option_Stock_Put_Short": 1669412,
+          "Total_Long_Contracts": 21942527,
+          "Total_Short_Contracts": 21942527
+        },
+        {
+          "Client_Type": "Pro",
+          "Future_Index_Long": 44875,
+          "Future_Index_Short": 31379,
+          "Future_Stock_Long": 866163,
+          "Future_Stock_Short": 356190,
+          "Option_Index_Call_Long": 929076,
+          "Option_Index_Put_Long": 1027040,
+          "Option_Index_Call_Short": 787884,
+          "Option_Index_Put_Short": 916435,
+          "Option_Stock_Call_Long": 801053,
+          "Option_Stock_Put_Long": 838873,
+          "Option_Stock_Call_Short": 1092437,
+          "Option_Stock_Put_Short": 665342,
+          "Total_Long_Contracts": 4507080,
+          "Total_Short_Contracts": 3849667
+        },
+        {
+          "Client_Type": "FII",
+          "Future_Index_Long": 29772,
+          "Future_Index_Short": 280539,
+          "Future_Stock_Long": 3835098,
+          "Future_Stock_Short": 3287749,
+          "Option_Index_Call_Long": 479396,
+          "Option_Index_Put_Long": 921556,
+          "Option_Index_Call_Short": 712869,
+          "Option_Index_Put_Short": 444381,
+          "Option_Stock_Call_Long": 138001,
+          "Option_Stock_Put_Long": 199213,
+          "Option_Stock_Call_Short": 218447,
+          "Option_Stock_Put_Short": 134068,
+          "Total_Long_Contracts": 5603036,
+          "Total_Short_Contracts": 5078053
+        },
+        {
+          "Client_Type": "DII",
+          "Future_Index_Long": 76163,
+          "Future_Index_Short": 11589,
+          "Future_Stock_Long": 273405,
+          "Future_Stock_Short": 4308220,
+          "Option_Index_Call_Long": 4090,
+          "Option_Index_Put_Long": 26055,
+          "Option_Index_Call_Short": 835,
+          "Option_Index_Put_Short": 1014,
+          "Option_Stock_Call_Long": 329,
+          "Option_Stock_Put_Long": 34684,
+          "Option_Stock_Call_Short": 201545,
+          "Option_Stock_Put_Short": 6163,
+          "Total_Long_Contracts": 414726,
+          "Total_Short_Contracts": 4529366
+        },
+        {
+          "Client_Type": "Client",
+          "Future_Index_Long": 239868,
+          "Future_Index_Short": 67171,
+          "Future_Stock_Long": 3193072,
+          "Future_Stock_Short": 215579,
+          "Option_Index_Call_Long": 3096998,
+          "Option_Index_Put_Long": 2747363,
+          "Option_Index_Call_Short": 3007973,
+          "Option_Index_Put_Short": 3360184,
+          "Option_Stock_Call_Long": 1543742,
+          "Option_Stock_Put_Long": 596642,
+          "Option_Stock_Call_Short": 970696,
+          "Option_Stock_Put_Short": 863839,
+          "Total_Long_Contracts": 11417685,
+          "Total_Short_Contracts": 8485442
+        }
+      ],
+      "06-07-2026": [
+        {
+          "Client_Type": "Client",
+          "Future_Index_Long": 232341,
+          "Future_Index_Short": 67709,
+          "Future_Stock_Long": 3179272,
+          "Future_Stock_Short": 234871,
+          "Option_Index_Call_Long": 2801650,
+          "Option_Index_Put_Long": 3400685,
+          "Option_Index_Call_Short": 2754218,
+          "Option_Index_Put_Short": 3913827,
+          "Option_Stock_Call_Long": 1634622,
+          "Option_Stock_Put_Long": 648181,
+          "Option_Stock_Call_Short": 1038830,
+          "Option_Stock_Put_Short": 897275,
+          "Total_Long_Contracts": 11896752,
+          "Total_Short_Contracts": 8906730
+        },
+        {
+          "Client_Type": "DII",
+          "Future_Index_Long": 77668,
+          "Future_Index_Short": 11572,
+          "Future_Stock_Long": 287044,
+          "Future_Stock_Short": 4297008,
+          "Option_Index_Call_Long": 4195,
+          "Option_Index_Put_Long": 26015,
+          "Option_Index_Call_Short": 800,
+          "Option_Index_Put_Short": 1779,
+          "Option_Stock_Call_Long": 359,
+          "Option_Stock_Put_Long": 35410,
+          "Option_Stock_Call_Short": 238644,
+          "Option_Stock_Put_Short": 6859,
+          "Total_Long_Contracts": 430691,
+          "Total_Short_Contracts": 4556662
+        },
+        {
+          "Client_Type": "FII",
+          "Future_Index_Long": 32686,
+          "Future_Index_Short": 273965,
+          "Future_Stock_Long": 3856372,
+          "Future_Stock_Short": 3284328,
+          "Option_Index_Call_Long": 481814,
+          "Option_Index_Put_Long": 973972,
+          "Option_Index_Call_Short": 670467,
+          "Option_Index_Put_Short": 516945,
+          "Option_Stock_Call_Long": 151938,
+          "Option_Stock_Put_Long": 214429,
+          "Option_Stock_Call_Short": 239161,
+          "Option_Stock_Put_Short": 151451,
+          "Total_Long_Contracts": 5711211,
+          "Total_Short_Contracts": 5136316
+        },
+        {
+          "Client_Type": "Pro",
+          "Future_Index_Long": 42645,
+          "Future_Index_Short": 32094,
+          "Future_Stock_Long": 864025,
+          "Future_Stock_Short": 370506,
+          "Option_Index_Call_Long": 962571,
+          "Option_Index_Put_Long": 1246877,
+          "Option_Index_Call_Short": 824746,
+          "Option_Index_Put_Short": 1214999,
+          "Option_Stock_Call_Long": 869717,
+          "Option_Stock_Put_Long": 869926,
+          "Option_Stock_Call_Short": 1140001,
+          "Option_Stock_Put_Short": 712361,
+          "Total_Long_Contracts": 4855761,
+          "Total_Short_Contracts": 4294706
+        },
+        {
+          "Client_Type": "TOTAL",
+          "Future_Index_Long": 385340,
+          "Future_Index_Short": 385340,
+          "Future_Stock_Long": 8186713,
+          "Future_Stock_Short": 8186713,
+          "Option_Index_Call_Long": 4250230,
+          "Option_Index_Put_Long": 5647550,
+          "Option_Index_Call_Short": 4250230,
+          "Option_Index_Put_Short": 5647550,
+          "Option_Stock_Call_Long": 2656636,
+          "Option_Stock_Put_Long": 1767946,
+          "Option_Stock_Call_Short": 2656636,
+          "Option_Stock_Put_Short": 1767946,
+          "Total_Long_Contracts": 22894415,
+          "Total_Short_Contracts": 22894415
+        }
+      ],
+      "07-07-2026": [
+        {
+          "Client_Type": "Client",
+          "Future_Index_Long": 228252,
+          "Future_Index_Short": 64093,
+          "Future_Stock_Long": 3162432,
+          "Future_Stock_Short": 246922,
+          "Option_Index_Call_Long": 1803242,
+          "Option_Index_Put_Long": 1500941,
+          "Option_Index_Call_Short": 1631914,
+          "Option_Index_Put_Short": 2015837,
+          "Option_Stock_Call_Long": 1779543,
+          "Option_Stock_Put_Long": 675542,
+          "Option_Stock_Call_Short": 1083796,
+          "Option_Stock_Put_Short": 940303,
+          "Total_Long_Contracts": 9149952,
+          "Total_Short_Contracts": 5982864
+        },
+        {
+          "Client_Type": "DII",
+          "Future_Index_Long": 80816,
+          "Future_Index_Short": 11572,
+          "Future_Stock_Long": 287662,
+          "Future_Stock_Short": 4279786,
+          "Option_Index_Call_Long": 5290,
+          "Option_Index_Put_Long": 26027,
+          "Option_Index_Call_Short": 90,
+          "Option_Index_Put_Short": 229,
+          "Option_Stock_Call_Long": 434,
+          "Option_Stock_Put_Long": 35491,
+          "Option_Stock_Call_Short": 283816,
+          "Option_Stock_Put_Short": 8721,
+          "Total_Long_Contracts": 435720,
+          "Total_Short_Contracts": 4584214
+        },
+        {
+          "Client_Type": "FII",
+          "Future_Index_Long": 32710,
+          "Future_Index_Short": 271548,
+          "Future_Stock_Long": 3845780,
+          "Future_Stock_Short": 3242088,
+          "Option_Index_Call_Long": 355937,
+          "Option_Index_Put_Long": 718833,
+          "Option_Index_Call_Short": 544458,
+          "Option_Index_Put_Short": 275050,
+          "Option_Stock_Call_Long": 164789,
+          "Option_Stock_Put_Long": 235205,
+          "Option_Stock_Call_Short": 259677,
+          "Option_Stock_Put_Short": 162062,
+          "Total_Long_Contracts": 5353254,
+          "Total_Short_Contracts": 4754883
+        },
+        {
+          "Client_Type": "Pro",
+          "Future_Index_Long": 38805,
+          "Future_Index_Short": 33370,
+          "Future_Stock_Long": 867367,
+          "Future_Stock_Short": 394445,
+          "Option_Index_Call_Long": 583538,
+          "Option_Index_Put_Long": 632342,
+          "Option_Index_Call_Short": 571546,
+          "Option_Index_Put_Short": 587027,
+          "Option_Stock_Call_Long": 909534,
+          "Option_Stock_Put_Long": 922116,
+          "Option_Stock_Call_Short": 1227011,
+          "Option_Stock_Put_Short": 757268,
+          "Total_Long_Contracts": 3953702,
+          "Total_Short_Contracts": 3570667
+        },
+        {
+          "Client_Type": "TOTAL",
+          "Future_Index_Long": 380583,
+          "Future_Index_Short": 380583,
+          "Future_Stock_Long": 8163241,
+          "Future_Stock_Short": 8163241,
+          "Option_Index_Call_Long": 2748007,
+          "Option_Index_Put_Long": 2878143,
+          "Option_Index_Call_Short": 2748007,
+          "Option_Index_Put_Short": 2878143,
+          "Option_Stock_Call_Long": 2854300,
+          "Option_Stock_Put_Long": 1868354,
+          "Option_Stock_Call_Short": 2854300,
+          "Option_Stock_Put_Short": 1868354,
+          "Total_Long_Contracts": 18892629,
+          "Total_Short_Contracts": 18892629
+        }
+      ]
+    },
+    "volume_files": {
+      "01-07-2026": [
+        {
+          "Client_Type": "Client",
+          "Future_Index_Long": 38315,
+          "Future_Index_Short": 36899,
+          "Future_Stock_Long": 318985,
+          "Future_Stock_Short": 297223,
+          "Option_Index_Call_Long": 11055090,
+          "Option_Index_Put_Long": 9548800,
+          "Option_Index_Call_Short": 11112376,
+          "Option_Index_Put_Short": 9529699,
+          "Option_Stock_Call_Long": 1185213,
+          "Option_Stock_Put_Long": 424204,
+          "Option_Stock_Call_Short": 1086786,
+          "Option_Stock_Put_Short": 434418,
+          "Total_Long_Contracts": 22570607,
+          "Total_Short_Contracts": 22497401
+        },
+        {
+          "Client_Type": "DII",
+          "Future_Index_Long": 38,
+          "Future_Index_Short": 30,
+          "Future_Stock_Long": 62007,
+          "Future_Stock_Short": 64119,
+          "Option_Index_Call_Long": 160,
+          "Option_Index_Put_Long": 2470,
+          "Option_Index_Call_Short": 25,
+          "Option_Index_Put_Short": 0,
+          "Option_Stock_Call_Long": 187,
+          "Option_Stock_Put_Long": 965,
+          "Option_Stock_Call_Short": 63805,
+          "Option_Stock_Put_Short": 554,
+          "Total_Long_Contracts": 65827,
+          "Total_Short_Contracts": 128533
+        },
+        {
+          "Client_Type": "FII",
+          "Future_Index_Long": 8329,
+          "Future_Index_Short": 11978,
+          "Future_Stock_Long": 254926,
+          "Future_Stock_Short": 268171,
+          "Option_Index_Call_Long": 1602749,
+          "Option_Index_Put_Long": 1679752,
+          "Option_Index_Call_Short": 1618771,
+          "Option_Index_Put_Short": 1706504,
+          "Option_Stock_Call_Long": 112829,
+          "Option_Stock_Put_Long": 89589,
+          "Option_Stock_Call_Short": 129047,
+          "Option_Stock_Put_Short": 85296,
+          "Total_Long_Contracts": 3748174,
+          "Total_Short_Contracts": 3819767
+        },
+        {
+          "Client_Type": "Pro",
+          "Future_Index_Long": 17737,
+          "Future_Index_Short": 15512,
+          "Future_Stock_Long": 368951,
+          "Future_Stock_Short": 375356,
+          "Option_Index_Call_Long": 11982776,
+          "Option_Index_Put_Long": 10654692,
+          "Option_Index_Call_Short": 11909603,
+          "Option_Index_Put_Short": 10649511,
+          "Option_Stock_Call_Long": 2074601,
+          "Option_Stock_Put_Long": 1181581,
+          "Option_Stock_Call_Short": 2093192,
+          "Option_Stock_Put_Short": 1176071,
+          "Total_Long_Contracts": 26280338,
+          "Total_Short_Contracts": 26219245
+        },
+        {
+          "Client_Type": "TOTAL",
+          "Future_Index_Long": 64419,
+          "Future_Index_Short": 64419,
+          "Future_Stock_Long": 1004869,
+          "Future_Stock_Short": 1004869,
+          "Option_Index_Call_Long": 24640775,
+          "Option_Index_Put_Long": 21885714,
+          "Option_Index_Call_Short": 24640775,
+          "Option_Index_Put_Short": 21885714,
+          "Option_Stock_Call_Long": 3372830,
+          "Option_Stock_Put_Long": 1696339,
+          "Option_Stock_Call_Short": 3372830,
+          "Option_Stock_Put_Short": 1696339,
+          "Total_Long_Contracts": 52664946,
+          "Total_Short_Contracts": 52664946
+        }
+      ],
+      "02-07-2026": [
+        {
+          "Client_Type": "Client",
+          "Future_Index_Long": 36217,
+          "Future_Index_Short": 45754,
+          "Future_Stock_Long": 307640,
+          "Future_Stock_Short": 324540,
+          "Option_Index_Call_Long": 10421970,
+          "Option_Index_Put_Long": 9420694,
+          "Option_Index_Call_Short": 10497891,
+          "Option_Index_Put_Short": 9300159,
+          "Option_Stock_Call_Long": 1075111,
+          "Option_Stock_Put_Long": 405185,
+          "Option_Stock_Call_Short": 1117159,
+          "Option_Stock_Put_Short": 400242,
+          "Total_Long_Contracts": 21666817,
+          "Total_Short_Contracts": 21685745
+        },
+        {
+          "Client_Type": "DII",
+          "Future_Index_Long": 3707,
+          "Future_Index_Short": 0,
+          "Future_Stock_Long": 64787,
+          "Future_Stock_Short": 69668,
+          "Option_Index_Call_Long": 75,
+          "Option_Index_Put_Long": 0,
+          "Option_Index_Call_Short": 140,
+          "Option_Index_Put_Short": 840,
+          "Option_Stock_Call_Long": 158,
+          "Option_Stock_Put_Long": 1217,
+          "Option_Stock_Call_Short": 26928,
+          "Option_Stock_Put_Short": 1532,
+          "Total_Long_Contracts": 69944,
+          "Total_Short_Contracts": 99108
+        },
+        {
+          "Client_Type": "FII",
+          "Future_Index_Long": 14087,
+          "Future_Index_Short": 10928,
+          "Future_Stock_Long": 311107,
+          "Future_Stock_Short": 273387,
+          "Option_Index_Call_Long": 1973383,
+          "Option_Index_Put_Long": 1963695,
+          "Option_Index_Call_Short": 1949163,
+          "Option_Index_Put_Short": 2027436,
+          "Option_Stock_Call_Long": 127427,
+          "Option_Stock_Put_Long": 92937,
+          "Option_Stock_Call_Short": 125846,
+          "Option_Stock_Put_Short": 83273,
+          "Total_Long_Contracts": 4482636,
+          "Total_Short_Contracts": 4470033
+        },
+        {
+          "Client_Type": "Pro",
+          "Future_Index_Long": 18164,
+          "Future_Index_Short": 15493,
+          "Future_Stock_Long": 355346,
+          "Future_Stock_Short": 371285,
+          "Option_Index_Call_Long": 13663059,
+          "Option_Index_Put_Long": 12583231,
+          "Option_Index_Call_Short": 13611293,
+          "Option_Index_Put_Short": 12639185,
+          "Option_Stock_Call_Long": 2016344,
+          "Option_Stock_Put_Long": 1098776,
+          "Option_Stock_Call_Short": 1949107,
+          "Option_Stock_Put_Short": 1113068,
+          "Total_Long_Contracts": 29734920,
+          "Total_Short_Contracts": 29699431
+        },
+        {
+          "Client_Type": "TOTAL",
+          "Future_Index_Long": 72175,
+          "Future_Index_Short": 72175,
+          "Future_Stock_Long": 1038880,
+          "Future_Stock_Short": 1038880,
+          "Option_Index_Call_Long": 26058487,
+          "Option_Index_Put_Long": 23967620,
+          "Option_Index_Call_Short": 26058487,
+          "Option_Index_Put_Short": 23967620,
+          "Option_Stock_Call_Long": 3219040,
+          "Option_Stock_Put_Long": 1598115,
+          "Option_Stock_Call_Short": 3219040,
+          "Option_Stock_Put_Short": 1598115,
+          "Total_Long_Contracts": 55954317,
+          "Total_Short_Contracts": 55954317
+        }
+      ],
+      "03-07-2026": [
+        {
+          "Client_Type": "TOTAL",
+          "Future_Index_Long": 74811,
+          "Future_Index_Short": 74811,
+          "Future_Stock_Long": 1111422,
+          "Future_Stock_Short": 1111422,
+          "Option_Index_Call_Long": 44030734,
+          "Option_Index_Put_Long": 46251439,
+          "Option_Index_Call_Short": 44030734,
+          "Option_Index_Put_Short": 46251439,
+          "Option_Stock_Call_Long": 3803609,
+          "Option_Stock_Put_Long": 1855419,
+          "Option_Stock_Call_Short": 3803609,
+          "Option_Stock_Put_Short": 1855419,
+          "Total_Long_Contracts": 97127434,
+          "Total_Short_Contracts": 97127434
+        },
+        {
+          "Client_Type": "Pro",
+          "Future_Index_Long": 20756,
+          "Future_Index_Short": 21578,
+          "Future_Stock_Long": 396766,
+          "Future_Stock_Short": 412731,
+          "Option_Index_Call_Long": 22384789,
+          "Option_Index_Put_Long": 23909727,
+          "Option_Index_Call_Short": 22405983,
+          "Option_Index_Put_Short": 23909657,
+          "Option_Stock_Call_Long": 2320937,
+          "Option_Stock_Put_Long": 1273133,
+          "Option_Stock_Call_Short": 2317709,
+          "Option_Stock_Put_Short": 1261455,
+          "Total_Long_Contracts": 50306108,
+          "Total_Short_Contracts": 50329113
+        },
+        {
+          "Client_Type": "FII",
+          "Future_Index_Long": 13475,
+          "Future_Index_Short": 7342,
+          "Future_Stock_Long": 301682,
+          "Future_Stock_Short": 288902,
+          "Option_Index_Call_Long": 2314134,
+          "Option_Index_Put_Long": 2633504,
+          "Option_Index_Call_Short": 2322707,
+          "Option_Index_Put_Short": 2598371,
+          "Option_Stock_Call_Long": 179265,
+          "Option_Stock_Put_Long": 120553,
+          "Option_Stock_Call_Short": 195749,
+          "Option_Stock_Put_Short": 109062,
+          "Total_Long_Contracts": 5562613,
+          "Total_Short_Contracts": 5522133
+        },
+        {
+          "Client_Type": "DII",
+          "Future_Index_Long": 112,
+          "Future_Index_Short": 134,
+          "Future_Stock_Long": 73703,
+          "Future_Stock_Short": 69044,
+          "Option_Index_Call_Long": 670,
+          "Option_Index_Put_Long": 465,
+          "Option_Index_Call_Short": 835,
+          "Option_Index_Put_Short": 80,
+          "Option_Stock_Call_Long": 706,
+          "Option_Stock_Put_Long": 799,
+          "Option_Stock_Call_Short": 41185,
+          "Option_Stock_Put_Short": 2262,
+          "Total_Long_Contracts": 76455,
+          "Total_Short_Contracts": 113540
+        },
+        {
+          "Client_Type": "Client",
+          "Future_Index_Long": 40468,
+          "Future_Index_Short": 45757,
+          "Future_Stock_Long": 339271,
+          "Future_Stock_Short": 340745,
+          "Option_Index_Call_Long": 19331141,
+          "Option_Index_Put_Long": 19707743,
+          "Option_Index_Call_Short": 19301209,
+          "Option_Index_Put_Short": 19743331,
+          "Option_Stock_Call_Long": 1302701,
+          "Option_Stock_Put_Long": 460934,
+          "Option_Stock_Call_Short": 1248966,
+          "Option_Stock_Put_Short": 482640,
+          "Total_Long_Contracts": 41182258,
+          "Total_Short_Contracts": 41162648
+        }
+      ],
+      "06-07-2026": [
+        {
+          "Client_Type": "Client",
+          "Future_Index_Long": 35762,
+          "Future_Index_Short": 43827,
+          "Future_Stock_Long": 275406,
+          "Future_Stock_Short": 308498,
+          "Option_Index_Call_Long": 26676122,
+          "Option_Index_Put_Long": 23340629,
+          "Option_Index_Call_Short": 26717715,
+          "Option_Index_Put_Short": 23240950,
+          "Option_Stock_Call_Long": 1161255,
+          "Option_Stock_Put_Long": 417475,
+          "Option_Stock_Call_Short": 1138509,
+          "Option_Stock_Put_Short": 399372,
+          "Total_Long_Contracts": 51906649,
+          "Total_Short_Contracts": 51848871
+        },
+        {
+          "Client_Type": "DII",
+          "Future_Index_Long": 1760,
+          "Future_Index_Short": 238,
+          "Future_Stock_Long": 83827,
+          "Future_Stock_Short": 58976,
+          "Option_Index_Call_Long": 195,
+          "Option_Index_Put_Long": 1074,
+          "Option_Index_Call_Short": 55,
+          "Option_Index_Put_Short": 1879,
+          "Option_Stock_Call_Long": 262,
+          "Option_Stock_Put_Long": 921,
+          "Option_Stock_Call_Short": 37331,
+          "Option_Stock_Put_Short": 891,
+          "Total_Long_Contracts": 88039,
+          "Total_Short_Contracts": 99370
+        },
+        {
+          "Client_Type": "FII",
+          "Future_Index_Long": 17088,
+          "Future_Index_Short": 7600,
+          "Future_Stock_Long": 249999,
+          "Future_Stock_Short": 225304,
+          "Option_Index_Call_Long": 3473359,
+          "Option_Index_Put_Long": 3702980,
+          "Option_Index_Call_Short": 3428539,
+          "Option_Index_Put_Short": 3723128,
+          "Option_Stock_Call_Long": 186781,
+          "Option_Stock_Put_Long": 110242,
+          "Option_Stock_Call_Short": 193558,
+          "Option_Stock_Put_Short": 112409,
+          "Total_Long_Contracts": 7740449,
+          "Total_Short_Contracts": 7690538
+        },
+        {
+          "Client_Type": "Pro",
+          "Future_Index_Long": 13446,
+          "Future_Index_Short": 16391,
+          "Future_Stock_Long": 325838,
+          "Future_Stock_Short": 342292,
+          "Option_Index_Call_Long": 35248941,
+          "Option_Index_Put_Long": 34721560,
+          "Option_Index_Call_Short": 35252308,
+          "Option_Index_Put_Short": 34800286,
+          "Option_Stock_Call_Long": 1982791,
+          "Option_Stock_Put_Long": 1039069,
+          "Option_Stock_Call_Short": 1961691,
+          "Option_Stock_Put_Short": 1055035,
+          "Total_Long_Contracts": 73331645,
+          "Total_Short_Contracts": 73428003
+        },
+        {
+          "Client_Type": "TOTAL",
+          "Future_Index_Long": 68056,
+          "Future_Index_Short": 68056,
+          "Future_Stock_Long": 935070,
+          "Future_Stock_Short": 935070,
+          "Option_Index_Call_Long": 65398617,
+          "Option_Index_Put_Long": 61766243,
+          "Option_Index_Call_Short": 65398617,
+          "Option_Index_Put_Short": 61766243,
+          "Option_Stock_Call_Long": 3331089,
+          "Option_Stock_Put_Long": 1567707,
+          "Option_Stock_Call_Short": 3331089,
+          "Option_Stock_Put_Short": 1567707,
+          "Total_Long_Contracts": 133066782,
+          "Total_Short_Contracts": 133066782
+        }
+      ],
+      "07-07-2026": [
+        {
+          "Client_Type": "Client",
+          "Future_Index_Long": 44003,
+          "Future_Index_Short": 44476,
+          "Future_Stock_Long": 300539,
+          "Future_Stock_Short": 329430,
+          "Option_Index_Call_Long": 67402038,
+          "Option_Index_Put_Long": 70517568,
+          "Option_Index_Call_Short": 67225117,
+          "Option_Index_Put_Short": 71052698,
+          "Option_Stock_Call_Long": 1267969,
+          "Option_Stock_Put_Long": 473259,
+          "Option_Stock_Call_Short": 1168014,
+          "Option_Stock_Put_Short": 488926,
+          "Total_Long_Contracts": 140005376,
+          "Total_Short_Contracts": 140308661
+        },
+        {
+          "Client_Type": "DII",
+          "Future_Index_Long": 3193,
+          "Future_Index_Short": 45,
+          "Future_Stock_Long": 105193,
+          "Future_Stock_Short": 87353,
+          "Option_Index_Call_Long": 1170,
+          "Option_Index_Put_Long": 2483,
+          "Option_Index_Call_Short": 165,
+          "Option_Index_Put_Short": 1721,
+          "Option_Stock_Call_Long": 484,
+          "Option_Stock_Put_Long": 424,
+          "Option_Stock_Call_Short": 45581,
+          "Option_Stock_Put_Short": 2205,
+          "Total_Long_Contracts": 112947,
+          "Total_Short_Contracts": 137070
+        },
+        {
+          "Client_Type": "FII",
+          "Future_Index_Long": 10046,
+          "Future_Index_Short": 7605,
+          "Future_Stock_Long": 328521,
+          "Future_Stock_Short": 296873,
+          "Option_Index_Call_Long": 8184095,
+          "Option_Index_Put_Long": 9730830,
+          "Option_Index_Call_Short": 8561132,
+          "Option_Index_Put_Short": 9608221,
+          "Option_Stock_Call_Long": 226994,
+          "Option_Stock_Put_Long": 137836,
+          "Option_Stock_Call_Short": 234659,
+          "Option_Stock_Put_Short": 127671,
+          "Total_Long_Contracts": 18618322,
+          "Total_Short_Contracts": 18836161
+        },
+        {
+          "Client_Type": "Pro",
+          "Future_Index_Long": 15625,
+          "Future_Index_Short": 20741,
+          "Future_Stock_Long": 370719,
+          "Future_Stock_Short": 391316,
+          "Option_Index_Call_Long": 107696779,
+          "Option_Index_Put_Long": 125162220,
+          "Option_Index_Call_Short": 107497668,
+          "Option_Index_Put_Short": 124750461,
+          "Option_Stock_Call_Long": 2218474,
+          "Option_Stock_Put_Long": 1300942,
+          "Option_Stock_Call_Short": 2265667,
+          "Option_Stock_Put_Short": 1293659,
+          "Total_Long_Contracts": 236764759,
+          "Total_Short_Contracts": 236219512
+        },
+        {
+          "Client_Type": "TOTAL",
+          "Future_Index_Long": 72867,
+          "Future_Index_Short": 72867,
+          "Future_Stock_Long": 1104972,
+          "Future_Stock_Short": 1104972,
+          "Option_Index_Call_Long": 183284082,
+          "Option_Index_Put_Long": 205413101,
+          "Option_Index_Call_Short": 183284082,
+          "Option_Index_Put_Short": 205413101,
+          "Option_Stock_Call_Long": 3713921,
+          "Option_Stock_Put_Long": 1912461,
+          "Option_Stock_Call_Short": 3713921,
+          "Option_Stock_Put_Short": 1912461,
+          "Total_Long_Contracts": 395501404,
+          "Total_Short_Contracts": 395501404
+        }
+      ]
+    },
+    "market_files": {
+      "01-07-2026": {
+        "Nifty": 24005.85,
+        "VIX": 13.24,
+        "Bank_Nifty": 58033.05
+      },
+      "02-07-2026": {
+        "Nifty": 24175.7,
+        "VIX": 12.29,
+        "Bank_Nifty": 58031.65
+      },
+      "03-07-2026": {
+        "Nifty": 24270.85,
+        "VIX": 11.8,
+        "Bank_Nifty": 57938.5
+      },
+      "06-07-2026": {
+        "Nifty": 24430.35,
+        "VIX": 11.82,
+        "Bank_Nifty": 58291.5
+      },
+      "07-07-2026": {
+        "Nifty": 24398.7,
+        "VIX": 11.65,
+        "Bank_Nifty": 58200.7
+      }
+    }
+  }
+}
