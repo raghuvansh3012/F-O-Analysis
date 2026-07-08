@@ -7,7 +7,6 @@ import datetime
 import json
 import sys
 import subprocess
-import datetime
 
 # --- basic setups ---
 DATA_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -521,18 +520,6 @@ def main():
         df_vol = filter_last_n_days(df_vol, n_days)
         df_mkt = filter_last_n_days(df_mkt, n_days)
     
-    # Save original full dataframe for summary tables before filtering for charts? 
-    # Actually, the summary tables need history too, which might be N days.
-    # The chart filtering is good for the summary history too.
-    
-    if auto_mode:
-        df_oi = filter_current_month(df_oi)
-        df_vol = filter_current_month(df_vol)
-        df_mkt = filter_current_month(df_mkt)
-    elif n_days:
-        df_oi = filter_last_n_days(df_oi, n_days)
-        df_vol = filter_last_n_days(df_vol, n_days)
-        df_mkt = filter_last_n_days(df_mkt, n_days)
     
     if df_oi is None: return
 
@@ -826,109 +813,109 @@ def main():
 
         html.append('<div class="navbar-wrapper"><div class="navbar">')
 
-    # Updated: FII, DII, Pro, Client, Summary
-    nav_tabs = ['FII', 'DII', 'Pro', 'Client', 'Summary']
-    for p in nav_tabs:
-         html.append(f"<button class='tablinks' onclick=\"openParticipant(event, '{p}')\">{p}</button>")
-    html.append("</div></div>") # End Navbar
+        # Updated: FII, DII, Pro, Client, Summary
+        nav_tabs = ['FII', 'DII', 'Pro', 'Client', 'Summary']
+        for p in nav_tabs:
+             html.append(f"<button class='tablinks' onclick=\"openParticipant(event, '{p}')\">{p}</button>")
+        html.append("</div></div>") # End Navbar
     
-    # --- Generate Content ---
+        # --- Generate Content ---
     
-    op_types = [
-        ("Option Index Call Long", "Call Long", "#10b981"),
-        ("Option Index Put Short", "Put Short", "#10b981"),
-        ("Option Index Put Long", "Put Long", "#ef4444"), 
-        ("Option Index Call Short", "Call Short", "#ef4444"), 
-        ("Option Stock Call Long", "Stock Call Long", "#10b981"),
-        ("Option Stock Put Short", "Stock Put Short", "#10b981"),
-        ("Option Stock Put Long", "Stock Put Long", "#ef4444"),
-        ("Option Stock Call Short", "Stock Call Short", "#ef4444")
-    ]
+        op_types = [
+            ("Option Index Call Long", "Call Long", "#10b981"),
+            ("Option Index Put Short", "Put Short", "#10b981"),
+            ("Option Index Put Long", "Put Long", "#ef4444"), 
+            ("Option Index Call Short", "Call Short", "#ef4444"), 
+            ("Option Stock Call Long", "Stock Call Long", "#10b981"),
+            ("Option Stock Put Short", "Stock Put Short", "#10b981"),
+            ("Option Stock Put Long", "Stock Put Long", "#ef4444"),
+            ("Option Stock Call Short", "Stock Call Short", "#ef4444")
+        ]
     
-    participants = ['FII', 'DII', 'Pro', 'Client']
+        participants = ['FII', 'DII', 'Pro', 'Client']
     
-    # 1. Loop for Regular Participants
-    for p in participants:
-        print(f"Generating charts for {p}...")
-        html.append(f"<div id='{p}' class='tab-content'><div class='container'>")
+        # 1. Loop for Regular Participants
+        for p in participants:
+            print(f"Generating charts for {p}...")
+            html.append(f"<div id='{p}' class='tab-content'><div class='container'>")
         
-        # Sub Nav
+            # Sub Nav
+            html.append(f"""
+            <div class="subnav">
+                <button onclick="openMetric(event, 'oi-view', '{p}')">OI Analysis</button>
+                <button onclick="openMetric(event, 'vol-view', '{p}')">Volume Analysis</button>
+            </div>
+            """)
+        
+            # --- OI View ---
+            p_oi = w_oi[w_oi['Client Type'] == p].copy()
+            html.append("<div class='oi-view subtab-content'>")
+        
+            # Futures
+            html.append(f"<h2>{p} Futures OI</h2>")
+            c1 = generate_html_chart(p_oi, w_mkt, f"{p} Future Index OI", "Future Index Long", "#10b981", "Nifty", True, "Future Index Short")
+            c2 = generate_html_chart(p_oi, w_mkt, f"{p} Future Stock OI", "Future Stock Long", "#10b981", "Nifty", True, "Future Stock Short")
+            html.append(f"<div class='card'>{c1}</div><div class='card'>{c2}</div>")
+        
+            # Options
+            html.append(f"<h2>{p} Options OI</h2>")
+            for col_full, col_short, color in op_types:
+                c = generate_html_chart(p_oi, w_mkt, f"{p} {col_full} OI", col_full, color, "Nifty")
+                html.append(f"<div class='card'>{c}</div>")
+            
+            html.append("</div>") 
+        
+            # --- Volume View ---
+            if w_vol is not None and not w_vol.empty:
+                p_vol = w_vol[w_vol['Client Type'] == p].copy()
+                html.append("<div class='vol-view subtab-content'>")
+            
+                # Futures Vol
+                html.append(f"<h2>{p} Futures Volume</h2>")
+                c3 = generate_html_chart(p_vol, w_mkt, f"{p} Future Index Volume", "Future Index Long", "#10b981", "VIX", True, "Future Index Short")
+                c4 = generate_html_chart(p_vol, w_mkt, f"{p} Future Stock Volume", "Future Stock Long", "#10b981", "VIX", True, "Future Stock Short")
+                html.append(f"<div class='card'>{c3}</div><div class='card'>{c4}</div>")
+            
+                # Options Vol
+                html.append(f"<h2>{p} Options Volume</h2>")
+                for col_full, col_short, color in op_types:
+                    c = generate_html_chart(p_vol, w_mkt, f"{p} {col_full} Volume", col_full, color, "VIX")
+                    html.append(f"<div class='card'>{c}</div>")
+                html.append("</div>")
+            else:
+                html.append("<div class='vol-view subtab-content'><p>No Volume Data</p></div>")
+
+            html.append("</div></div>") # End Participant Tab
+        
+        # 2. Add 'Summary' Tab Content
+        html.append(f"<div id='Summary' class='tab-content'><div class='container'>")
+    
+        # Toggle Controls
         html.append(f"""
-        <div class="subnav">
-            <button onclick="openMetric(event, 'oi-view', '{p}')">OI Analysis</button>
-            <button onclick="openMetric(event, 'vol-view', '{p}')">Volume Analysis</button>
+        <div class="toggle-container">
+            <div class="toggle-pill">
+                <button id="btn-oi" class="toggle-btn active" onclick="toggleSummary('oi', {idx})">OI Analysis</button>
+                <button id="btn-vol" class="toggle-btn" onclick="toggleSummary('vol', {idx})">Volume Analysis</button>
+            </div>
         </div>
         """)
-        
-        # --- OI View ---
-        p_oi = w_oi[w_oi['Client Type'] == p].copy()
-        html.append("<div class='oi-view subtab-content'>")
-        
-        # Futures
-        html.append(f"<h2>{p} Futures OI</h2>")
-        c1 = generate_html_chart(p_oi, w_mkt, f"{p} Future Index OI", "Future Index Long", "#10b981", "Nifty", True, "Future Index Short")
-        c2 = generate_html_chart(p_oi, w_mkt, f"{p} Future Stock OI", "Future Stock Long", "#10b981", "Nifty", True, "Future Stock Short")
-        html.append(f"<div class='card'>{c1}</div><div class='card'>{c2}</div>")
-        
-        # Options
-        html.append(f"<h2>{p} Options OI</h2>")
-        for col_full, col_short, color in op_types:
-            c = generate_html_chart(p_oi, w_mkt, f"{p} {col_full} OI", col_full, color, "Nifty")
-            html.append(f"<div class='card'>{c}</div>")
-            
-        html.append("</div>") 
-        
-        # --- Volume View ---
-        if w_vol is not None and not w_vol.empty:
-            p_vol = w_vol[w_vol['Client Type'] == p].copy()
-            html.append("<div class='vol-view subtab-content'>")
-            
-            # Futures Vol
-            html.append(f"<h2>{p} Futures Volume</h2>")
-            c3 = generate_html_chart(p_vol, w_mkt, f"{p} Future Index Volume", "Future Index Long", "#10b981", "VIX", True, "Future Index Short")
-            c4 = generate_html_chart(p_vol, w_mkt, f"{p} Future Stock Volume", "Future Stock Long", "#10b981", "VIX", True, "Future Stock Short")
-            html.append(f"<div class='card'>{c3}</div><div class='card'>{c4}</div>")
-            
-            # Options Vol
-            html.append(f"<h2>{p} Options Volume</h2>")
-            for col_full, col_short, color in op_types:
-                c = generate_html_chart(p_vol, w_mkt, f"{p} {col_full} Volume", col_full, color, "VIX")
-                html.append(f"<div class='card'>{c}</div>")
-            html.append("</div>")
-        else:
-            html.append("<div class='vol-view subtab-content'><p>No Volume Data</p></div>")
-
-        html.append("</div></div>") # End Participant Tab
-        
-    # 2. Add 'Summary' Tab Content
-    html.append(f"<div id='Summary' class='tab-content'><div class='container'>")
     
-    # Toggle Controls
-    html.append("""
-    <div class="toggle-container">
-        <div class="toggle-pill">
-            <button id="btn-oi" class="toggle-btn active" onclick="toggleSummary('oi', {idx})">OI Analysis</button>
-            <button id="btn-vol" class="toggle-btn" onclick="toggleSummary('vol', {idx})">Volume Analysis</button>
-        </div>
-    </div>
-    """)
+        # OI View of Summary
+        html.append("<div id='view-oi' class='result-section active'>")
+        html.append(generate_summary_table(w_oi, is_volume=False, n_days_history=5))
+        html.append(generate_activity_table(w_oi, is_volume=False))
+        html.append("</div>")
     
-    # OI View of Summary
-    html.append("<div id='view-oi' class='result-section active'>")
-    html.append(generate_summary_table(w_oi, is_volume=False, n_days_history=5))
-    html.append(generate_activity_table(w_oi, is_volume=False))
-    html.append("</div>")
+        # Vol View of Summary
+        html.append("<div id='view-vol' class='result-section'>")
+        html.append(generate_summary_table(w_vol, is_volume=True, n_days_history=5))
+        html.append(generate_activity_table(w_vol, is_volume=True))
+        html.append("</div>")
     
-    # Vol View of Summary
-    html.append("<div id='view-vol' class='result-section'>")
-    html.append(generate_summary_table(w_vol, is_volume=True, n_days_history=5))
-    html.append(generate_activity_table(w_vol, is_volume=True))
-    html.append("</div>")
-    
-    html.append("</div></div>") # End Summary Tab
+        html.append("</div></div>") # End Summary Tab
         
     
-    html.append("</div>") # End Week Container
+        html.append("</div>") # End Week Container
         
     html.append("</div>") # End Main Content
     
