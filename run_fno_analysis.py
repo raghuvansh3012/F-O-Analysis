@@ -120,7 +120,7 @@ def main():
     subprocess.run(viz_args)
     
     print("\nDone! Dashboard Updated.")
-    print(r"Open: e:\daily report\Option_Aanalysis\index.html")
+    print(r"Open: e:\daily report\F&O Analysis\index.html")
 
 if __name__ == "__main__":
     main()

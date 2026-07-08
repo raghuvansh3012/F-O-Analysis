@@ -46,3 +46,31 @@
 2026-07-08 15:49:35,848 | INFO     |   [DONE] Date Range: 2026-07-01 to 2026-07-08: 5 new, 0 skipped, 1 holidays, 0 failed
 2026-07-08 15:49:35,848 | INFO     |   [ORGANIZE] Creating expiry-cycle folders...
 2026-07-08 15:49:35,982 | INFO     |   [SAVED] 5 new option chain files in option_chain_data/
+2026-07-08 16:02:24,920 | INFO     | Establishing NSE session (getting cookies)...
+2026-07-08 16:02:25,874 | WARNING  | NSE homepage returned status 403, proceeding anyway...
+2026-07-08 16:02:26,889 | INFO     | 
+2026-07-08 16:02:26,889 | INFO     | =================================================================
+2026-07-08 16:02:26,889 | INFO     |   [RUN] Date Range: 2026-07-01 to 2026-07-08
+2026-07-08 16:02:26,889 | INFO     |   [INFO] 6 potential trading days
+2026-07-08 16:02:26,889 | INFO     | =================================================================
+2026-07-08 16:02:34,278 | INFO     |   [DONE] Date Range: 2026-07-01 to 2026-07-08: 0 new, 5 skipped, 1 holidays, 0 failed
+2026-07-08 16:02:34,278 | INFO     |   [INFO] All data for Date Range: 2026-07-01 to 2026-07-08 was already downloaded previously.
+2026-07-08 21:05:00,910 | INFO     | Establishing NSE session (getting cookies)...
+2026-07-08 21:05:02,032 | WARNING  | NSE homepage returned status 403, proceeding anyway...
+2026-07-08 21:05:03,036 | INFO     | 
+2026-07-08 21:05:03,036 | INFO     | =================================================================
+2026-07-08 21:05:03,036 | INFO     |   [RUN] Date Range: 2026-07-01 to 2026-07-08
+2026-07-08 21:05:03,036 | INFO     |   [INFO] 6 potential trading days
+2026-07-08 21:05:03,039 | INFO     | =================================================================
+2026-07-08 21:05:12,699 | INFO     |   [DONE] Date Range: 2026-07-01 to 2026-07-08: 1 new, 5 skipped, 0 holidays, 0 failed
+2026-07-08 21:05:12,699 | INFO     |   [ORGANIZE] Creating expiry-cycle folders...
+2026-07-08 21:05:12,735 | INFO     |   [SAVED] 1 new option chain files in option_chain_data/
+2026-07-08 22:24:20,943 | INFO     | Establishing NSE session (getting cookies)...
+2026-07-08 22:24:22,139 | WARNING  | NSE homepage returned status 403, proceeding anyway...
+2026-07-08 22:24:23,142 | INFO     | 
+2026-07-08 22:24:23,142 | INFO     | =================================================================
+2026-07-08 22:24:23,142 | INFO     |   [RUN] Date Range: 2026-07-01 to 2026-07-08
+2026-07-08 22:24:23,143 | INFO     |   [INFO] 6 potential trading days
+2026-07-08 22:24:23,143 | INFO     | =================================================================
+2026-07-08 22:24:23,144 | INFO     |   [DONE] Date Range: 2026-07-01 to 2026-07-08: 0 new, 6 skipped, 0 holidays, 0 failed
+2026-07-08 22:24:23,145 | INFO     |   [INFO] All data for Date Range: 2026-07-01 to 2026-07-08 was already downloaded previously.

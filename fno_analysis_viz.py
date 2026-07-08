@@ -278,7 +278,7 @@ def generate_html_chart(df_part, df_mkt, title, metric_col, color, secondary_col
         legend=dict(font=dict(color='white'))
     )
     
-    return fig.to_html(full_html=False, include_plotlyjs='cdn')
+    return fig.to_html(full_html=False, include_plotlyjs=False)
 
 # --- 3. Summary table ke helper functions ---
 
@@ -665,6 +665,7 @@ def main():
     html = [f"""
     <!DOCTYPE html>
     <html><head><title>F&O Dashboard</title>
+    <script charset="utf-8" src="https://cdn.plot.ly/plotly-2.30.0.min.js"></script>
     <style>{css}</style>
     <script>
         function openNav() {{
