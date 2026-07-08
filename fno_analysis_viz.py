@@ -11,7 +11,7 @@ import datetime
 
 # --- basic setups ---
 DATA_DIR = os.path.dirname(os.path.abspath(__file__))
-OUTPUT_FILE = os.path.join(DATA_DIR, "fno_dashboard.html")
+OUTPUT_FILE = os.path.join(DATA_DIR, "index.html")
 FETCH_SCRIPT = os.path.join(DATA_DIR, "fetch_nse_reports.py")
 
 # --- 0. data lana start karte hain ---
