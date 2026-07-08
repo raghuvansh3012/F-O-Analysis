@@ -360,155 +360,25 @@ def get_actual_expiry(trade_date, df):
 
 
 def organize_into_folders(base_dir, all_data):
-    """Organize downloaded data into actual expiry-cycle folders.
-    
-    Handles incremental downloads correctly:
-    - Scans existing expiry folders to avoid creating duplicates
-    - Merges new CSVs into existing folders if the expiry date matches
-    - Only creates new folders for genuinely new expiry dates
-    - Continues numbering from the highest existing expiry number in each FY
-    """
+    """Save downloaded data into a flat option_chain_data folder."""
     if not all_data:
         return []
     
-    # Sort data by date
-    all_data.sort(key=lambda x: x[0])
+    out_dir = os.path.join(base_dir, "option_chain_data")
+    os.makedirs(out_dir, exist_ok=True)
     
-    # Group by expiry cycle
-    cycles = {}
+    new_files = 0
     for trade_date, df in all_data:
-        expiry = get_actual_expiry(trade_date, df)
-        if expiry is None:
-            continue
-        expiry_key = expiry.strftime('%Y-%m-%d')
-        if expiry_key not in cycles:
-            cycles[expiry_key] = []
-        cycles[expiry_key].append((trade_date, df))
-    
-    # ── Scan ALL existing expiry folders across all FY directories ──
-    # Maps expiry_date_str → existing folder absolute path
-    existing_expiry_folders = {}
-    # Maps fy_folder → highest expiry number (for continuing numbering)
-    fy_max_number = {}
-    
-    for item in os.listdir(base_dir):
-        item_path = os.path.join(base_dir, item)
-        if not os.path.isdir(item_path) or not item.startswith('FY_'):
-            continue
+        csv_name = f"{trade_date.strftime('%Y-%m-%d')}_nifty_options.csv"
+        csv_path = os.path.join(out_dir, csv_name)
+        if not os.path.exists(csv_path):
+            df.to_csv(csv_path, index=False)
+            new_files += 1
+            
+    if new_files > 0:
+        logging.info(f"  [SAVED] {new_files} new option chain files in option_chain_data/")
         
-        max_num = 0
-        for subfolder in os.listdir(item_path):
-            subfolder_path = os.path.join(item_path, subfolder)
-            if not os.path.isdir(subfolder_path):
-                continue
-            # Parse: 2026-07-07_Expiry_0014
-            m = re.match(r'(\d{4}-\d{2}-\d{2})_Expiry_(\d+)', subfolder)
-            if m:
-                exp_date_str = m.group(1)
-                exp_num = int(m.group(2))
-                existing_expiry_folders[exp_date_str] = subfolder_path
-                max_num = max(max_num, exp_num)
-        
-        fy_max_number[item] = max_num
-    
-    # ── Process each expiry cycle ──
-    summary_rows = []
-    
-    # Determine FY for each expiry
-    fy_new_expiries = {}  # fy_folder → list of new expiry_keys (not yet in existing folders)
-    
-    for expiry_key in sorted(cycles.keys()):
-        dt = datetime.strptime(expiry_key, '%Y-%m-%d')
-        if dt.month >= 4:
-            fy_start = dt.year
-            fy_end = dt.year + 1
-        else:
-            fy_start = dt.year - 1
-            fy_end = dt.year
-        fy_folder = f"FY_{fy_start}-{str(fy_end)[-2:]}"
-        
-        if expiry_key in existing_expiry_folders:
-            # ── MERGE into existing folder ──
-            folder_path = existing_expiry_folders[expiry_key]
-            total_contracts = 0
-            new_files = 0
-            
-            for trade_date, df in cycles[expiry_key]:
-                csv_name = f"{trade_date.strftime('%Y-%m-%d')}_nifty_options.csv"
-                csv_path = os.path.join(folder_path, csv_name)
-                if not os.path.exists(csv_path):
-                    df.to_csv(csv_path, index=False)
-                    new_files += 1
-                if 'CONTRACTS' in df.columns:
-                    total_contracts += df['CONTRACTS'].sum()
-            
-            # Count total trading days in folder after merge
-            csv_count = len([f for f in os.listdir(folder_path) if f.endswith('.csv')])
-            rel_folder = os.path.relpath(folder_path, base_dir)
-            
-            if new_files > 0:
-                logging.info(f"  [MERGE] {rel_folder}: +{new_files} new files ({csv_count} total)")
-            else:
-                logging.info(f"  [SKIP] {rel_folder}: all files already exist ({csv_count} total)")
-            
-            summary_rows.append({
-                'Financial_Year': fy_folder,
-                'Folder': rel_folder,
-                'Expiry_Date': expiry_key,
-                'Trading_Days': csv_count,
-                'Total_Contracts': int(total_contracts),
-                'Action': 'merged' if new_files > 0 else 'skipped',
-            })
-        else:
-            # ── CREATE new folder ──
-            if fy_folder not in fy_new_expiries:
-                fy_new_expiries[fy_folder] = []
-            fy_new_expiries[fy_folder].append(expiry_key)
-    
-    # Create new folders with correct sequential numbering
-    for fy_folder, new_expiries in fy_new_expiries.items():
-        fy_path = os.path.join(base_dir, fy_folder)
-        os.makedirs(fy_path, exist_ok=True)
-        
-        # Start numbering from the next available number
-        next_num = fy_max_number.get(fy_folder, 0) + 1
-        
-        for expiry_key in sorted(new_expiries):
-            folder_name = f"{expiry_key}_Expiry_{next_num:04d}"
-            folder_path = os.path.join(fy_path, folder_name)
-            os.makedirs(folder_path, exist_ok=True)
-            
-            total_contracts = 0
-            trading_days = 0
-            
-            for trade_date, df in cycles[expiry_key]:
-                csv_name = f"{trade_date.strftime('%Y-%m-%d')}_nifty_options.csv"
-                csv_path = os.path.join(folder_path, csv_name)
-                df.to_csv(csv_path, index=False)
-                trading_days += 1
-                if 'CONTRACTS' in df.columns:
-                    total_contracts += df['CONTRACTS'].sum()
-            
-            rel_folder = os.path.join(fy_folder, folder_name)
-            logging.info(f"  [FOLDER] {rel_folder}: {trading_days} trading days")
-            
-            summary_rows.append({
-                'Financial_Year': fy_folder,
-                'Folder': rel_folder,
-                'Expiry_Date': expiry_key,
-                'Trading_Days': trading_days,
-                'Total_Contracts': int(total_contracts),
-                'Action': 'created',
-            })
-            
-            # Register this new folder so subsequent runs see it
-            existing_expiry_folders[expiry_key] = folder_path
-            next_num += 1
-        
-        # Update the max number tracker
-        fy_max_number[fy_folder] = next_num - 1
-    
-    return summary_rows
+    return []
 
 
 # ============================================================

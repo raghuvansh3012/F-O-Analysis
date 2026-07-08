@@ -758,10 +758,11 @@ def main():
         html.append('</div>')
         
     # --- Option Chain Menu ---
-    html.append('<div style="padding: 10px 15px; color: #8892b0; font-size: 14px; text-transform: uppercase; margin-top: 20px; font-family: monospace;">🔗 Option Chain</div>')
+    month_label = all_dates[-1].strftime("%B %Y").upper() if all_dates else "OPTION CHAIN"
+    html.append(f'<div style="padding: 10px 15px; color: #8892b0; font-size: 14px; text-transform: uppercase; margin-top: 20px; font-family: monospace;">📅 {month_label} (OPTION CHAIN)</div>')
     
     import glob
-    option_files = glob.glob(os.path.join(DATA_DIR, "FY_*", "*", "*_nifty_options.csv"))
+    option_files = glob.glob(os.path.join(DATA_DIR, "option_chain_data", "*_nifty_options.csv"))
     oc_dates = []
     
     current_month_val = all_dates[-1].month if all_dates else None
