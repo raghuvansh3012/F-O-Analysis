@@ -1,46 +1,47 @@
 # NSE F&O Analyzer
 
-An automated quantitative analysis engine and ETL data-pipeline built for the Indian Derivatives Market. It orchestrates the ingestion of daily NSE datasets to decode the institutional flow across Futures and Options, rendering complex buy/sell metrics into a high-performance interactive visual ecosystem.
+A fully automated, zero-maintenance tool that tracks what Big Players (FII, DII, PRO) are doing in the Indian Stock Market. It fetches daily F&O data from the NSE website, crunches the numbers, and gives you a beautiful interactive dashboard.
 
-## What does it do?
-This engine automates the extraction, transformation, and loading (ETL) of raw structural market data released by the NSE. Its primary objective is to track and visualize the exact daily buy and sell activities of major market participants: **FII (Foreign Institutional Investors), DII (Domestic Institutional Investors), Pro (Proprietary Desks), and Retail Clients**.
+## 🔥 What's New! (Latest Updates)
+* **100% Automated:** Runs automatically every day at 7:30 PM using GitHub Actions. No need to run scripts manually anymore!
+* **Live on GitHub Pages:** The dashboard is hosted online for free. You can view it from anywhere on your phone or PC.
+* **Weekly Expiry Breakdown:** Data is automatically organized into weekly tabs based on expiry days (Wednesday to Tuesday).
+* **Download Raw Data:** A dedicated "Download JSON" button is available inside the sidebar to export the week's F&O data in a clean, pretty-printed JSON format.
+* **Auto-Cleanup:** Old CSV files are automatically deleted on the 1st of every month to keep the repository size small and fast.
 
-1. **Algorithmic Data Ingestion**: Automatically scrapes and validates daily Participant Open Interest (OI) and Volume reports directly from the NSE archives.
-2. **Quantitative Processing Engine**: Utilizes a Pandas-based architecture to clean unstructured CSVs, compute net long/short deltas, and cross-reference derivatives flow with Nifty 50 and India VIX closing metrics.
-3. **Interactive Analytics Dashboard**: Deploys a Plotly-driven dynamic UI that visualizes the exact daily F&O buying and selling activity of FII, DII, Pro, and Clients, exposing hidden market sentiments in real-time.
+## 🚀 How to View the Dashboard
+You don't need to install anything to view the data. Just visit the live link:
+👉 [https://raghuvansh3012.github.io/F-O-Analysis/](https://raghuvansh3012.github.io/F-O-Analysis/)
 
-## Why I made this
-I initially built this tool for my own daily use. Manually downloading CSV files from the NSE website every day and comparing them with previous days was a very tedious and boring task. I wanted to automate this process to save time and replace manual Excel number-crunching with a clean, automated visual summary.
+The dashboard updates automatically every Monday to Friday at 7:30 PM (IST).
 
-## How to use it
-It's very easy to run!
+## 🛠️ How to Run it Locally (For Developers)
 
-1. Make sure you have Python installed on your computer.
-2. Install the required libraries by running:
+If you want to run this project on your own computer:
+
+1. Make sure you have Python installed.
+2. Install the required libraries:
    ```bash
-   pip install -r requirements.txt
+   pip install pandas plotly requests
    ```
-3. Run the main script:
+3. Run the main script in "Auto" mode to fetch the current month's data:
    ```bash
-   python run_fno_analysis.py
+   python run_fno_analysis.py --auto
    ```
-4. The script will ask you how many days of data you want to analyze. Enter a number (like `5` for the last week) or press Enter to analyze all available data.
-5. Once it finishes downloading and processing, it will automatically open a file called `fno_dashboard.html` in your default web browser.
+4. Once it finishes, open the `index.html` file in your browser to view the dashboard.
 
-## Features
+## 📊 Features
 * **Participant-wise Analysis**: Separate tabs for FII, DII, Pro, and Retail Clients.
 * **OI & Volume Views**: Switch between Open Interest (carried positions) and Volume (intraday activity).
 * **Net Summary Table**: A quick glance at who is turning bullish or bearish over the last few days.
-* **No Database Required**: Uses simple CSV files to store and read data, so it works perfectly offline once the data is fetched.
-* **Modern UI**: The dashboard is responsive, visually pleasing, and built with Plotly.
+* **Tree-view Sidebar Menu**: Easy navigation between different weeks of the current month.
 
-## Project Structure
-Here is a quick overview of what the files in this repository do:
-- `run_fno_analysis.py`: This is the main script that you run. It acts as the manager.
-- `fetch_nse_reports.py`: This script handles downloading the raw CSV files directly from the NSE website.
-- `fno_analysis_viz.py`: This script processes the raw data and builds the beautiful HTML dashboard.
-- `requirements.txt`: Contains a list of all the Python libraries needed to run the project.
+## 📁 Project Structure
+- `run_fno_analysis.py`: The main manager script.
+- `fetch_nse_reports.py`: Downloads the raw CSV files directly from the NSE website.
+- `fno_analysis_viz.py`: Processes the raw data, groups them into weeks, generates JSON, and builds the HTML dashboard.
+- `cleanup_old_csvs.py`: Deletes last month's CSV data to save space.
+- `.github/workflows/daily_fno_update.yml`: The magic file that runs the GitHub bot every day at 7:30 PM.
 
-
-## Disclaimer
+## ⚠️ Disclaimer
 This tool is made for educational and informational purposes only. It does not provide financial advice. Please do your own research before making any trades in the stock market.
