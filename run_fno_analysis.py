@@ -107,8 +107,10 @@ def main():
         print(f"Successfully collected {valid_days_count} days: {collected_dates}")
         
     # 3. ab dashboard generate karne ka time aa gaya
-    print("\n[Running Analysis] Generating Dashboard...")
+    print("\n[Running Option Chain Fetch] Fetching daily Nifty Option Chain data...")
+    subprocess.run([sys.executable, os.path.join(DATA_DIR, "download_nifty_options.py"), "--auto"])
     
+    print("\n[Running Analysis] Generating Dashboard...")
     viz_args = [sys.executable, VIZ_SCRIPT]
     if auto_mode:
         viz_args.append("--auto")

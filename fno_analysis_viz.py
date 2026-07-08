@@ -757,6 +757,58 @@ def main():
             
         html.append('</div>')
         
+    # --- Option Chain Menu ---
+    html.append('<div style="padding: 10px 15px; color: #8892b0; font-size: 14px; text-transform: uppercase; margin-top: 20px; font-family: monospace;">🔗 Option Chain</div>')
+    
+    import glob
+    option_files = glob.glob(os.path.join(DATA_DIR, "FY_*", "*", "*_nifty_options.csv"))
+    oc_dates = []
+    
+    current_month_val = all_dates[-1].month if all_dates else None
+    current_year_val = all_dates[-1].year if all_dates else None
+        
+    for f in option_files:
+        basename = os.path.basename(f)
+        date_str = basename.split("_")[0]
+        try:
+            oc_date = datetime.datetime.strptime(date_str, "%Y-%m-%d")
+            if current_month_val and current_year_val:
+                if oc_date.month == current_month_val and oc_date.year == current_year_val:
+                    oc_dates.append((oc_date, f))
+            else:
+                oc_dates.append((oc_date, f))
+        except:
+            pass
+
+    oc_dates.sort(key=lambda x: x[0])
+    oc_date_list = [d[0] for d in oc_dates]
+    oc_weeks_dates = group_dates_into_weeks(oc_date_list)
+    date_to_path = {d[0]: d[1] for d in oc_dates}
+    
+    for idx, week_dates in enumerate(oc_weeks_dates):
+        if not week_dates: continue
+        label = f'Week {idx+1} (Expiry: {week_dates[-1].strftime("%b %d")})'
+        html.append(f'<div class="sidebar-item-wrapper" style="padding-left: 20px;">')
+        prefix = '└─ ' if idx == len(oc_weeks_dates) - 1 else '├─ '
+        html.append(f'<div style="color: #8892b0; font-family: monospace; display: flex; align-items: flex-start; padding-right: 15px; margin-top: 10px;">')
+        html.append(f'<span style="white-space: pre;">{prefix}</span>')
+        html.append(f'<span style="font-family: monospace; font-size: 14px; padding: 0; line-height: 1.4; display: inline-block;">{label}</span>')
+        html.append('</div>')
+        
+        html.append(f'<div style="padding-left: 25px; margin-top: 5px;">')
+        for d_idx, dt in enumerate(week_dates):
+            d_prefix = '└─ ' if d_idx == len(week_dates) - 1 else '├─ '
+            date_str_display = dt.strftime("%d-%b-%Y")
+            f_path = date_to_path.get(dt)
+            if f_path:
+                rel_path = os.path.relpath(f_path, DATA_DIR).replace("\\", "/")
+                html.append(f'<div style="color: #8892b0; font-family: monospace; display: flex; align-items: center; margin-top: 3px;">')
+                html.append(f'<span style="white-space: pre;">{d_prefix}</span>')
+                html.append(f'<a href="{rel_path}" download class="sidebar-week-link" style="font-family: monospace; font-size: 13px; padding: 0; display: inline-block; text-decoration: none; color: #58a6ff;" onmouseover="this.style.color=\'#79c0ff\'" onmouseout="this.style.color=\'#58a6ff\'">{date_str_display} ⬇️</a>')
+                html.append('</div>')
+        html.append('</div>')
+        html.append('</div>')
+        
     html.append('</div>\n<div id="main-content">\n<button class="hamburger-btn" onclick="openNav()">&#9776;</button>')
     html.append('<script>function switchWeek(weekId) { document.querySelectorAll(".week-container").forEach(el => el.classList.remove("active")); document.querySelectorAll(".sidebar-week-link").forEach(el => el.classList.remove("active")); document.getElementById("week-container-" + weekId).classList.add("active"); document.querySelectorAll(".download-json-btn").forEach(el => el.style.display="none"); document.getElementById("json-link-" + weekId).style.display="block"; closeNav(); var firstTab = document.querySelector("#week-container-" + weekId + " .tablinks"); if(firstTab) firstTab.click(); setTimeout(function() { window.dispatchEvent(new Event("resize")); }, 100); }</script>')
     

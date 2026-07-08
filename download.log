@@ -1,0 +1,29 @@
+2026-07-08 15:37:11,266 | INFO     | Establishing NSE session (getting cookies)...
+2026-07-08 15:37:12,610 | WARNING  | NSE homepage returned status 403, proceeding anyway...
+2026-07-08 15:37:13,614 | INFO     | 
+2026-07-08 15:37:13,615 | INFO     | =================================================================
+2026-07-08 15:37:13,615 | INFO     |   [RUN] Date Range: 2026-07-01 to 2026-07-08
+2026-07-08 15:37:13,615 | INFO     |   [INFO] 6 potential trading days
+2026-07-08 15:37:13,615 | INFO     | =================================================================
+2026-07-08 15:37:44,193 | INFO     |   [DONE] Date Range: 2026-07-01 to 2026-07-08: 5 new, 0 skipped, 1 holidays, 0 failed
+2026-07-08 15:37:44,194 | INFO     |   [ORGANIZE] Creating expiry-cycle folders...
+2026-07-08 15:37:44,335 | INFO     |   [FOLDER] FY_2026-27\2026-07-07_Expiry_0001: 4 trading days
+2026-07-08 15:37:44,362 | INFO     |   [FOLDER] FY_2026-27\2026-07-14_Expiry_0002: 1 trading days
+2026-07-08 15:38:30,857 | INFO     | Establishing NSE session (getting cookies)...
+2026-07-08 15:38:32,513 | WARNING  | NSE homepage returned status 403, proceeding anyway...
+2026-07-08 15:38:33,519 | INFO     | 
+2026-07-08 15:38:33,519 | INFO     | =================================================================
+2026-07-08 15:38:33,519 | INFO     |   [RUN] Date Range: 2026-07-01 to 2026-07-08
+2026-07-08 15:38:33,519 | INFO     |   [INFO] 6 potential trading days
+2026-07-08 15:38:33,519 | INFO     | =================================================================
+2026-07-08 15:38:40,893 | INFO     |   [DONE] Date Range: 2026-07-01 to 2026-07-08: 0 new, 5 skipped, 1 holidays, 0 failed
+2026-07-08 15:38:40,895 | INFO     |   [INFO] All data for Date Range: 2026-07-01 to 2026-07-08 was already downloaded previously.
+2026-07-08 15:40:01,695 | INFO     | Establishing NSE session (getting cookies)...
+2026-07-08 15:40:02,716 | WARNING  | NSE homepage returned status 403, proceeding anyway...
+2026-07-08 15:40:03,727 | INFO     | 
+2026-07-08 15:40:03,727 | INFO     | =================================================================
+2026-07-08 15:40:03,727 | INFO     |   [RUN] Date Range: 2026-07-01 to 2026-07-08
+2026-07-08 15:40:03,728 | INFO     |   [INFO] 6 potential trading days
+2026-07-08 15:40:03,728 | INFO     | =================================================================
+2026-07-08 15:40:12,581 | INFO     |   [DONE] Date Range: 2026-07-01 to 2026-07-08: 0 new, 5 skipped, 1 holidays, 0 failed
+2026-07-08 15:40:12,581 | INFO     |   [INFO] All data for Date Range: 2026-07-01 to 2026-07-08 was already downloaded previously.
