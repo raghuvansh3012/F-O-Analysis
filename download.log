@@ -74,3 +74,22 @@
 2026-07-08 22:24:23,143 | INFO     | =================================================================
 2026-07-08 22:24:23,144 | INFO     |   [DONE] Date Range: 2026-07-01 to 2026-07-08: 0 new, 6 skipped, 0 holidays, 0 failed
 2026-07-08 22:24:23,145 | INFO     |   [INFO] All data for Date Range: 2026-07-01 to 2026-07-08 was already downloaded previously.
+2026-07-08 18:56:00,384 | INFO     | Establishing NSE session (getting cookies)...
+2026-07-08 18:56:00,465 | WARNING  | NSE homepage returned status 403, proceeding anyway...
+2026-07-08 18:56:01,467 | INFO     | 
+2026-07-08 18:56:01,467 | INFO     | =================================================================
+2026-07-08 18:56:01,467 | INFO     |   [RUN] Date Range: 2026-07-01 to 2026-07-08
+2026-07-08 18:56:01,467 | INFO     |   [INFO] 6 potential trading days
+2026-07-08 18:56:01,467 | INFO     | =================================================================
+2026-07-08 18:56:01,468 | INFO     |   [DONE] Date Range: 2026-07-01 to 2026-07-08: 0 new, 6 skipped, 0 holidays, 0 failed
+2026-07-08 18:56:01,468 | INFO     |   [INFO] All data for Date Range: 2026-07-01 to 2026-07-08 was already downloaded previously.
+2026-07-09 14:05:44,033 | INFO     | Establishing NSE session (getting cookies)...
+2026-07-09 14:05:44,111 | WARNING  | NSE homepage returned status 403, proceeding anyway...
+2026-07-09 14:05:45,113 | INFO     | 
+2026-07-09 14:05:45,113 | INFO     | =================================================================
+2026-07-09 14:05:45,113 | INFO     |   [RUN] Date Range: 2026-07-01 to 2026-07-09
+2026-07-09 14:05:45,113 | INFO     |   [INFO] 7 potential trading days
+2026-07-09 14:05:45,113 | INFO     | =================================================================
+2026-07-09 14:05:50,277 | INFO     |   [DONE] Date Range: 2026-07-01 to 2026-07-09: 1 new, 6 skipped, 0 holidays, 0 failed
+2026-07-09 14:05:50,278 | INFO     |   [ORGANIZE] Creating expiry-cycle folders...
+2026-07-09 14:05:50,289 | INFO     |   [SAVED] 1 new option chain files in option_chain_data/
