@@ -2,8 +2,8 @@ name: Daily F&O Analysis Update
 
 on:
   schedule:
-    # 7:30 PM IST = 14:00 UTC (runs Monday to Friday)
-    - cron: '0 14 * * 1-5'
+    # ~7:53 PM IST = 14:23 UTC (off-peak minute to avoid GitHub delays)
+    - cron: '23 14 * * 1-5'
   workflow_dispatch: # Allows manual trigger from GitHub UI
 
 jobs:
