@@ -189,3 +189,13 @@
 2026-07-20 20:35:38,517 | INFO     | =================================================================
 2026-07-20 20:43:45,672 | INFO     |   [DONE] Date Range: 2026-07-01 to 2026-07-20: 0 new, 13 skipped, 1 holidays, 0 failed
 2026-07-20 20:43:45,672 | INFO     |   [INFO] All data for Date Range: 2026-07-01 to 2026-07-20 was already downloaded previously.
+2026-07-21 17:32:33,880 | INFO     | Establishing NSE session (getting cookies)...
+2026-07-21 17:32:33,960 | WARNING  | NSE homepage returned status 403, proceeding anyway...
+2026-07-21 17:32:34,962 | INFO     | 
+2026-07-21 17:32:34,962 | INFO     | =================================================================
+2026-07-21 17:32:34,962 | INFO     |   [RUN] Date Range: 2026-07-01 to 2026-07-21
+2026-07-21 17:32:34,962 | INFO     |   [INFO] 15 potential trading days
+2026-07-21 17:32:34,962 | INFO     | =================================================================
+2026-07-21 17:32:45,630 | INFO     |   [DONE] Date Range: 2026-07-01 to 2026-07-21: 2 new, 13 skipped, 0 holidays, 0 failed
+2026-07-21 17:32:45,630 | INFO     |   [ORGANIZE] Creating expiry-cycle folders...
+2026-07-21 17:32:45,650 | INFO     |   [SAVED] 2 new option chain files in option_chain_data/
