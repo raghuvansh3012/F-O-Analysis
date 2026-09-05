@@ -154,10 +154,19 @@ def filter_last_n_days(df, n_days, date_col='Date'):
 
 
 def filter_current_month(df, date_col='Date'):
+    """Legacy fallback — filters by calendar month."""
     if df is None or df.empty: return df
     current_month = datetime.date.today().month
     current_year = datetime.date.today().year
     return df[(df[date_col].dt.month == current_month) & (df[date_col].dt.year == current_year)]
+
+def filter_current_expiry_cycle(df, cycle_start, cycle_end, date_col='Date'):
+    """Filters data to keep only dates within the current expiry cycle."""
+    if df is None or df.empty: return df
+    import pandas as _pd
+    start_ts = _pd.Timestamp(cycle_start)
+    end_ts = _pd.Timestamp(cycle_end)
+    return df[(df[date_col] >= start_ts) & (df[date_col] <= end_ts)]
 
 def group_dates_into_weeks(dates):
     # Groups dates into weeks. A new week starts on Wednesday.
@@ -499,12 +508,24 @@ def main():
         except ValueError:
             print("Invalid input, showing all data.")
             
-    if n_days and not auto_mode:
+    # Determine expiry cycle for auto mode
+    cycle_start = None
+    cycle_end = None
+    cycle_label = None
+    if auto_mode:
+        try:
+            from expiry_utils import get_current_expiry_cycle, get_trading_days_in_cycle
+            cycle_start, cycle_end, cycle_label = get_current_expiry_cycle()
+            fetch_days = get_trading_days_in_cycle()
+            print(f"Current expiry cycle: {cycle_label}")
+            print(f"Cycle: {cycle_start} to {cycle_end} ({fetch_days} trading days)")
+            ensure_data_for_days(fetch_days)
+        except Exception as e:
+            print(f"Warning: Could not determine expiry cycle ({e}), falling back to calendar month.")
+            current_date = datetime.date.today()
+            ensure_data_for_days(current_date.day)
+    elif n_days:
         ensure_data_for_days(n_days)
-    elif auto_mode:
-        # In auto mode we want the script to try fetching all missing days of the current month
-        current_date = datetime.date.today()
-        ensure_data_for_days(current_date.day)
 
     print("Loading Data...")
     df_oi, df_vol, df_mkt = load_data()
@@ -512,9 +533,14 @@ def main():
     if df_oi is None: return
 
     if auto_mode:
-        df_oi = filter_current_month(df_oi)
-        df_vol = filter_current_month(df_vol)
-        df_mkt = filter_current_month(df_mkt)
+        if cycle_start and cycle_end:
+            df_oi = filter_current_expiry_cycle(df_oi, cycle_start, cycle_end)
+            df_vol = filter_current_expiry_cycle(df_vol, cycle_start, cycle_end)
+            df_mkt = filter_current_expiry_cycle(df_mkt, cycle_start, cycle_end)
+        else:
+            df_oi = filter_current_month(df_oi)
+            df_vol = filter_current_month(df_vol)
+            df_mkt = filter_current_month(df_mkt)
     elif n_days:
         df_oi = filter_last_n_days(df_oi, n_days)
         df_vol = filter_last_n_days(df_vol, n_days)
@@ -707,9 +733,9 @@ def main():
     all_dates = sorted(df_oi['Date'].unique()) if df_oi is not None else []
     weeks = group_dates_into_weeks(all_dates)
     
-    # Get current month header
+    # Get current month/cycle header
     if all_dates:
-        month_header = all_dates[-1].strftime("%B %Y")
+        month_header = cycle_label if cycle_label else all_dates[-1].strftime("%B %Y")
         html.append(f'<div style="padding: 10px 15px; color: #8892b0; font-size: 14px; text-transform: uppercase; margin-top: 10px; font-family: monospace;">📅 {month_header}</div>')
 
     # Generate Sidebar Links
@@ -746,26 +772,32 @@ def main():
         html.append('</div>')
         
     # --- Option Chain Menu ---
-    month_label = all_dates[-1].strftime("%B %Y").upper() if all_dates else "OPTION CHAIN"
+    month_label = (cycle_label.upper() if cycle_label else all_dates[-1].strftime("%B %Y").upper()) if all_dates else "OPTION CHAIN"
     html.append(f'<div style="padding: 10px 15px; color: #8892b0; font-size: 14px; text-transform: uppercase; margin-top: 20px; font-family: monospace;">📅 {month_label} (OPTION CHAIN)</div>')
     
     import glob
     option_files = glob.glob(os.path.join(DATA_DIR, "option_chain_data", "*_nifty_options.csv"))
     oc_dates = []
     
-    current_month_val = all_dates[-1].month if all_dates else None
-    current_year_val = all_dates[-1].year if all_dates else None
-        
     for f in option_files:
         basename = os.path.basename(f)
         date_str = basename.split("_")[0]
         try:
             oc_date = datetime.datetime.strptime(date_str, "%Y-%m-%d")
-            if current_month_val and current_year_val:
-                if oc_date.month == current_month_val and oc_date.year == current_year_val:
+            # Filter option chain files by expiry cycle dates
+            if cycle_start and cycle_end:
+                oc_date_only = oc_date.date() if hasattr(oc_date, 'date') else oc_date
+                if cycle_start <= oc_date_only <= cycle_end:
                     oc_dates.append((oc_date, f))
             else:
-                oc_dates.append((oc_date, f))
+                # Fallback: use calendar month
+                current_month_val = all_dates[-1].month if all_dates else None
+                current_year_val = all_dates[-1].year if all_dates else None
+                if current_month_val and current_year_val:
+                    if oc_date.month == current_month_val and oc_date.year == current_year_val:
+                        oc_dates.append((oc_date, f))
+                else:
+                    oc_dates.append((oc_date, f))
         except:
             pass
 

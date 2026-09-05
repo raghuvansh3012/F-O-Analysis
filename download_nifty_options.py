@@ -618,7 +618,16 @@ def main():
     
     if len(sys.argv) > 1 and sys.argv[1] == '--auto':
         today = datetime.now()
-        start_date = today.replace(day=1)
+        # Dynamically determine cycle start from expiry data
+        try:
+            from expiry_utils import get_current_expiry_cycle
+            cycle_start_date, cycle_end_date, label = get_current_expiry_cycle(today.date())
+            start_date = datetime.combine(cycle_start_date, datetime.min.time())
+            logging.info(f"Auto mode: Current expiry cycle = {label}")
+            logging.info(f"Auto mode: Downloading from {cycle_start_date}")
+        except Exception as e:
+            logging.warning(f"Could not determine expiry cycle ({e}), falling back to 1st of month.")
+            start_date = today.replace(day=1)
         end_date = today
         user_choices = {'mode': 'date', 'start': start_date, 'end': end_date}
     else:

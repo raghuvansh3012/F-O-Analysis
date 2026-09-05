@@ -66,8 +66,16 @@ def main():
     # Calculate days if in auto_mode
     current_date = datetime.date.today()
     if auto_mode:
-        # We want to fetch everything from the 1st of the month till today
-        n_days = current_date.day
+        # Dynamically calculate trading days from the expiry cycle start
+        try:
+            from expiry_utils import get_trading_days_in_cycle, get_current_expiry_cycle
+            n_days = get_trading_days_in_cycle()
+            cycle_start, cycle_end, label = get_current_expiry_cycle()
+            print(f"Current expiry cycle: {label}")
+            print(f"Fetching data from cycle start ({cycle_start})...")
+        except Exception as e:
+            print(f"Warning: Could not determine expiry cycle ({e}), falling back to calendar month.")
+            n_days = current_date.day
         
     print(f"\nScanning for last {n_days} valid data points...")
     
